@@ -5,7 +5,7 @@ This New Tab Page is based on bing search.
 in coming versions there will be more festures available for this website
 
 report bugs or errors and contact us <a href='https://github.com/webergstudios/NewTab/issues'>over here</a><br>
-check out this project online <a href='https://webergstudios.github.io/NewTab'>over here</a>
+check out this project online <a href='https://webergstudios.github.io/newtab'>over here</a>
 
 download to get full experience with customizing with your own profile picture.
 add your favorite webstes as shortcut in weberg search by clicking on profile icon located on the top-right corner of the webpage.
