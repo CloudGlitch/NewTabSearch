@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta name="description" content="Weberg Search v16.0.3 is also known as Weberg NewTab Page. developed by Weberg Studios" />
-  <title>Weberg Studios</title>
+  <meta name="msvalidate.01" content="985E31D4671410081DE1A38A31F66B02" />
+  <meta name="google-site-verification" content="KJMjwtxws-tAk8v8tlqYWxdJr-KYyoWSnatVeTNz2lE" />
+  <meta http-equiv='content-language' content='en-us'>
+  <meta name='author' content='Weberg Studios'>
+  <meta name="description" content="Weberg Search developed by Weberg Studios. Find us on github to contact , report bug or issues and suggestions." />
+  <title>Weberg Studios | Weberg Search</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="icon" href="https://www.linkpicture.com/q/new-logo.png">
-<style>
+<style-
    body::-webkit-scrollbar {
     width: .75rem;
 }
@@ -65,6 +69,7 @@ button:hover {
                 background-color: #fff;
                 box-shadow: 0 0 50px grey;
                 transform: scale(1.2);
+                draggable="false"
             }
 #zoom {
   transition: 0.5s;
@@ -125,22 +130,28 @@ button:hover {
         width: 150px;
         font-family: Agency FB;
     }
+  .disable-select {
+    user-select: none;
+   -webkit-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+}
 
 </style>
 </head>
 <header>
-<body id="body" style="font-family: Agency FB; overflow: hidden;">
+<body id="body" style="font-family: Agency FB; overflow: hidden;" class="disable-select" draggable="false">
  
   <marquee style="margin-top: -0px; background-color: #ffffff;" behavior="slide" direction="down" Scrollamount=120>
 
   <header>
-    &nbsp;&nbsp;<img src="https://d30y9cdsu7xlg0.cloudfront.net/png/10563-200.png" id="menu1" style="width: 30px;" onclick="wm();">
-    <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/10563-200.png" style="width: 30px; display: none;" id="menu2" onclick="menuclose();">
+    &nbsp;&nbsp;<img src="https://d30y9cdsu7xlg0.cloudfront.net/png/10563-200.png" id="menu1" style="width: 30px;" onclick="wm();" draggable="false">
+    <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/10563-200.png" style="width: 30px; display: none;" id="menu2" onclick="menuclose();" draggable="false">
 
     <!--paste your image url down-->
 
-    <img src="logo.png" id="profileimg" style="width: 40px;" align="right" onclick="funcprofile();">
-    <img src="logo.png" id="profileimg2" style="width: 40px; display: none;" align="right" onclick="funcprofile2();">
+    <img src="logo.png" id="profileimg" style="width: 40px;" align="right" onclick="funcprofile();" draggable="false">
+    <img src="logo.png" id="profileimg2" style="width: 40px; display: none;" align="right" onclick="funcprofile2();" draggable="false">
 
     
 
@@ -168,7 +179,7 @@ button:hover {
   <center>
 
     <br><br><br><br>
-<h2 style="font-size: 50px;" id="ws"><img  align="center"  src="https://www.linkpicture.com/q/Logo_63.png" style="width: 100px;">Weberg Search</h2></center>
+<h2 style="font-size: 50px;" id="ws"><img  align="center"  src="https://www.linkpicture.com/q/Logo_63.png" style="width: 100px;" draggable="false">Weberg Search</h2></center>
 
 <center><br><br>
 
@@ -365,7 +376,7 @@ document.onkeydown = function(e) {
             window.location.reload();
             return false;
         } else {
-            return false;
+            return true;
         }
 };
 
