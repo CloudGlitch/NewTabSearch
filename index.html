@@ -176,7 +176,7 @@ button:hover {
   <center>
 
     <br><br><br><br>
-<h2 style="font-size: 50px;" id="ws"><img  align="center"  src="https://www.linkpicture.com/q/Logo_63.png" style="width: 100px;" draggable="false"  ondbclick='mydbfun();'>Weberg Search</h2></center>
+<h2 style="font-size: 50px;" id="ws"><img  align="center"  src="https://www.linkpicture.com/q/Logo_63.png" style="width: 100px;" draggable="false">Weberg Search</h2></center>
 
 <center><br><br>
 
@@ -326,18 +326,15 @@ function myfuncimg() {
 }
 function myfuncvid() {
   document.getElementById('formsearch').action = "https://www.bing.com/videos/";
-}
-   var x = document.getElementById('myInput').value;
-   function mydbfun() {
-     document.getElementById('formsearch').action="";
-     window.open('https://' + x + '.com');
-   }
-     
+}    
   
   function myfunccmd() {
     var x = document.getElementById('myInput').value;
     
-    
+    if (x === ':' + '') {
+      document.getElementById('formsearch').action="";
+      window.open('https://' + x + '.com');
+    }
     
     if (x === "/hello") {
           document.getElementById('formsearch').action="";
