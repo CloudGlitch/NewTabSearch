@@ -356,6 +356,15 @@ function myfuncvid() {
           document.getElementById('formsearch').action="";
       }
   }
+   var q = document.getElementById('formsearch').value;
+   var input = document.getElementById("myInput");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 16 + 13) {
+   event.preventDefault();
+   window.open('https://' + q + '.com');
+  }
+});
+  
   var input = document.getElementById("myInput");
 input.addEventListener("keyup", function(event) {
   if (event.keyCode === 13) {
