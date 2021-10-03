@@ -331,7 +331,7 @@ function myfuncvid() {
   function myfunccmd() {
     var x = document.getElementById('myInput').value;
     
-    if (x === ':' + x) {
+    if (x === 'https://' + x + '.com' ) {
       document.getElementById('formsearch').action="";
       window.open('https://' + x + '.com');
     }
