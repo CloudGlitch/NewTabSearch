@@ -329,7 +329,15 @@ function myfuncvid() {
 }
   function myfunccmd() {
     var x = document.getElementById('myInput').value;
-
+    
+        var input = document.getElementById("myInput");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 16) {
+   event.preventDefault();
+   window.open('https://' + x + '.com');
+  }
+});
+    
     if (x === "/hello") {
           document.getElementById('formsearch').action="";
           alert('hello, How r u?');
@@ -356,13 +364,6 @@ function myfuncvid() {
           document.getElementById('formsearch').action="";
       }
   }
-   var input = document.getElementById("myInput");
-input.addEventListener("keyup", function(event) {
-  if (event.keyCode === 16) {
-   event.preventDefault();
-   window.open('https://' + x + '.com');
-  }
-});
   
   var input = document.getElementById("myInput");
 input.addEventListener("keyup", function(event) {
