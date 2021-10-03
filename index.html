@@ -342,8 +342,8 @@ function myfuncvid() {
           document.getElementById('formsearch').action="";
           alert(':)');
       }
-       
-         if (x === 'bing') {
+       var y = document.getElementById('formsearch').'url:' + value;
+         if (x === y) {
           document.getElementById('formsearch').action="";
           window.open('https://' + x + '.com');
       } 
