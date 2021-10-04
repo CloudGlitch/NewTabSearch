@@ -145,7 +145,7 @@ li a:hover:not(.active) {
   <li><a href="#images" style='font-size:20px;' onclick="myfuncimg();">Images</a></li>
   <li><a href="#video" style='font-size:20px;' onclick="myfuncvid();">Video</a></li>
   <li><a href="converter" style='font-size:20px;'>Converter</a></li>
-  <li style='float:right'><a href='https://github.com/webergstudios/webergnewtab'><i class="material-icons" style="font-size:20px; position:relative; right:0px;">help</i></a></li>
+  <li style='float:right'><i class="material-icons" style="font-size:20px; position:relative; right:0px;" onclick='help();'>help</i></li>
 </ul>
  <br><br><br>
 <header>
@@ -211,6 +211,16 @@ li a:hover:not(.active) {
         }
         return localStorage.getItem(v);
     }
+  
+  function help() {
+    let text;
+  let person = prompt("type !verify to prove your not a robot");
+  if (person == '!verify') {
+    alert('access accepted!');
+  } else {
+    alert('access denied!');
+  }
+}
 </script>
 
 <br><br></center>
@@ -219,7 +229,7 @@ li a:hover:not(.active) {
 
 <div align="left" id="divprofile" style="border: 2px solid black; width: 350px; background-color: #fff; border-radius: 10px; overflow:hidden; position:absolute; display: none; top: 60px; left: 1px; height: 500px;" overlay>
      
-    <h2 style="position: relative; left: 20px;">Weberg Search v16.0.4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+    <h2 style="position: relative; left: 20px;">Weberg Search v16.0.5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
     <h3 style="position: relative; left: 20px;">Type in the URL and NAME of your shortcut and then<br>click OK to save them</h3>
     
     <input style="position: relative; left: 10px;" type="text" id="txt_1" placeholder='your 1st shortcut url' onkeyup='saveValue(this);'/>
