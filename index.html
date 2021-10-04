@@ -196,7 +196,7 @@ li a:hover:not(.active) {
 
 <script type="text/javascript">
     document.getElementById("a1").href = getSavedValue("txt_1");   
-    document.getElementById("btn1").innerHTML = getSavedValue("txt_2");  
+    document.getElementById("btn1").innerHTML = getSavedValue("txt_2"); 
     document.getElementById("a2").href = getSavedValue("txt_3");   
     document.getElementById("btn2").innerHTML = getSavedValue("txt_4");  
     document.getElementById("a3").href = getSavedValue("txt_5");   
@@ -258,7 +258,7 @@ li a:hover:not(.active) {
 
     <button style="left: 120px; position: relative; width: 100px; height: 50px;" onclick="ok();">OK</button><br>
   
-  <button onclick='hide1();' onkeyup='saveValue(this);' id='h1'>1</button>
+   <input style="position: relative; left: 10px;" type="text" id="hidetxt" placeholder='how many button to hide 1-6' onkeyup='saveValue(this);'/>
   
   <br><br><br><br>
 </div>
@@ -267,9 +267,11 @@ li a:hover:not(.active) {
     </div>
 
 <script>
-  function hide1() {
-    document.getElementById('btn1').style.display = getSavedValue("h1");
-  }
+var x = document.GetElementById('hidetxt').value;
+function (x === '1') {
+  document.getElementById('btn1').style.display = 'none';
+}
+document.getElementById("hidetxt").innerHTML = getSavedValue("hidetxt");
   
  function ok() {
     window.location.reload();
