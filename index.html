@@ -159,13 +159,6 @@ li a:hover:not(.active) {
   <script>
     function funcprofile() {
       document.getElementById('divprofile').style.display = "";
-      document.getElementById('profileimg').style.display = "none";
-      document.getElementById('profileimg2').style.display = "";
-    }
-    function funcprofile2() {
-      document.getElementById('divprofile').style.display = "none";
-      document.getElementById('profileimg').style.display = "";
-      document.getElementById('profileimg2').style.display = "none";
     }
   </script>  
     
@@ -263,28 +256,6 @@ li a:hover:not(.active) {
  function ok() {
     window.location.reload();
  }
-  document.onclick = hideMenu;
-  document.oncontextmenu = rightClick;
-    
-  function hideMenu() {
-      document.getElementById("contextMenu")
-              .style.display = "none"
-  }
-
-  function rightClick(e) {
-      e.preventDefault();
-
-      if (document.getElementById("contextMenu")
-              .style.display == "block")
-          hideMenu();
-      else{
-          var menu = document.getElementById("contextMenu")
-
-          menu.style.display = 'block';
-          menu.style.left = e.pageX + "px";
-          menu.style.top = e.pageY + "px";
-      }
-  }
 </script>
 
 <script>
