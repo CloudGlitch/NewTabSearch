@@ -1,5 +1,4 @@
 # WebergNewTab
-#Weberg Serach v16.0.5
 Weberg Search v16.0.5 or Weberg New Tab is a New Tab page for browsers [the browser should support html5 , css3 and javascript for example Microsoft Edge]
 This New Tab Page is based on bing search.
 
