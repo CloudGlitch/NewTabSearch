@@ -172,7 +172,8 @@ li a:hover:not(.active) {
 </head>
  
   <ul>
-  <li><a class="active" href="#home"><i class="material-icons" style='font-size:10px;'>menu</i></a></li>
+  <li><a class="active" href="#home"><i class="material-icons" style='font-size:10px;' id="menu1" onclick="wm();" >menu</i></a></li>
+  <li><a class="active" href="#home"><i class="material-icons" style='font-size:10px; display: none;'  id="menu2" onclick="menuclose();" >menu</i></a></li>
   <li><a href="#news">Web</a></li>
   <li><a href="#contact">Images</a></li>
   <li><a href="#about">Video</a></li>
@@ -184,9 +185,6 @@ li a:hover:not(.active) {
   <marquee style="margin-top: -0px; background-color: #ffffff;" behavior="slide" direction="down" Scrollamount=120>
 
   <header>
-    &nbsp;&nbsp;<img src="https://d30y9cdsu7xlg0.cloudfront.net/png/10563-200.png" id="menu1" style="width: 30px;" onclick="wm();" draggable="false">
-    <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/10563-200.png" style="width: 30px; display: none;" id="menu2" onclick="menuclose();" draggable="false">
-
     <!--paste your image url down-->
 
     <img src="logo.png" id="profileimg" style="width: 40px;" align="right" onclick="funcprofile();" draggable="false">
