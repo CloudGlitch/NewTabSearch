@@ -187,7 +187,7 @@ button:hover {
       <input type="submit" value="Go" onclick="myfunccmd();" style="width: 500px; display: none;" id="myBtn"></div>
 </form><br><br>
 
-<a href='' id='a1'><button id="btn1" ondbclick="document.getElemntById('btn1').style.display='none';">Shortcut</button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href='' id='a1'><button id="btn1" ondbclick="btn1hide();">Shortcut</button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <a href='' id='a2'><button id="btn2">Shortcut</button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <a href='' id='a3'><button id="btn3">Shortcut</button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <a href='' id='a4'><button id="btn4">Shortcut</button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -195,6 +195,10 @@ button:hover {
 <a href='' id='a6'><button id="btn6">Shortcut</button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 <script type="text/javascript">
+  function btn1hide() {
+    document.getElemntById('btn1').style.display='none';
+  }
+  
     document.getElementById("a1").href = getSavedValue("txt_1");   
     document.getElementById("btn1").innerHTML = getSavedValue("txt_2");  
     document.getElementById("a2").href = getSavedValue("txt_3");   
