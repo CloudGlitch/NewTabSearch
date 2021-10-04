@@ -154,10 +154,7 @@ li a:hover:not(.active) {
   <marquee style="margin-top: -0px; background-color: #ffffff;" behavior="slide" direction="down" Scrollamount=120>
 
   <header>
-    <!--paste your image url down-->
-    <img src="logo.png" id="profileimg2" style="width: 40px; display: none;" align="right" onclick="funcprofile2();" draggable="false">
 
-    
 
   <script>
     function funcprofile() {
@@ -256,26 +253,13 @@ li a:hover:not(.active) {
     
     <input style="position: relative; left: 10px;" type="text" id="txt_12" placeholder='your 6th shortcut name' onkeyup='saveValue(this);'/><br><br><br>
 
-    <button style="left: 120px; position: relative; width: 100px; height: 50px;" onclick="ok();">OK</button><br>
-  
-   <input style="position: relative; left: 10px;" type="text" id="hidetxt" placeholder='how many button to hide 1-6' onkeyup='saveValue(this);'/>
-  
-  <br><br><br><br>
+    <button style="left: 120px; position: relative; width: 100px; height: 50px;" onclick="ok();">OK</button><br><br><br><br><br>
 </div>
 <h3 style="position: relative; bottom: 50px; right: 0px;" align='right'>Copyright (c) 2021, Weberg Studios
     All rights reserved.</h3>
     </div>
 
 <script>
-var p = document.GetElementById('hidetxt').value;
-function (p === '1') {
-  document.getElementById('btn1').style.display = 'none';
-}else {
-  alert('error');
-}
-document.getElementById("hidetxt").innerHTML = getSavedValue("hidetxt");
-
-  
  function ok() {
     window.location.reload();
  }
