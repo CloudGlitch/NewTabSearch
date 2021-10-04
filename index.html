@@ -140,10 +140,10 @@ li a:hover:not(.active) {
 </head>
  
   <ul>
-  <li><a href="#home"><i class="material-icons" style='font-size:20px;' id="menu1" onclick="wm();">menu</i></a></li>
-  <li><a href="#news" style='font-size:20px;'>Web</a></li>
-  <li><a href="#contact" style='font-size:20px;'>Images</a></li>
-  <li><a href="#about" style='font-size:20px;'>Video</a></li>
+  <li><a href="#home"><i class="material-icons" style='font-size:20px;' id="menu1" onclick="funcprofile();">menu</i></a></li>
+  <li><a href="#news" style='font-size:20px;' onclick="myfuncweb();">Web</a></li>
+  <li><a href="#contact" style='font-size:20px;' onclick="myfuncimg();">Images</a></li>
+  <li><a href="#about" style='font-size:20px;' onclick="myfuncvid();">Video</a></li>
 </ul>
  <br><br><br>
 <header>
@@ -153,8 +153,6 @@ li a:hover:not(.active) {
 
   <header>
     <!--paste your image url down-->
-
-    <img src="logo.png" id="profileimg" style="width: 40px;" align="right" onclick="funcprofile();" draggable="false">
     <img src="logo.png" id="profileimg2" style="width: 40px; display: none;" align="right" onclick="funcprofile2();" draggable="false">
 
     
@@ -170,14 +168,7 @@ li a:hover:not(.active) {
       document.getElementById('profileimg').style.display = "";
       document.getElementById('profileimg2').style.display = "none";
     }
-  </script>
-  
-
-    <div align="left" id="divmenu" style="border: 2px solid black; width: 190px; background-color: #fff; border-radius: 10px; display: none; overflow:hidden; position: absolute;" overlay>
-
-      <p id="p" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="web" onclick="myfuncweb();">Click To Search Web</span><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span onclick="myfuncimg();">Click To Search Image</span><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span onclick="myfuncvid();">Click To Search Videos</span></p>
-    </div>
-    
+  </script>  
     
   </header>
   <center>
@@ -297,11 +288,6 @@ li a:hover:not(.active) {
 </script>
 
 <script>
-
-function wm() {
-  document.getElementById('divmenu').style.display = "";
-}
-
 if( screen.width <=  1133 ) {
     alert('your device is not compatible with this website')
     window.history.back()
