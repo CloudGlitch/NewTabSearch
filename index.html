@@ -176,7 +176,7 @@ button:hover {
   <center>
 
     <br><br><br><br>
-<h2 style="font-size: 50px;" id="ws"><img  align="center"  onclick='btn1hide()'  src="https://www.linkpicture.com/q/Logo_63.png" style="width: 100px;" draggable="false">Weberg Search</h2></center>
+<h2 style="font-size: 50px;" id="ws"><img  align="center" src="https://www.linkpicture.com/q/Logo_63.png" style="width: 100px;" draggable="false">Weberg Search</h2></center>
 
 <center><br><br>
 
@@ -195,10 +195,6 @@ button:hover {
 <a href='' id='a6'><button id="btn6">Shortcut</button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 <script type="text/javascript">
-  function btn1hide() {
-    document.getElemntById('btn1').style.display='none';
-  }
-  
     document.getElementById("a1").href = getSavedValue("txt_1");   
     document.getElementById("btn1").innerHTML = getSavedValue("txt_2");  
     document.getElementById("a2").href = getSavedValue("txt_3");   
@@ -246,7 +242,7 @@ button:hover {
     <h2>Weberg Search v16.0.4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
     <h3 style="position: relative; right: 20px;">Type in the URL and NAME of your shortcut and then<br>click OK to save them</h3>
     
-    <input style="position: relative; right: 10px;" type="text" id="txt_1" placeholder='your 1st shortcut url' onkeyup='saveValue(this);'/> 
+    <input style="position: relative; right: 10px;" type="text" id="txt_1" placeholder='your 1st shortcut url' onkeyup='saveValue(this);'/><button onclick='document.getElementById('btn1').style.display = none;'>hide</button>
     
     <input style="position: relative; right: 10px;" type="text" id="txt_2" placeholder='your 1st shortcut name' onkeyup='saveValue(this);'/><br><br>
     
