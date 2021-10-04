@@ -258,7 +258,7 @@ li a:hover:not(.active) {
 
     <button style="left: 120px; position: relative; width: 100px; height: 50px;" onclick="ok();">OK</button><br>
   
-  <button onclick='hide1();'>1</button>
+  <button onclick='hide1();' onkeyup='saveValue(this);' id='h1'>1</button>
   
   <br><br><br><br>
 </div>
@@ -268,7 +268,7 @@ li a:hover:not(.active) {
 
 <script>
   function hide1() {
-    document.getElementById('btn1').style.display = 'none';
+    document.getElementById('btn1').style.display = getSavedValue("h1");
   }
   
  function ok() {
