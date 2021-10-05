@@ -294,10 +294,20 @@ function myfuncvid() {
   function myfunccmd() {
     var x = document.getElementById('myInput').value;
     
+    if (x === 'epic') {
+    let text;
+  let browser = prompt("whcih browser do you use?");
+  if (browser == 'edge' || 'chrome') {
+    alert('edge is noice');
+  }else {
+    alert('never heard of it!')
+  }
+}
+    
       if (x === 'epic') {
     let text;
-  let person = prompt("are you epic?");
-  if (person == 'yes') {
+  let epic = prompt("are you epic?");
+  if (epic == 'yes') {
     alert('noice!');
   }else {
     alert('bruh!')
