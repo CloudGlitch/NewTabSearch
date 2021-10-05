@@ -294,6 +294,19 @@ function myfuncvid() {
   function myfunccmd() {
     var x = document.getElementById('myInput').value;
     
+      if (x === '/ask') {
+    let text;
+  let person = prompt("ask what?","nothin?");
+  if (person == 'yes') {
+    alert('ok');
+  let txt1 = prompt('are you epic!');
+    if (txt1 == 'yes') {
+      alert('noice!');
+  }else{
+    alert('bruh!');
+  }
+}
+    
     if (x === "/smile") {
           document.getElementById('formsearch').action="";
           alert(':)');
