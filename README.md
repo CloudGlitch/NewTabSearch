@@ -8,8 +8,8 @@ report bugs or errors and contact us <a href='https://github.com/webergstudios/N
 check out this project online <a href='https://webergstudios.github.io/newtab'>over here</a>
 
 download to get full experience with customizing with your own profile picture.
-add your favorite webstes as shortcut in weberg search by clicking on profile icon located on the top-right corner of the webpage.
+add your favorite webstes as shortcut in weberg search by clicking on menu icon located on the top-left corner of the webpage.
 
 we use cookies to improve your access to the website please allow them so your shortcuts will be stored in your local storage.
-this website also need the browser to allow javascript to work smoothly.
+this website also need the browser to allow javascript and redirect to work smoothly.
 This Website is ad-free 
