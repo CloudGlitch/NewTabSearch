@@ -139,7 +139,7 @@ li a:hover:not(.active) {
 </style>
 </head>
  
-  <ul>
+  <ul id='ul'>
   <li><a href="#menu"><i class="material-icons" style='font-size:20px;' id="menu1" onclick="funcprofile();">menu</i></a></li>
   <li><a href="#web" style='font-size:20px;' onclick="myfuncweb();">Web</a></li>
   <li><a href="#images" style='font-size:20px;' onclick="myfuncimg();">Images</a></li>
@@ -302,6 +302,13 @@ function myfuncvid() {
   }else {
     alert('hmm...i dont know that one')
   }
+}
+    
+    if (x === '/hide') {
+    document.getElemntById('ul').style.display = 'none';
+}
+    if (x === '/show') {
+    document.getElemntById('ul').style.display = '';
 }
     
       if (x === 'epic') {
