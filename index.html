@@ -144,8 +144,9 @@ li a:hover:not(.active) {
   <li><a href="#images" style='font-size:20px;' onclick="myfuncimg();">Images</a></li>
   <li><a href="#video" style='font-size:20px;' onclick="myfuncvid();">Video</a></li>
   <li><a href="converter.html" style='font-size:20px;'>Converter</a></li>
-  <li style='float:right'><a href='' id='profileredirect'><img src='logo.png' style="width:20px; height:20px;"></a></li>
   <li style='float:right'><a href='#verify'><i class="material-icons" style="font-size:20px;" onclick='help();'>help</i></a></li>
+  <li style='float:right'><a href='' id='profileredirect'><img src='logo.png' style="width:20px; height:20px;"></a></li>
+   <li style='float:right'><a href='#user'><p font-size='20px;' id='user'></p></a></li>
 </ul>
  <br><br><br>
 <header>
@@ -185,6 +186,7 @@ li a:hover:not(.active) {
 <a href='' id='a6'><button id="btn6">Shortcut</button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 <script type="text/javascript">
+    document.getElementById("user").inneHTML = getSavedValue("name");   
     document.getElementById("profileredirect").href = getSavedValue("profileinput");   
     document.getElementById("a1").href = getSavedValue("txt_1");   
     document.getElementById("btn1").innerHTML = getSavedValue("txt_2"); 
@@ -258,7 +260,9 @@ li a:hover:not(.active) {
     
     <input style="position: relative; left: 10px;" type="text" id="txt_12" placeholder='your 6th shortcut name' onkeyup='saveValue(this);'/><br><br>
     
-    <input style="position: relative; left: 10px; width:310px; height:20px; font-family:Agency FB; font-size:15px;" type="text" id="profileinput" placeholder='type in the url where you go when you click your profile' onkeyup='saveValue(this);'/> 
+    <input style="position: relative; left: 10px; width:310px; height:20px; font-family:Agency FB; font-size:15px;" type="text" id="profileinput" placeholder='type in the url where you go when you click your profile' onkeyup='saveValue(this);'/><br><br>
+    <input style="position: relative; left: 10px; width:310px; height:20px; font-family:Agency FB; font-size:15px;" type="text" id="name" placeholder='what is your name?' onkeyup='saveValue(this);'/> 
+   
     <br><br><br>
 
     <button style="left: 120px; position: relative; width: 100px; height: 50px;" onclick="ok();">OK</button><br><br><br><br><br>
