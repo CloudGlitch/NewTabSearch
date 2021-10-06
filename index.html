@@ -146,7 +146,7 @@ li a:hover:not(.active) {
   <li><a href="converter.html" style='font-size:20px;'>Converter</a></li>
   <li style='float:right'><a href='#verify'><i class="material-icons" style="font-size:20px;" onclick='help();'>help</i></a></li>
   <li style='float:right'><a href='' id='profileredirect'><img src='logo.png' style="width:20px; height:20px;"></a></li>
-  <li style='float:right'><a href='#user' font-size='20px;' style="height:0px;" id='user'>User</a></li>
+  <li style='float:right'><a href='#user' font-size='30px;' id='user'>User</a></li>
 </ul>
  <br><br><br>
 <header>
@@ -186,7 +186,7 @@ li a:hover:not(.active) {
 <a href='' id='a6'><button id="btn6">Shortcut</button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 <script type="text/javascript">
-    document.getElementById("user").inneHTML = getSavedValue("name");   
+    document.getElementById("user").innerHTML = getSavedValue("name");   
     document.getElementById("profileredirect").href = getSavedValue("profileinput");   
     document.getElementById("a1").href = getSavedValue("txt_1");   
     document.getElementById("btn1").innerHTML = getSavedValue("txt_2"); 
