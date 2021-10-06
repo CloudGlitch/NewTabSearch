@@ -145,6 +145,8 @@ li a:hover:not(.active) {
   <li><a href="#images" style='font-size:20px;' onclick="myfuncimg();">Images</a></li>
   <li><a href="#video" style='font-size:20px;' onclick="myfuncvid();">Video</a></li>
   <li><a href="converter.html" style='font-size:20px;'>Converter</a></li>
+  <li><a href="#" style='font-size:20px;' onclick='hideul();'>Nav Bar Hide</a></li>
+  <li><a href="#" style='font-size:20px;' onclick='showul();'>Nav Bar Show</a></li>
   <li style='float:right'><a href='' id='profileredirect'><img src='logo.png' style="width:20px; height:20px;"></a></li>
   <li style='float:right'><a href='#verify'><i class="material-icons" style="font-size:20px;" onclick='help();'>help</i></a></li>
 </ul>
@@ -304,13 +306,11 @@ function myfuncvid() {
   }
 }
     
-    if (x === '/hide') {
+    function ulhide() {
     document.getElemntById('ul').style.display = 'none';
-    document.getElementById('formsearch').action="";
 }
-    if (x === '/show') {
+    function ulshow() {
     document.getElemntById('ul').style.display = '';
-    document.getElementById('formsearch').action="";
 }
     
       if (x === 'epic') {
