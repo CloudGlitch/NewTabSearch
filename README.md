@@ -1,7 +1,9 @@
 # WebergNewTab
 Weberg Search v16.0.5 or Weberg New Tab is a New Tab page for browsers [the browser should support html5 , css3 and javascript for example Microsoft Edge]
 This New Tab Page is based on bing search.
-
+ 
+ download link: https://codeload.github.com/webergstudios/webergsearch/zip/refs/heads/main
+ 
 operating system should be above windows 10.
 
 In coming versions there will be more features available for this website
