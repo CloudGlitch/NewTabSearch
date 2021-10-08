@@ -1,3 +1,35 @@
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@webergstudios 
+webergstudios
+/
+webergsearch
+Public
+1
+00
+Code
+Issues
+3
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+Settings
+webergsearch/index.html
+@webergstudios
+webergstudios Update index.html
+Latest commit 152f29a 26 minutes ago
+ History
+ 1 contributor
+493 lines (428 sloc)  19.4 KB
+   
 <!DOCTYPE html>
 <html>
 <head>
@@ -231,7 +263,7 @@ li a:hover:not(.active) {
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </marquee>
 
-<div align="left" id="divprofile" style="border: 2px solid black; width: 600px; background-color: #fff; border-radius: 10px; overflow:hidden; position:absolute; display: none; top: 60px; left: 1px; height: 550px;" overlay>
+<div align="left" id="divprofile" style="border: 2px solid black; width: 600px; background-color: #fff; border-radius: 10px; overflow:hidden; position:absolute; display: none; top: 60px; left: 1px; height: 590px;" overlay>
      
     <h2 style="position: relative; left: 20px;">Weberg Search v16.0.5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
     <h3 style="position: relative; left: 20px;">Type in the URL and NAME of your shortcut and then<br>click OK to save them</h3>
@@ -260,23 +292,30 @@ li a:hover:not(.active) {
     
     <input style="position: relative; left: 10px;" type="text" id="txt_12" placeholder='your 6th shortcut name' onkeyup='saveValue(this);'/><br><br>
     
- 
-  
-  
-  <input style="position: relative; left: 350px; top:-350px; width:200px; height:20px; font-family:Agency FB; font-size:15px;" type="text" id="name" placeholder="what is your name?" onkeyup="saveValue(this);">
-  <p style="left:350px; position:relative; top:-330; font-size:15px;">download app by <a href="https://github.com/webergstudios/webergsearch">clicking here </a>and then<br>scroll down to see<br>download link<br><br><br>Have any issues or see a bug<br>or have a suggestion for Weberg Search<br>please click <a href="https://github.com/webergstudios/webergsearch/issues">here</a></p>
- 
-   <button style="left: 140px; top:-60px;position:relative; width: 100px; height: 50px;" onclick="ok();" accesskey="n">Done!</button>
-   <br><br><br>
+    <input style="position: relative; left: 10px;" type="text" id="txt_7" placeholder='your 4th shortcut url' onkeyup='saveValue(this);'/> 
+    
+    <input style="position: relative; left: 10px;" type="text" id="txt_8" placeholder='your 4th shortcut name' onkeyup='saveValue(this);'/><br><br>
+    
+    <input style="position: relative; left: 10px;" type="text" id="txt_9" placeholder='your 5th shortcut url' onkeyup='saveValue(this);'/> 
+    
+    <input style="position: relative; left: 10px;" type="text" id="txt_10" placeholder='your 5th shortcut name' onkeyup='saveValue(this);'/><br><br>
+    
+    <input style="position: relative; left: 10px;" type="text" id="txt_11" placeholder='your 6th shortcut url' onkeyup='saveValue(this);'/> 
+    
+    <input style="position: relative; left: 10px;" type="text" id="txt_12" placeholder='your 6th shortcut name' onkeyup='saveValue(this);'/><br><br>
+    
+   <button style="left: 140px; top:-50px; position: relative; width: 100px; height: 50px;" onclick="ok();" accesskey="n">Done!</button><br>
+<p style="left:350px; position:relative; top:-500px; font-size:15px;">download app by <a href="https://github.com/webergstudios/webergsearch">clicking here</a>and then<br>scroll down to see<br>download link<br><br><br>Have any issues or see a bug<br>or have a suggestion for Weberg Search<br>please click <a href="https://github.com/webergstudios/webergsearch/issues">here</a></p>
+    <br><br><br>
 
   <br>
 </div>
-<h3 style="position: absolute; bottom: 0px; right: 0px;" align='right'>Copyright (c) 2021, Weberg Studios
+<h3 style="position: relative; bottom: 50px; right: 0px;" align='right'>Copyright (c) 2021, Weberg Studios
     All rights reserved.</h3>
     </div>
 
 <script>
- function ok() { 
+ function ok() {
     window.location.reload();
  }
 </script>
@@ -484,3 +523,16 @@ autocomplete(document.getElementById("myInput"), countries);
 </script>
 </body>
 </html>
+© 2021 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+Loading complete
