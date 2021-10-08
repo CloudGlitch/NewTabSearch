@@ -30,7 +30,7 @@ alt + n : menu close<br>
 alt + s : search bar focus<br>
 alt + h : help
 <br><br>
-supported versions: <br>
+available versions: <br>
 v16.0.5 ✅<br>
 v16.0.4 ✅<br>
 v16.0.3 ❌<br>
