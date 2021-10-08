@@ -24,7 +24,7 @@ we use cookies to improve your access to the website please allow them so your s
 this website also need the browser to allow javascript and redirect to work smoothly.
 This Website is ad-free 
 
-alt + m : menu open
-alt + n : menu close
-alt + s : search bar focus
+alt + m : menu open<br>
+alt + n : menu close<br>
+alt + s : search bar focus<br>
 alt + h : help
