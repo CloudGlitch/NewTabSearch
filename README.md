@@ -1,4 +1,7 @@
 # WebergNewTab
+
+Any part of this website [https://webergstudios.github.io/webergsearch] is not allowed to reproduce or recreate. 
+
 Weberg Search v16.0.5 or Weberg New Tab is a New Tab page for browsers [the browser should support html5 , css3 and javascript for example Microsoft Edge]
 This New Tab Page is based on bing search.
  
