@@ -28,3 +28,9 @@ alt + m : menu open<br>
 alt + n : menu close<br>
 alt + s : search bar focus<br>
 alt + h : help
+<br><br>
+supported versions: <br>
+v16.0.5 ✅<br>
+v16.0.4 ✅<br>
+v16.0.3 ❌<br>
+v16.0.2 and before ❌
