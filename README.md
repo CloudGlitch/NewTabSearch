@@ -28,15 +28,11 @@ this website also need the browser to allow javascript and redirect to work smoo
 This Website is ad-free 
 
 app shortcuts:<br>
-alt + m : menu open<br>
-alt + n : menu close<br>
+alt + m : menu open and close<br>
+alt + n : menu refresh<br>
 alt + s : search bar focus<br>
 alt + h : help
+alt + c : Weberg converter
 <br><br>
-available versions: <br>
-v16.0.5 ✅<br>
-v16.0.4 ✅<br>
-v16.0.3 ❌<br>
-v16.0.2 and before ❌
 
-To get v16.0.4 pls contact us.
+Enjoy :smile:
