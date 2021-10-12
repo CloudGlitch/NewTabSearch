@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,8 +7,30 @@
   <meta name="description" content="Weberg Search developed by Weberg Studios. Find us on github to contact , report bug or issues and suggestions." />
   <title>Weberg Search</title>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="icon" href="https://www.linkpicture.com/q/new-logo.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
+  @media only screen and (max-width: 600px) {
+    body {
+      font-family:Agency FB;
+    }
+    #user , #txt_7 , #txt_8 , #txt_9 , #txt_10 , #txt_11 , #txt_12 , #name , #btn4 , #btn5 , #btn6  {
+      display:none;
+    }
+    #btn1 , #btn2 , #btn3 {
+      width:20%; 
+    }
+    #helpp {
+      display:none;
+    }
+    #divprofile { 
+      max-width:400px;
+      min-width:400px;
+      width:400px;
+    }
+    
+  }
    body::-webkit-scrollbar {
     width: .75rem;
 }
@@ -131,11 +154,19 @@ li a {
 li a:hover:not(.active) {
   background-color: #111;
 }
-
-.active {
-  background-color: #04AA6D;
+#myBtn {
+  width:5%;
+  height:46px;
+  background-color:white;
+  border:1px soild black;
+  border-radius:3px;
+  outline:none;
+  position:relative;
+  top:-2px;
 }
-  
+  #myBtn:hover {
+    background-color:#ddd;
+  }
 </style>
 </head>
   <ul id='ul'>
@@ -143,7 +174,7 @@ li a:hover:not(.active) {
   <li><a href="#web" style='font-size:20px;' onclick="myfuncweb();">Web</a></li>
   <li><a href="#images" style='font-size:20px;' onclick="myfuncimg();">Images</a></li>
   <li><a href="#video" style='font-size:20px;' onclick="myfuncvid();">Video</a></li>
-  <li><a href="converter.html" style='font-size:20px;'>Converter</a></li>
+  <li><a href="converter.html" style='font-size:20px;' accesskey="c">Converter</a></li>
   <li style='float:right'><a href='#verify'><i class="material-icons" style="font-size:20px;" onclick='help();' accesskey="h">help</i></a></li>
   <li style='float:right'><a href='' id='profileredirect'><img src='logo.png' style="width:20px; height:20px;"></a></li>
   <li style='float:right'><a href='#user' style="font-size:20px;" id='user'>User</a></li>
@@ -159,8 +190,13 @@ li a:hover:not(.active) {
 
   <script>
     function funcprofile() {
-      document.getElementById('divprofile').style.display = "";
-    }
+  var x = document.getElementById("divprofile");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
   </script>  
     
   </header>
@@ -174,32 +210,37 @@ li a:hover:not(.active) {
 
 
   <div id="zoom">
-<div class="autocomplete" style="width:90%; font-family: Agency FB;border-width: 1px; border-color: black; z-index: 0;"><form id="formsearch" autocomplete="off" action="https://bing.com" method="GET"><input id="myInput" type="q" name="q" accesskey='s' placeholder="Search here.." style="width: 60%; height: 40px; outline: none; font-family: Agency FB; font-size: 26px; background: #fff; border: 1px solid black; border-radius: 3px;" autofocus required></div>
-      <input type="submit" value="Go" onclick="myfunccmd();" style="width: 500px; display: none;" id="myBtn"></div>
+<div class="autocomplete" style="width:90%; font-family: Agency FB; border-width:1px; border-color:black; z-index: 0;"><form id="formsearch" autocomplete="off" action="https://bing.com" method="GET"><input id="myInput" type="q" name="q" accesskey="s" placeholder="Search here.." style="width: 60%; height: 40px; outline: none; font-family: Agency FB; font-size: 26px; background: #fff; border: 2px solid black; border-radius: 3px;" autofocus="" required="">&nbsp;&nbsp;<button type="submit" title="Search" name="search" id="myBtn"><i class="fa fa-search"></i></button></div>
 </form><br><br>
 
 <a href='' id='a1'><button id="btn1">Shortcut</button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href='' id='a2'><button id="btn2">Shortcut</button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href='' id='a2'><button title="" id="btn2">Shortcut</button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <a href='' id='a3'><button id="btn3">Shortcut</button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <a href='' id='a4'><button id="btn4">Shortcut</button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <a href='' id='a5'><button id="btn5">Shortcut</button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href='' id='a6'><button id="btn6">Shortcut</button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href='' id='a6'><button title="" id="btn6">Shortcut</button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 <script type="text/javascript">
     document.getElementById("user").innerHTML = "Welcome, " + getSavedValue("name");   
     document.getElementById("profileredirect").href = getSavedValue("profileinput");   
     document.getElementById("a1").href = getSavedValue("txt_1");   
     document.getElementById("btn1").innerHTML = getSavedValue("txt_2"); 
+    document.getElementById("btn1").title = getSavedValue("txt_2"); 
     document.getElementById("a2").href = getSavedValue("txt_3");   
     document.getElementById("btn2").innerHTML = getSavedValue("txt_4");  
+    document.getElementById("btn2").title = getSavedValue("txt_4"); 
     document.getElementById("a3").href = getSavedValue("txt_5");   
     document.getElementById("btn3").innerHTML = getSavedValue("txt_6");  
+    document.getElementById("btn3").title = getSavedValue("txt_6");
     document.getElementById("a4").href = getSavedValue("txt_7");   
     document.getElementById("btn4").innerHTML = getSavedValue("txt_8");  
+    document.getElementById("btn4").title = getSavedValue("txt_8");
     document.getElementById("a5").href = getSavedValue("txt_9");   
-    document.getElementById("btn5").innerHTML = getSavedValue("txt_10");  
+    document.getElementById("btn5").innerHTML = getSavedValue("txt_10"); 
+    document.getElementById("btn5").title = getSavedValue("txt_10");
     document.getElementById("a6").href = getSavedValue("txt_11");   
     document.getElementById("btn6").innerHTML = getSavedValue("txt_12");  
+    document.getElementById("btn6").title = getSavedValue("txt_12"); 
 
     function saveValue(e){
         var id = e.id;  // get the sender's id to save it . 
@@ -220,7 +261,13 @@ li a:hover:not(.active) {
   let person = prompt("type !verify to prove your not a robot");
   if (person == '!verify') {
     alert('access granted!');
-    window.open('https://github.com/webergstudios/webergnewtab');
+    alert('To add shortcuts open menu or press alt+m.');
+    alert('alt+n to refresh');
+    alert('alt+m to open and close menu');
+    alert('alt+s to focus on search bar');
+    alert('alt+c to open converter');
+    alert('alt+h to get help');
+    alert('thank you have a nice day');
   } else {
     alert('access denied!');
   }
@@ -231,10 +278,10 @@ li a:hover:not(.active) {
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </marquee>
 
-<div align="left" id="divprofile" style="border: 2px solid black; width: 600px; background-color: #fff; border-radius: 10px; overflow:hidden; position:absolute; display: none; top: 60px; left: 1px; height: 500px;" overlay>
+<div align="left" id="divprofile" style="border: 2px solid black; width: 600px; background-color: #fff; border-radius: 10px; overflow:hidden; position:absolute; display: none; top: 60px; left: 1px; height: 400px;" overlay>
      
-    <h2 style="position: relative; left: 20px;">Weberg Search v16.0.6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
-    <h3 style="position: relative; left: 20px;">Type in the URL and NAME of your shortcut and then<br>click OK to save them</h3>
+    <h2 style="position: relative; left: 20px;">Weberg Search v16.0.7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+    <h3 style="position: relative; left: 20px;">Type in the URL and NAME of your shortcut and then<br>click DONE or REFRESH THE PAGE to save them</h3>
     
     <input style="position: relative; left: 10px;" type="text" id="txt_1" placeholder='your 1st shortcut url' onkeyup='saveValue(this);'/>
     
@@ -260,22 +307,11 @@ li a:hover:not(.active) {
     <input style="position: relative; left: 10px;" type="text" id="txt_11" placeholder='your 6th shortcut url' onkeyup='saveValue(this);'/> 
     
     <input style="position: relative; left: 10px;" type="text" id="txt_12" placeholder='your 6th shortcut name' onkeyup='saveValue(this);'/><br><br>
-    
-    <input style="position: relative; left: 10px;" type="text" id="txt_7" placeholder='your 4th shortcut url' onkeyup='saveValue(this);'/> 
-    
-    <input style="position: relative; left: 10px;" type="text" id="txt_8" placeholder='your 4th shortcut name' onkeyup='saveValue(this);'/><br><br>
-    
-    <input style="position: relative; left: 10px;" type="text" id="txt_9" placeholder='your 5th shortcut url' onkeyup='saveValue(this);'/> 
-    
-    <input style="position: relative; left: 10px;" type="text" id="txt_10" placeholder='your 5th shortcut name' onkeyup='saveValue(this);'/><br><br>
-    
-    <input style="position: relative; left: 10px;" type="text" id="txt_11" placeholder='your 6th shortcut url' onkeyup='saveValue(this);'/> 
-    
-    <input style="position: relative; left: 10px;" type="text" id="txt_12" placeholder='your 6th shortcut name' onkeyup='saveValue(this);'/><br><br>
+
   
     
    <button style="left: 480px; top:-60px; position: relative; width: 100px; height: 50px;" onclick="ok();" accesskey="n">Done!</button>
-<p style="left:350px; position:relative; top:-300px; font-size:15px;">download app by <a href="https://github.com/webergstudios/webergsearch">clicking here</a>and then<br>scroll down to see<br>download link<br><br><br>Have any issues or see a bug<br>or have a suggestion for Weberg Search<br>please click <a href="https://github.com/webergstudios/webergsearch/issues">here</a></p>
+<p id='helpp' style="left:350px; position:relative; top:-250px; font-size:15px;">download app by <a href="https://github.com/webergstudios/webergsearch">clicking here</a>and then<br>scroll down to see<br>download link<br><br>Have any issues or see a bug<br>or have a suggestion for Weberg Search<br>please click <a href="https://github.com/webergstudios/webergsearch/issues">here</a></p>
     <br><br><br>
 
   <br>
@@ -292,8 +328,8 @@ li a:hover:not(.active) {
 
 <script>
 if( screen.width <=  1133 ) {
-    alert('your device is not compatible with this website')
-    window.history.back()
+    alert('your device is not compatible with this website');
+    window.history.back();
 }
  
 
