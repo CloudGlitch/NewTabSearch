@@ -31,7 +31,7 @@ app shortcuts:<br>
 alt + m : menu open and close<br>
 alt + n : menu refresh<br>
 alt + s : search bar focus<br>
-alt + h : help
+alt + h : help<br>
 alt + c : Weberg converter
 <br><br>
 
