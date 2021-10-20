@@ -2,7 +2,7 @@
 
 Any part of this <a href="https://webergstudios.github.io/webergsearch">website</a> or <a href="https://codeload.github.com/webergstudios/webergsearch/zip/refs/heads/main">application</a> is not allowed to redistribute , reproduce or recreate. 
 
-Weberg Search v16.0.6 or Weberg New Tab is a New Tab page for browsers [the browser should support html5 , css3 and javascript for example Microsoft Edge]
+Weberg Search v16.0.7 or Weberg New Tab is a New Tab page for browsers [the browser should support html5 , css3 and javascript for example Microsoft Edge]
 This New Tab Page is based on bing search.
  
  download link: <a href="https://codeload.github.com/webergstudios/webergsearch/zip/refs/heads/main">Download</a>
@@ -26,13 +26,5 @@ add your favorite webstes as shortcut in weberg search by clicking on menu icon 
 we use cookies to improve your access to the website please allow them so your shortcuts will be stored in your local storage.
 this website also need the browser to allow javascript and redirect to work smoothly.
 This Website is ad-free 
-
-app shortcuts:<br>
-alt + m : menu open and close<br>
-alt + n : menu refresh<br>
-alt + s : search bar focus<br>
-alt + h : help<br>
-alt + c : Weberg converter
-<br><br>
 
 Enjoy :smile:
