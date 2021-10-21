@@ -1,4 +1,7 @@
 
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -87,10 +90,9 @@ button {
   transition: 0.5s;
 }
 button:hover {
-                background-color: #fff);
+                background-color: #ffffff;
                 box-shadow: 0 0 50px grey;
                 transform: scale(1.2);
-                draggable="false"
             }
 #zoom {
   transition: 0.5s;
@@ -104,7 +106,7 @@ button:hover {
 #overlay {
   z-index: 999;
 }
-#divmenu, #divprofile{
+#divprofile, #divhelp{
       position:relative;
       animation:animatetop 0.5s;
 }
@@ -167,23 +169,38 @@ li a:hover:not(.active) {
   #myBtn:hover {
     background-color:#ddd;
   }
+  #divhelp {
+      border: 2px solid black;
+      border-radius: 10px;
+      height: 550px;
+      background-color: white;
+      z-index: 9999;
+      overflow-x: visible;
+      display: none;
+  }
 </style>
 </head>
   <ul id='ul'>
   <li><a href="#menu"><i class="material-icons" style='font-size:20px;' id="menu1" onclick="funcprofile();" accesskey='m' >menu</i></a></li>
-  <li><a href="#web" style='font-size:20px;' onclick="myfuncweb();">Web</a></li>
-  <li><a href="#images" style='font-size:20px;' onclick="myfuncimg();">Images</a></li>
-  <li><a href="#video" style='font-size:20px;' onclick="myfuncvid();">Video</a></li>
-  <li><a href="converter.html" style='font-size:20px;' accesskey="c">Converter</a></li>
-  <li style='float:right'><a href='#verify'><i class="material-icons" style="font-size:20px;" onclick='help();' accesskey="h">help</i></a></li>
-  <li style='float:right'><a href='https://webergstudios.github.io/weberghome' id='profileredirect'><img src='logo.png' style="width:20px; height:20px;"></a></li>
-  <li style='float:right'><a href='#user' style="font-size:20px;" id='user'>User</a></li>
+  <li><a href="#web" style='font-size:20px;' onclick="myfuncweb();"  accesskey="w">Web</a></li>
+  <li><a href="#images" style='font-size:20px;' onclick="myfuncimg();"  accesskey="i">Images</a></li>
+  <li><a href="#video" style='font-size:20px;' onclick="myfuncvid();" accesskey="v">Video</a></li>
+  <li><a href="converter.html" style='font-size:20px;'>Converter</a></li>
+  <li style='float:right'><a href='#help'><i class="material-icons" style="font-size:20px;" onclick='help();' accesskey="h">help</i></a></li>
+  <li style='float:right'><a href="https://webergstudios.github.io/weberghome"><img src='logo.png' style="width:20px; height:20px;"></a></li>
+  <li style='float:right' onclick="userhistory();"><a href='#user' style="font-size:20px;" id='user'>User</a></li>
 </ul>
  <br><br><br>
 <header>
 <body oncontextmenu='return false;' id="body" style="font-family: Agency FB; " class="disable-select" draggable="false">
  
   <marquee style="margin-top: -0px; background-color: #ffffff;" behavior="slide" direction="down" Scrollamount=120>
+    <div id='divhelp' style="position: fixed; right:5px; width: 300px; top: 20px;" overlay>
+        <center>
+            <h1 style="font-size: 30px;">Help</h1><h1 style="text-decoration: underline;">Shortcuts</h1><br>
+            <h2>alt + i to search for images<br><br>alt+w to search web<br><br>alt+m to open and close menu<br><br>alt+s to focus on search bar<br><br>alt+v to search for videos<br><br>alt+h to get help</h2><h1 style="text-decoration: underline;">How To</h1><br><h2>To enter urls in search bar start with https://</h2>
+        </center>
+    </div>
 
   <header>
 
@@ -203,16 +220,15 @@ li a:hover:not(.active) {
   <center>
 
     <br><br><br><br>
-<h2 style="font-size: 50px;" id="ws"><img align="center" src="https://www.linkpicture.com/q/Logo_63.png" style="width: 100px;" draggable="false">Weberg Search</h2></center>
+<h2 style="font-size: 50px;" id="ws"><img  align="center" src="https://www.linkpicture.com/q/Logo_63.png" style="width: 100px;" draggable="false">Weberg Search</h2></center>
 
 <center><br><br>
 
 
 
   <div id="zoom">
-<div class="autocomplete" style="width:90%; font-family: Agency FB; border-width:1px; border-color:black; z-index: 0;"><form id="formsearch" autocomplete="off" action="https://bing.com" method="GET"><input id="myInput" type="q" name="q" accesskey="s" placeholder="Search here.." style="width: 60%; height: 40px; outline: none; font-family: Agency FB; font-size: 26px; background: #fff; border: 2px solid black; border-radius: 3px;" autofocus="" required="">&nbsp;&nbsp;<button type="submit" title="Search" name="search" id="myBtn"><i class="fa fa-search"></i></button></div>
+<div class="autocomplete" style="width:90%; font-family: Agency FB; border-width:1px; border-color:black; z-index: 0;"><form id="formsearch" autocomplete="off" action="https://bing.com" method="GET"><input id="myInput" type="q" name="q" accesskey="s" placeholder="Search the web or enter a web address" style="width: 60%; height: 40px; outline: none; font-family: Agency FB; font-size: 26px; background: #fff; border: 2px solid black; border-radius: 3px;" autofocus="" required="" onkeyup='saveValue(this);'/>&nbsp;&nbsp;<button type="submit" title="Search" onclick="funcurl();" name="search" id="myBtn"><i class="fa fa-search"></i></button></div>
 </form><br><br>
-
 <a href='' id='a1'><button id="btn1">Shortcut</button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <a href='' id='a2'><button title="" id="btn2">Shortcut</button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <a href='' id='a3'><button id="btn3">Shortcut</button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -222,7 +238,6 @@ li a:hover:not(.active) {
 
 <script type="text/javascript">
     document.getElementById("user").innerHTML = "Welcome, " + getSavedValue("name");   
-    document.getElementById("profileredirect").href = getSavedValue("profileinput");   
     document.getElementById("a1").href = getSavedValue("txt_1");   
     document.getElementById("btn1").innerHTML = getSavedValue("txt_2"); 
     document.getElementById("btn1").title = getSavedValue("txt_2"); 
@@ -257,30 +272,21 @@ li a:hover:not(.active) {
     }
   
   function help() {
-    let text;
-  let person = prompt("type !verify to prove your not a robot");
-  if (person == '!verify') {
-    alert('access granted!');
-    alert('To add shortcuts open menu or press alt+m.');
-    alert('alt+n to refresh');
-    alert('alt+m to open and close menu');
-    alert('alt+s to focus on search bar');
-    alert('alt+c to open converter');
-    alert('alt+h to get help');
-    alert('thank you have a nice day');
+  var help = document.getElementById("divhelp");
+  if (help.style.display === "none") {
+    help.style.display = "block";
   } else {
-    alert('access denied!');
+    help.style.display = "none";
   }
 }
 </script>
-
 <br><br></center>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </marquee>
 
 <div align="left" id="divprofile" style="border: 2px solid black; width: 600px; background-color: #fff; border-radius: 10px; overflow:hidden; position:absolute; display: none; top: 60px; left: 1px; height: 400px;" overlay>
      
-    <h2 style="position: relative; left: 20px;">Weberg Search v16.0.7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+    <h2 style="position: relative; left: 20px;">Weberg Search v16.0.8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
     <h3 style="position: relative; left: 20px;">Type in the URL and NAME of your shortcut and then<br>click DONE or REFRESH THE PAGE to save them</h3>
     
     <input style="position: relative; left: 10px;" type="text" id="txt_1" placeholder='your 1st shortcut url' onkeyup='saveValue(this);'/>
@@ -311,12 +317,12 @@ li a:hover:not(.active) {
   
     
    <button style="left: 480px; top:-60px; position: relative; width: 100px; height: 50px;" onclick="ok();" accesskey="n">Done!</button>
-<p id='helpp' style="left:350px; position:relative; top:-250px; font-size:15px;">download app by <a href="https://github.com/webergstudios/webergsearch">clicking here</a>and then<br>scroll down to see<br>download link<br><br>Have any issues or see a bug<br>or have a suggestion for Weberg Search<br>please click <a href="https://github.com/webergstudios/webergsearch/issues">here</a></p>
+<p id='helpp' style="left:350px; position:relative; top:-250px; font-size:15px;">download app by <a href="https://github.com/webergstudios/webergsearch">clicking here</a> and then<br>scroll down to see<br>download link<br><br>Have any issues or see a bug<br>or have a suggestion for Weberg Search<br>please click <a href="https://github.com/webergstudios/webergsearch/issues">here</a></p>
     <br><br><br>
 
   <br>
 </div>
-<h3 style="position: relative; bottom: 50px; right: 0px;" align='right'>Copyright (c) 2021, Weberg Studios
+<h3 style="position: absolute; bottom: 0px; right: 0px;" align='right'>Copyright (c) 2021, Weberg Studios
     All rights reserved.</h3>
     </div>
 
@@ -324,9 +330,23 @@ li a:hover:not(.active) {
  function ok() {
     window.location.reload();
  }
+ function funcurl() {
+     var inp = document.getElementById("myInput").value;
+     if (inp.startsWith("https://")) {
+         document.getElementById('formsearch').action = " ";
+         window.open(inp);
+     }
+ }
 </script>
 
 <script>
+    var input = document.getElementById("myInput");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("myBtn").click();
+  }
+});
 if( screen.width <=  1133 ) {
     alert('your device is not compatible with this website');
     window.history.back();
@@ -335,80 +355,17 @@ if( screen.width <=  1133 ) {
 
 function myfuncweb() {
   document.getElementById('formsearch').action = "https://bing.com";
+  document.getElementById('myInput').placeholder = "Search the web or enter a web address";
 }
 function myfuncimg() {
   document.getElementById('formsearch').action = "https://www.bing.com/images/";
+  document.getElementById('myInput').placeholder = "Search for images or enter a web address";
 }
 function myfuncvid() {
   document.getElementById('formsearch').action = "https://www.bing.com/videos/";
+  document.getElementById('myInput').placeholder = "Search for videos or enter a web address";
 }    
   
-  function myfunccmd() {
-    var x = document.getElementById('myInput').value;
-    
-    if (x === 'os') {
-    let text;
-  let os = prompt("whcih os do you use?");
-  if (os == 'windows' || 'mac os' || 'solaris' || 'chrome os' || 'ubuntu' || 'linux') {
-    alert('hmm....noice!');
-  }else {
-    alert('hmm...i dont know that one')
-  }
-}
-   
-    
-      if (x === 'epic') {
-    let text;
-  let epic = prompt("are you epic?");
-  if (epic == 'yes') {
-    alert('noice!');
-  }else {
-    alert('bruh!')
-  }
-}
-    
-    if (x === "/smile") {
-          document.getElementById('formsearch').action="";
-          alert(':)');
-      }
-      if (x === "/sad") {
-          document.getElementById('formsearch').action="";
-          alert(':(');
-      }
-      if (x === "/happy") {
-          document.getElementById('formsearch').action="";
-          alert('😀');
-      }
-      if (x === "/cry") {
-          document.getElementById('formsearch').action="";
-          alert('😭');
-      }
-    
-      if (x === "//converter") {
-          document.getElementById('formsearch').action="";
-          window.open("converter.html");
-      }
-      if (x === "//yt") {
-          document.getElementById('formsearch').action="";
-          window.open("https://youtube.com");
-      }
-      if (x === "//bing") {
-          window.open("https://bing.com");
-          document.getElementById('formsearch').action="";
-      }
-      if (x === "//google") {
-          window.open("https://google.com");
-          document.getElementById('formsearch').action="";
-      }
-  }
-  
-  var input = document.getElementById("myInput");
-input.addEventListener("keyup", function(event) {
-  if (event.keyCode === 13) {
-   event.preventDefault();
-   document.getElementById("myBtn").click();
-  }
-});
 
 document.onkeydown = function(e) {
         if (e.ctrlKey && 
@@ -520,9 +477,8 @@ function autocomplete(inp, arr) {
       closeAllLists(e.target);
   });
 }
-
 /*An array containing all the country names in the world:*/
-var countries = ["hello","hi","what","what is","what is the","what is the meaning of","which","which is","which is the","how",'how many','google','bing','amazon','flipkart','a','animals','quara','wikipedia','usa','canva','china','russia','india','who','who is','who is the','who was the','why','why did','office','onedrive','outlook','run','translate','youtube','youtube downloader','iconfinder','pintrest','prime video','amazon prime','sublime text','sublime text 3 download','sublime text download','discord','facebook','whatsapp','gmail','google meet','microsoft teams','hotstar','jpg to png','png to jpg','linkedin','zoho presentaion','zoom','zoom meeting','bbc news','msn news','netflix','0','1','2','3','4','5','6','7','8','9','msn weather','weather','msn','euro','europe','k','x','v','microsoft','what is the difference between','remove bg','remove background','meet','png to ico','word to pdf','png to jpeg','png to jpg','jpeg to png','Visual Code Studio','Visual Code Studio download','skype','github','weberg search','weberg studios','weberg converter'];
+var countries = ["hello","hi","what","what is","what is the","what is the meaning of","which","which is","which is the","how",'how many','google','bing','amazon','flipkart','a','animals','quara','wikipedia','usa','canva','china','russia','india','who','who is','who is the','who was the','why','why did','office','onedrive','outlook','run','translate','youtube','youtube downloader','iconfinder','pintrest','prime video','amazon prime','sublime text','sublime text 3 download','sublime text download','discord','facebook','whatsapp','gmail','google meet','microsoft teams','hotstar','jpg to png','png to jpg','linkedin','zoho presentaion','zoom','zoom meeting','bbc news','msn news','netflix','0','1','2','3','4','5','6','7','8','9','msn weather','weather','msn','euro','europe','k','x','v','microsoft','what is the difference between','remove bg','remove background','meet','png to ico','word to pdf','png to jpeg','png to jpg','jpeg to png','Visual Code Studio','Visual Code Studio download','skype','github','weberg search','weberg studios','weberg converter','https://bing.com','https://youtube.com','https://google.com','difference between','youtube.com','bing.com','https://discord.com/app','microsoft.com','https://github.com','github.com','w3schools','stackoverflow','https://w3schools.com','https://stackoverflow.com'];
 
 /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
 autocomplete(document.getElementById("myInput"), countries);
