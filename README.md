@@ -26,5 +26,7 @@ add your favorite webstes as shortcut in weberg search by clicking on menu icon 
 we use cookies to improve your access to the website please allow them so your shortcuts will be stored in your local storage.
 this website also need the browser to allow javascript and redirect to work smoothly.
 This Website is ad-free 
-
+<br>
+Codename : ws167
+<br>
 Enjoy :smile:
