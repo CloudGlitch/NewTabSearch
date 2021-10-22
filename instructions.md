@@ -22,3 +22,5 @@ to enter urls in search bar start with `https://` then click enter or search but
 `alt + s` to focus on search bar
 
 `alt + h` to get help
+## Personalization 
+if you enter user name in menu and then click done or refresh the page you will see Welcome,`your name` instead of Welcome,User.
