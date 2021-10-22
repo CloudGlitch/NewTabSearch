@@ -24,3 +24,12 @@ to enter urls in search bar start with `https://` then click enter or search but
 `alt + h` to get help
 ## Personalization 
 if you enter user name in menu and then click done or refresh the page you will see `Welcome,your name` instead of `Welcome,User`.
+
+download to get full experience with customizing with your own profile picture. 
+
+### To change profile picture: 
+step 1: download 
+
+step 2: put all the items in a folder 
+
+step 3: replace the logo.png with ur png pic and name it logo step 4: open index.html
