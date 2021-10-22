@@ -186,7 +186,7 @@ li a:hover:not(.active) {
   <li><a href="#images" style='font-size:20px;' onclick="myfuncimg();"  accesskey="i">Images</a></li>
   <li><a href="#video" style='font-size:20px;' onclick="myfuncvid();" accesskey="v">Video</a></li>
   <li><a href="converter.html" style='font-size:20px;'>Converter</a></li>
-  <li style='float:right'><a href='#help'><i class="material-icons" style="font-size:20px;" onclick='help();' accesskey="h">help</i></a></li>
+  <li style='float:right'><a href='https://github.com/webergstudios/webergsearch/blob/main/extensions/help.md'><i class="material-icons" style="font-size:20px;" accesskey="h">help</i></a></li>
   <li style='float:right'><a href="https://webergstudios.github.io/weberghome"><img src='logo.png' style="width:20px; height:20px;"></a></li>
   <li style='float:right' onclick="userhistory();"><a href='#user' style="font-size:20px;" id='user'>User</a></li>
 </ul>
@@ -195,13 +195,7 @@ li a:hover:not(.active) {
 <body oncontextmenu='return false;' id="body" style="font-family: Agency FB; " class="disable-select" draggable="false">
  
   <marquee style="margin-top: -0px; background-color: #ffffff;" behavior="slide" direction="down" Scrollamount=120>
-    <div id='divhelp' style="position: fixed; right:5px; width: 300px; top: 20px;" overlay>
-        <center>
-            <h1 style="font-size: 30px;">Help</h1><h1 style="text-decoration: underline;">Shortcuts</h1><br>
-            <h2>alt + i to search for images<br><br>alt+w to search web<br><br>alt+m to open and close menu<br><br>alt+s to focus on search bar<br><br>alt+v to search for videos<br><br>alt+h to get help</h2><h1 style="text-decoration: underline;">How To</h1><br><h2>To enter urls in search bar start with https://</h2>
-        </center>
-    </div>
-
+ 
   <header>
 
 
@@ -270,15 +264,6 @@ li a:hover:not(.active) {
         }
         return localStorage.getItem(v);
     }
-  
-  function help() {
-  var help = document.getElementById("divhelp");
-  if (help.style.display === "none") {
-    help.style.display = "block";
-  } else {
-    help.style.display = "none";
-  }
-}
 </script>
 <br><br></center>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
