@@ -7,3 +7,18 @@ To make shortcuts in Weberg Search click on menu option located on top-left corn
 then type in the url and name of your shortcut.
 
 then click done or refresh the page to save them.
+## how to enter urls in search bar
+to enter urls in search bar start with `https://` then click enter or search button.
+##shortcut keys
+### Searching
+`alt + w` to search the web
+
+`alt + i` to search for images
+
+`alt + v` to search for videos
+### ease of access
+`alt + m` to open and close menu
+
+`alt + s` to focus on search bar
+
+`alt + h` to get help
