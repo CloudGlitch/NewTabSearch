@@ -1,5 +1,2 @@
 ##get started
-
-#download
-
 to install weberg search click on the green code button and click ```download ZIP``` option 
