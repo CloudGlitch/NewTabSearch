@@ -9,7 +9,7 @@ then type in the url and name of your shortcut.
 then click done or refresh the page to save them.
 ## how to enter urls in search bar
 to enter urls in search bar start with `https://` or end with `.com` then click enter or search button.
-##shortcut keys
+## shortcut keys
 ### Searching
 `alt + w` to search the web
 
