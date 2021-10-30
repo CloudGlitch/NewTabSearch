@@ -22,6 +22,8 @@ to enter urls in search bar start with `https://` or end with `.com` then click 
 `alt + s` to focus on search bar
 
 `alt + h` to get help
+
+press `tab` to paste the currently focused auto-prediction into the search bar
 ## Personalization 
 if you enter user name in menu and then click done or refresh the page you will see `Welcome,your name` instead of `Welcome,User`.
 
