@@ -39,22 +39,3 @@ step 3: replace the logo.png with ur png pic and name it logo step 4: open index
 if the texts appear to be big pls change the font-size of you browser to small from medium
 
 if the animations doesnt work and page seems to be big and untidy your browser is not supported
-## here are the list of browsers which are supported and not supported
-### supported
-Microsoft Edge
-Google Chrome
-### not supported
-Mozilla Firefox
-Opera [all versions]
-safari
-water fox
-brave
-DuckDuckGo
-vivaldi
-Maxathon
-UC browser
-## browser engines
-Chromium - Supported
-Quantum - Not Supported
-v8 - Partially Supported
-Gecko - Partially Supported
