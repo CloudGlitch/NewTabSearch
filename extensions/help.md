@@ -17,7 +17,8 @@ to enter urls in search bar start with `https://` then click enter or search but
 
 `alt + v` to search for videos
 ### ease of access
-`alt + m` to open and close menu
+`alt + m` to open menu
+`alt + n` to close menu
 
 `alt + s` to focus on search bar
 
