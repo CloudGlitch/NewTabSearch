@@ -1,4 +1,5 @@
 # Get started
+### there is chance that the page appears to big and untidy if this occurs please goto the browser settings-->appearance-->font size and chnage to to small. this bug will be fixed soon.
 ## How to Download [if needed]
 to install weberg search goto https://github.com/webergstudios/webergsearch/ then scroll down a bit to see download link
 ## How to make shortcuts
