@@ -1,5 +1,4 @@
 # Get started
-### there is chance that the page appears to big and untidy if this occurs please goto the browser settings-->appearance-->font size and chnage to to small. this bug will be fixed soon.
 ## How to Download [if needed]
 to install weberg search goto https://github.com/webergstudios/webergsearch/ then scroll down a bit to see download link
 ## How to make shortcuts
@@ -10,6 +9,10 @@ then type in the url and name of your shortcut.
 then click done or refresh the page to save them.
 ## how to enter urls in search bar
 to enter urls in search bar start with `https://` then click enter or search button.
+
+to enter file url start with `file://C:/`.
+
+This New Tab Extension is made for Microsoft Edge, to enter `edge://` urls start with `edge://`.
 ## shortcut keys
 ### Searching
 `alt + w` to search the web
@@ -17,6 +20,12 @@ to enter urls in search bar start with `https://` then click enter or search but
 `alt + i` to search for images
 
 `alt + v` to search for videos
+
+type `h` to auto-complete `https://` [if you want to type something other than https:// that start with h, please type h and the next letter at the same time]
+
+type `file` to auto-complete `file://C:/`
+
+type `edge` to autocomplete `edge://`
 ### ease of access
 `alt + m` to open menu
 `alt + n` to close menu
