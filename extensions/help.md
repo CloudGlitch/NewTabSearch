@@ -14,7 +14,7 @@ to enter urls in search bar start with `https://` then click enter or search but
 to enter file url start with `file://C:/`.
 
 This New Tab Extension is made for Microsoft Edge, to enter `edge://` urls start with `edge://`.
-## shortcut keys
+## shortcut keys and quick access
 ### Searching
 `alt + w` to search the web
 
