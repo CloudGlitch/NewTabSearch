@@ -2,7 +2,7 @@
 
 Any part of this <a href="https://webergstudios.github.io/webergsearch">website</a> or <a href="https://codeload.github.com/webergstudios/webergsearch/zip/refs/heads/main">application</a> is not allowed to redistribute , reproduce or recreate. 
 
-Weberg Search v16.0.9 or Weberg New Tab is a New Tab page for browsers [the browser should support html5 , css3 and javascript for example Microsoft Edge]
+Weberg Search v17 or Weberg New Tab is a New Tab page for browsers [the browser should support html5 , css3 and javascript for example Microsoft Edge]
 This New Tab Page is based on bing search.
  
  download link: <a href="https://webergstudios.github.io/webergsearch/extensions/download">Download</a>
@@ -25,6 +25,6 @@ we use cookies to improve your access to the website please allow them so your s
 this website also need the browser to allow javascript and redirect to work smoothly.
 This Website is ad-free 
 <br>
-Codename : ws169
+Codename : ws17
 <br>
 Enjoy :smile:
