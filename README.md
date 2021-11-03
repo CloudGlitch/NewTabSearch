@@ -1,4 +1,4 @@
-# WebergNewTab
+# Weberg Search
 
 Any part of this <a href="https://webergstudios.github.io/webergsearch">website</a> or <a href="https://codeload.github.com/webergstudios/webergsearch/zip/refs/heads/main">application</a> is not allowed to redistribute , reproduce or recreate. 
 
