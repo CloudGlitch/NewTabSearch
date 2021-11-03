@@ -12,8 +12,6 @@ then click done or refresh the page to save them.
 to enter urls in search bar start with `https://` then click enter or search button.
 
 to enter file url start with `file://C:/`.
-
-This New Tab Extension is made for Microsoft Edge, to enter `edge://` urls start with `edge://`.
 ## shortcut keys and quick access
 ### Searching
 `alt + w` to search the web
@@ -26,7 +24,6 @@ type `h` to auto-complete `https://` [if you want to type something other than h
 
 type `file` to auto-complete `file://C:/`
 
-type `edge` to autocomplete `edge://`
 ### ease of access
 `alt + m` to open menu
 `alt + n` to close menu
