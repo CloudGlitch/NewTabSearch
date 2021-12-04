@@ -30,3 +30,9 @@ This Website is ad-free
 Codename : ws17
 <br>
 Enjoy :smile:
+
+
+## New Year is coming!!
+want to see what we have planned for the new year?
+
+vist the weberg search <a href="https://webergstudios.github.io/webergsearchbeta">beta</a> to know more.
