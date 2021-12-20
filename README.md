@@ -4,30 +4,25 @@ Any part of this <a href="https://webergstudios.github.io/webergsearch">website<
 
 <<a href="https://github.com/webergstudios/webergsearchbeta">Check The Beta Channel</a>>
 
+
+
+## Compatability 
+
+operating system should be above windows 10.
+
 Weberg Search v17 or Weberg New Tab is a New Tab page for browsers [the browser should support html5 , css3 and javascript for example Microsoft Edge]
 This New Tab Page is based on bing search.
  
- download link: <a href="https://webergstudios.github.io/webergsearch/extensions/download">Download</a>
- 
-operating system should be above windows 10.
+ ## How To?
 
-In coming versions there will be more features available for this website
+download link: <a href="https://webergstudios.github.io/webergsearch/extensions/download">Download</a> to download the file
 
 report bugs or errors and contact us <a href='https://github.com/webergstudios/webergsearch/issues'>over here</a><br>
 check out this project online <a href='https://webergstudios.github.io/webergsearch'>over here</a>
 
-download to get full experience with customizing with your own profile picture.
-To change profile picture:
- step 1: download 
- step 2: put all the items in a folder
- step 3: replace the logo.png with ur png pic and name it logo
- step 4: open index.html
+<a href="https://webergstudios.github.io/webergsearch">Weberg Search Link</a>
 
-we use cookies to improve your access to the website please allow them so your shortcuts will be stored in your local storage.
-this website also need the browser to allow javascript and redirect to work smoothly.
 This Website is ad-free 
-<br>
-Codename : ws17
 <br>
 Enjoy :smile:
 
