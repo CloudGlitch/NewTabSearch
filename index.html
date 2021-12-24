@@ -1,20 +1,16 @@
 
-
-
-
-
-
-
-
-
+<!--Copyright (c) 2021 Weberg Studios-->
+<!-- created and published by weberg studios-->
+<!--source code of weberg search v17.1-->
+<!-- Weberg Search New Tab Extension developed by Weberg Studios. Customize you new tab in youe way. Create Shortcuts and options to search the web or images , videos , maps and news directly . Find us on github to contact , report bug or issues and suggestions. -->
 
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="msvalidate.01" content="985E31D4671410081DE1A38A31F66B02" />
     <meta name='author' content='Weberg Studios'>
-    <meta name="description" content="Weberg Search developed by Weberg Studios. Find us on github to contact , report bug or issues and suggestions." />
+    <meta name="description" content="Weberg Search New Tab Extension developed by Weberg Studios. Customize you new tab in youe way. Create Shortcuts and options to search the web or images , videos , maps and news directly . Find us on github to contact , report bug or issues and suggestions." />
     <title>Weberg Search</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8" />
@@ -22,774 +18,2119 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" href="https://webergstudios.github.io/webergsearch/extensions/logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <style>
-        * {
-            font-family: Century Gothic;
-            cursor: url("https://webergstudios.github.io/webergsearch/extensions/cursor/normal.cur"),default;
-        }
-
-
-        @media only screen and (max-width: 900px) {
-            #user, #navlogo {
-                display: none;
-            }
-        }
-
-        @media only screen and (max-width: 600px) {
-            * {
-                font-family: Century Gothic;
-            }
-
-            #myInput {
-                width: 66%;
-            }
-
-            #user, #txt_7, #txt_8, #txt_9, #txt_10, #txt_11, #txt_12, #name, #btn1, #btn2, #btn3, #btn4, #btn5, #btn6, #menu1 {
-                display: none;
-            }
-
-            #btn1, #btn2, #btn3 {
-                width: 20%;
-            }
-
-            #helpp {
-                display: none;
-            }
-
+.disable-select {
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+#hdr::-moz-selection{
+	background: white;
+            color:black;
+}
+#hdr::selection{
+	background: white;
+            color:black;
+}
+#keycode::-moz-selection {
+ background: white;
+ color:black;
+}
+#keycode::selection {
+ background:white;
+ color:black;
 }
 
-        body::-webkit-scrollbar {
-            width: .100rem;
-        }
+#myInput::-moz-selection{
+	background: white;
+            color:black;
+}
+#myInput::selection{
+	background: white;
+            color:black;
+}
+.barrelRoll,.fadeIn,.floater,.heartbeat,.pulse,.rollerLeft,.rollerRight,.rotateIn,.rotateInLeft,.rotateInRight,.rotation,.shake,.sideToSide,.slideDown,.slideLeft,.slideRight,.slideUp,.spinner,.wiggle,.zoomer,.zoomerOut {
+	visibility: visible!important;
+}
 
-        *::-webkit-scrollbar-track {
-            background-color: #000;
-        }
+.rotation {
+	animation-name: rotation;
+	-webkit-animation-name: rotation;
+	animation-duration: 4s;
+	-webkit-animation-duration: 4s;
+	animation-timing-function: linear;
+	-webkit-animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
 
-        *::-webkit-scrollbar-thumb {
-            background-color: #ddd;
-            border-radius: 9999px;
-        }
+.rotation,.sideToSide {
+	-webkit-animation-iteration-count: infinite;
+}
 
-        .autocomplete {
-            position: relative;
-            display: inline-block;
-        }
+@-webkit-keyframes rotation {
+	from {
+		-webkit-transform: rotate(0) translateX(50%) rotate(0);
+	}
 
-        .autocomplete-items {
-            position: absolute;
-            border-bottom: none;
-            border-top: none;
-            font-size: 1.5vw;
-            z-index: 99;
+	to {
+		-webkit-transform: rotate(360deg) translateX(50%) rotate(-360deg);
+	}
+}
+
+@keyframes rotation {
+	from {
+		transform: rotate(0) translateX(50%) rotate(0);
+	}
+
+	to {
+		transform: rotate(360deg) translateX(50%) rotate(-360deg);
+	}
+}
+
+.sideToSide {
+	animation-name: sideToSide;
+	-webkit-animation-name: sideToSide;
+	animation-duration: 3s;
+	-webkit-animation-duration: 3s;
+	animation-timing-function: ease;
+	-webkit-animation-timing-function: ease;
+	animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes sideToSide {
+	0%,100% {
+		-webkit-transform: translate(100%,0);
+	}
+
+	50% {
+		-webkit-transform: translate(-100%,0);
+	}
+}
+
+@keyframes sideToSide {
+	0%,100% {
+		transform: translate(100%,0);
+	}
+
+	50% {
+		transform: translate(-100%,0);
+	}
+}
+
+.zoomer {
+	animation-name: zoomer;
+	-webkit-animation-name: zoomer;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-timing-function: cubic-bezier(.5,.2,.3,1);
+	animation-iteration-count: 1;
+}
+
+.zoomer,.zoomerOut {
+	-webkit-animation-iteration-count: 1;
+	animation-timing-function: cubic-bezier(.5,.2,.3,1);
+	animation-duration: 1s;
+}
+
+@-webkit-keyframes zoomer {
+	0% {
+		-webkit-transform: scale(.3);
+	}
+
+	100% {
+		-webkit-transform: scale(1);
+	}
+}
+
+@keyframes zoomer {
+	0% {
+		transform: scale(.3);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+.zoomerOut {
+	animation-name: zoomerOut;
+	-webkit-animation-name: zoomerOut;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-timing-function: cubic-bezier(.5,.2,.3,1);
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
+.rollerRight,.zoomerOut {
+	-webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes zoomerOut {
+	0% {
+		-webkit-transform: scale(1);
+	}
+
+	100% {
+		-webkit-transform: scale(0);
+	}
+}
+
+@keyframes zoomerOut {
+	0% {
+		transform: scale(1);
+	}
+
+	100% {
+		transform: scale(0);
+	}
+}
+
+.spinner {
+	animation-name: spinner;
+	-webkit-animation-name: spinner;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+}
+
+.pulse,.spinner {
+	animation-timing-function: linear;
+	animation-duration: 2s;
+}
+
+@-webkit-keyframes spinner {
+	from {
+		-webkit-transform: rotate(0);
+	}
+
+	to {
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+@keyframes spinner {
+	from {
+		transform: rotate(0);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.pulse {
+	animation-name: pulse;
+	-webkit-animation-name: pulse;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+}
+
+@keyframes pulse {
+	0%,100% {
+		transform: scale(.9);
+		opacity: .9;
+	}
+
+	50% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes pulse {
+	0%,100% {
+		-webkit-transform: scale(.95);
+		opacity: .9;
+	}
+
+	50% {
+		-webkit-transform: scale(1);
+		opacity: 1;
+	}
+}
+
+.shake {
+	animation-name: shake;
+	-webkit-animation-name: shake;
+	-webkit-animation-duration: .4s;
+	-webkit-animation-timing-function: ease;
+	-webkit-animation-iteration-count: 1;
+}
+
+.barrelRoll,.shake {
+	animation-iteration-count: 1;
+	animation-timing-function: ease;
+	animation-duration: .4s;
+}
+
+@keyframes shake {
+	0%,100% {
+		transform: translateX(0);
+	}
+
+	16%,50%,83% {
+		transform: translateX(-10px);
+	}
+
+	33%,66% {
+		transform: translateX(10px);
+	}
+}
+
+@-webkit-keyframes shake {
+	0%,100% {
+		-webkit-transform: translateX(0);
+	}
+
+	16%,50%,83% {
+		-webkit-transform: translateX(-10px);
+	}
+
+	33%,66% {
+		-webkit-transform: translateX(10px);
+	}
+}
+
+.barrelRoll {
+	animation-name: barrelRoll;
+	-webkit-animation-name: barrelRoll;
+	-webkit-animation-duration: .4s;
+	-webkit-animation-timing-function: ease;
+	-webkit-animation-iteration-count: 1;
+}
+
+@keyframes barrelRoll {
+	from {
+		transform: rotate(0);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@-webkit-keyframes barrelRoll {
+	from {
+		-webkit-transform: rotate(0);
+	}
+
+	to {
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+.floater {
+	animation-name: floater;
+	-webkit-animation-name: floater;
+	animation-duration: 1.5s;
+	-webkit-animation-duration: 1.5s;
+	-webkit-animation-iteration-count: infinite;
+}
+
+.floater,.wiggle {
+	animation-iteration-count: infinite;
+}
+
+@keyframes floater {
+	0%,100% {
+		transform: translateY(0);
+	}
+
+	50% {
+		transform: translateY(8%);
+	}
+}
+
+@-webkit-keyframes floater {
+	0%,100% {
+		-webkit-transform: translateY(0);
+	}
+
+	50% {
+		-webkit-transform: translateY(8%);
+	}
+}
+
+.wiggle {
+	animation-name: wiggle;
+	-webkit-animation-name: wiggle;
+	animation-duration: 2.5s;
+	-webkit-animation-duration: 2.5s;
+	-webkit-animation-iteration-count: infinite;
+}
+
+@keyframes wiggle {
+	0%,100% {
+		transform: rotate(-4deg);
+	}
+
+	50% {
+		transform: rotate(4deg);
+	}
+}
+
+@-webkit-keyframes wiggle {
+	0%,100% {
+		-webkit-transform: rotate(-4deg);
+	}
+
+	50% {
+		-webkit-transform: rotate(4deg);
+	}
+}
+
+.pound {
+	animation-name: pound;
+	-webkit-animation-name: pound;
+	animation-duration: .5s;
+	-webkit-animation-duration: .5s;
+	-webkit-animation-timing-function: ease;
+	-webkit-animation-iteration-count: infinite;
+	visibility: visible!important;
+}
+
+.heartbeat,.pound {
+	animation-iteration-count: infinite;
+	animation-timing-function: ease;
+}
+
+@keyframes pound {
+	to {
+		transform: scale(1.2);
+	}
+}
+
+@-webkit-keyframes pound {
+	to {
+		transform: scale(1.2);
+	}
+}
+
+.heartbeat {
+	animation-name: heartbeat;
+	-webkit-animation-name: heartbeat;
+	animation-duration: 3s;
+	-webkit-animation-duration: 3s;
+	-webkit-animation-timing-function: ease;
+	-webkit-animation-iteration-count: infinite;
+}
+
+@keyframes heartbeat {
+	0%,100% {
+		transform: scale(1);
+	}
+
+	10% {
+		transform: scale(1.2);
+	}
+
+	20% {
+		transform: scale(1.4);
+	}
+}
+
+@-webkit-keyframes heartbeat {
+	0%,100% {
+		-webkit-transform: scale(1);
+	}
+
+	10% {
+		-webkit-transform: scale(1.2);
+	}
+
+	20% {
+		-webkit-transform: scale(1.4);
+	}
+}
+
+.rollerRight {
+	animation-name: rollerRight;
+	-webkit-animation-name: rollerRight;
+	animation-duration: 2s;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-timing-function: ease;
+	-webkit-animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
+.rollerLeft,.rollerRight {
+	animation-iteration-count: 1;
+	animation-timing-function: ease;
+}
+
+@keyframes rollerRight {
+	0% {
+		transform: translateX(-200px) rotate(0);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateX(0) rotate(2turn);
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes rollerRight {
+	0% {
+		-webkit-transform: translateX(-200px) rotate(0);
+		opacity: 0;
+	}
+
+	100% {
+		-webkit-transform: translateX(0) rotate(2turn);
+		opacity: 1;
+	}
+}
+
+.rollerLeft {
+	animation-name: rollerLeft;
+	-webkit-animation-name: rollerLeft;
+	animation-duration: 2s;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-timing-function: ease;
+	-webkit-animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
+.fadeOut,.rollerLeft {
+	-webkit-animation-fill-mode: forwards;
+}
+
+@keyframes rollerLeft {
+	0% {
+		transform: translateX(200px) rotate(0);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateX(0) rotate(-2turn);
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes rollerLeft {
+	0% {
+		-webkit-transform: translateX(200px) rotate(0);
+		opacity: 0;
+	}
+
+	100% {
+		-webkit-transform: translateX(0) rotate(-2turn);
+		opacity: 1;
+	}
+}
+
+.slideDown {
+	animation-name: slideDown;
+	-webkit-animation-name: slideDown;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-timing-function: ease;
+}
+
+.slideDown,.slideUp {
+	animation-timing-function: ease;
+	animation-duration: 1s;
+}
+
+@keyframes slideDown {
+	0% {
+		transform: translateY(-100%);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes slideDown {
+	0% {
+		-webkit-transform: translateY(-100%);
+		opacity: 0;
+	}
+
+	100% {
+		-webkit-transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+.slideUp {
+	animation-name: slideUp;
+	-webkit-animation-name: slideUp;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-timing-function: ease;
+}
+
+@keyframes slideUp {
+	0% {
+		transform: translateY(100%);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes slideUp {
+	0% {
+		-webkit-transform: translateY(100%);
+		opacity: 0;
+	}
+
+	100% {
+		-webkit-transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+.slideLeft {
+	animation-name: slideLeft;
+	-webkit-animation-name: slideLeft;
+	animation-duration: 1s;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-timing-function: ease;
+}
+
+.slideLeft,.slideRight {
+	animation-timing-function: ease;
+}
+
+@keyframes slideLeft {
+	0% {
+		transform: translateX(150%);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes slideLeft {
+	0% {
+		-webkit-transform: translateX(150%);
+		opacity: 0;
+	}
+
+	100% {
+		-webkit-transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+.slideRight {
+	animation-name: slideRight;
+	-webkit-animation-name: slideRight;
+	animation-duration: 1s;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-timing-function: ease;
+}
+
+@keyframes slideRight {
+	0% {
+		transform: translateX(-150%);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes slideRight {
+	0% {
+		-webkit-transform: translateX(-150%);
+		opacity: 0;
+	}
+
+	100% {
+		-webkit-transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+.fadeIn {
+	animation-name: fadeIn;
+	-webkit-animation-name: fadeIn;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-timing-function: ease;
+}
+
+.fadeIn,.fadeOut {
+	animation-timing-function: ease;
+	animation-duration: 2s;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.fadeOut {
+	animation-name: fadeOut;
+	-webkit-animation-name: fadeOut;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-timing-function: ease;
+	animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+@-webkit-keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+.rotateInRight {
+	animation-name: rotateInRight;
+	-webkit-animation-name: rotateInRight;
+	animation-duration: 3s;
+	-webkit-animation-duration: 3s;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count: 1;
+	animation-iteration-count: 1;
+}
+
+.rotateInLeft,.rotateInRight {
+	animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes rotateInRight {
+	from {
+		-webkit-transform: rotate(0) translateX(100%) rotate(0);
+	}
+
+	to {
+		-webkit-transform: rotate(360deg) translateX(0) rotate(-360deg);
+	}
+}
+
+@keyframes rotateInRight {
+	from {
+		transform: rotate(0) translateX(100%) rotate(0);
+	}
+
+	to {
+		transform: rotate(360deg) translateX(0) rotate(-360deg);
+	}
+}
+
+.rotateInLeft {
+	animation-name: rotateInLeft;
+	-webkit-animation-name: rotateInLeft;
+	animation-duration: 3s;
+	-webkit-animation-duration: 3s;
+	-webkit-animation-timing-function: ease-in-out;
+	animation-iteration-count: 1;
+}
+
+.rotateIn,.rotateInLeft {
+	-webkit-animation-iteration-count: 1;
+}
+
+@-webkit-keyframes rotateInLeft {
+	from {
+		-webkit-transform: rotate(0) translateX(-100%) rotate(0);
+	}
+
+	to {
+		-webkit-transform: rotate(360deg) translateX(0) rotate(-360deg);
+	}
+}
+
+@keyframes rotateInLeft {
+	from {
+		transform: rotate(0) translateX(-100%) rotate(0);
+	}
+
+	to {
+		transform: rotate(360deg) translateX(0) rotate(-360deg);
+	}
+}
+
+.rotateIn {
+	animation-name: rotateIn;
+	-webkit-animation-name: rotateIn;
+	animation-duration: 3s;
+	-webkit-animation-duration: 3s;
+	animation-timing-function: ease;
+	-webkit-animation-timing-function: ease;
+	animation-iteration-count: 1;
+	-webkit-transform-origin: center;
+	transform-origin: center;
+}
+
+@-webkit-keyframes rotateIn {
+	0% {
+		-webkit-transform: rotate3d(0,0,1,-720deg);
+		transform: rotate3d(0,0,1,-720deg);
+		opacity: 0;
+	}
+
+	100% {
+		-webkit-transform-origin: center;
+		transform-origin: center;
+		-webkit-transform: none;
+		transform: none;
+		opacity: 1;
+	}
+}
+
+@keyframes rotateIn {
+	0% {
+		-webkit-transform: rotate3d(0,0,1,-720deg);
+		transform: rotate3d(0,0,1,-720deg);
+		opacity: 0;
+	}
+
+	100% {
+		-webkit-transform: none;
+		transform: none;
+		opacity: 1;
+	}
+}
+
+.bounceIn {
+	-webkit-animation-name: bounceIn;
+	animation-name: bounceIn;
+	-webkit-animation-duration: .8s;
+	animation-duration: .8s;
+	-webkit-animation-timing-function: cubic-bezier(.215,.61,.355,1);
+	animation-timing-function: cubic-bezier(.215,.61,.355,1);
+}
+
+@-webkit-keyframes bounceIn {
+	0% {
+		opacity: 0;
+		-webkit-transform: scale3d(.3,.3,.3);
+		transform: scale3d(.3,.3,.3);
+	}
+
+	20% {
+		-webkit-transform: scale3d(1.1,1.1,1.1);
+		transform: scale3d(1.1,1.1,1.1);
+	}
+
+	40% {
+		-webkit-transform: scale3d(.9,.9,.9);
+		transform: scale3d(.9,.9,.9);
+	}
+
+	60% {
+		opacity: 1;
+		-webkit-transform: scale3d(1.03,1.03,1.03);
+		transform: scale3d(1.03,1.03,1.03);
+	}
+
+	80% {
+		-webkit-transform: scale3d(.97,.97,.97);
+		transform: scale3d(.97,.97,.97);
+	}
+
+	100% {
+		opacity: 1;
+		-webkit-transform: scale3d(1,1,1);
+		transform: scale3d(1,1,1);
+	}
+}
+
+@keyframes bounceIn {
+	0% {
+		opacity: 0;
+		-webkit-transform: scale3d(.3,.3,.3);
+		transform: scale3d(.3,.3,.3);
+	}
+
+	20% {
+		-webkit-transform: scale3d(1.1,1.1,1.1);
+		transform: scale3d(1.1,1.1,1.1);
+	}
+
+	40% {
+		-webkit-transform: scale3d(.9,.9,.9);
+		transform: scale3d(.9,.9,.9);
+	}
+
+	60% {
+		opacity: 1;
+		-webkit-transform: scale3d(1.03,1.03,1.03);
+		transform: scale3d(1.03,1.03,1.03);
+	}
+
+	80% {
+		-webkit-transform: scale3d(.97,.97,.97);
+		transform: scale3d(.97,.97,.97);
+	}
+
+	100% {
+		opacity: 1;
+		-webkit-transform: scale3d(1,1,1);
+		transform: scale3d(1,1,1);
+	}
+}
+* {
+	font-family: Century Gothic;
+	cursor: url("normal.cur"),default;
+	color: white;
+}
+
+#myInput {
+	width: 50%;
+	min-width: 280px;
+}
+
+body {
+	width: 100%;
+	height: 100vh;
+}
+
+form {
+	position: relative;
+}
+
+.tasksInput {
+	margin-right: 150px;
+}
+
+.submit-and-options {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+#user {
+	color: white;
+}    
+}
+
+.autocomplete {
+	position: relative;
+	display: inline-block;
+}
+
+.autocomplete-items {
+	position: absolute;
+	border-bottom: none;
+	border-top: none;
+	font-size: 18px;
+	z-index: 99;
             /*position the autocomplete items to be the same width as the container:*/
-            top: 100%;
-            left: 20%;
-            right: 20%;
-            border: 1px solid black;
-        }
-
-            .autocomplete-items div {
-                padding: 10px;
-                cursor: pointer;
-                background-color: #fff;
-            }
-
-                .autocomplete-items div:hover {
-                    background-color: #333;
-                    color: #fff;
-                    font-size: 1.8vw;
-                }
-
-        .autocomplete-active {
-            background-color: #333 !important;
-            color: #ffffff;
-            font-size: 1.8vw;
-        }
-
-        button {
-            width: 10vw;
-            height: 8vw;
-            border-radius: 8px;
-            font-size: 1.5vw;
-            border: 2px solid black;
-            background-color: transparent;
-            box-shadow: 0 0 0px grey;
-            transition: 0.5s;
-        }
-
-            button:hover {
-                font-size: 1.6vw;
-            }
-
-
-
-        #overlay {
-            z-index: 999;
-        }
-
-        body {
-            animation: FadeIn 2s;
-            overflow-x: hidden;
-            margin: 0px;
-        }
-
-
-        @keyframes FadeIn {
-            0% {
-                opacity: 0;
-            }
-
-            100% {
-                opacity: 1;
-            }
-        }
-
-        @keyframes animatetop {
-            from {
-                top: 0px;
-                opacity: 0
-            }
-
-            to {
-                top: 40px;
-                opacity: 1
-            }
-        }
-
-        #txt_1, #txt_2, #txt_3, #txt_4, #txt_5, #txt_6, #txt_7, #txt_8, #txt_9, #txt_10, #txt_11, #txt_12, #name {
-            height: 20px;
-            font-size: 10px;
-            width: 150px;
-            border: 1px solid black;
-            background: white;
-            color: black;
-        }
-
-        .disable-select {
-            user-select: none;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-        }
-
-
-
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            color: black;
-            overflow: hidden;
-            background-color: transparent;
-            position: fixed;
-            top: 0;
-            width: 100%;
-        }
-
-        li {
-            float: left;
-        }
-
-            li a {
-                display: block;
-                text-align: center;
-                padding: 14px 16px;
-                color: black;
-                text-decoration: none;
-            }
-
-        #c {
-            text-decoration: none;
-            font-size: 11px;
-        }
-
-        #wss {
-            text-decoration: none;
-            color: black;
-            font-size: 11px;
-        }
-
-            #wss:hover {
-                text-decoration: underline;
-            }
-
-        #options {
-            position: relative;
-            left: 20.5%;
-            font-size:1vw;
-        }
-
-        #web:hover, #img:hover, #vid:hover, #map:hover, #news:hover {
-            text-decoration: underline;
-        }
-
-        @media screen and (prefers-color-scheme: dark) {
-            .autocomplete-items, .autocomplete-items div, .autocomplete-active {
-                color: white;
-                background: #222;
-            }
-
-            .autocomplete-items {
-                border: 1px solid white;
-            }
-
-            * {
-                color: white;
-            }
-
-            ul {
-                color: white;
-            }
-
-            body {
-                background: #222;
-            }
-
-            #myInput {
-                border: 2px solid white;
-            }
-
-            button {
-                border: 2px solid white;
-                color: white;
-            }
-
-            #menu1, .darknav, #wss {
-                color: white;
-            }
-
-            #txt_1, #txt_2, #txt_3, #txt_4, #txt_5, #txt_6, #txt_7, #txt_8, #txt_9, #txt_10, #txt_11, #txt_12, #name {
-                background: #222;
-                color: black;
-                border: 1px solid white;
-            }
-        }
-
-        @media screen and (prefers-color-scheme: light) {
-            #myInput {
-                border: 2px solid black;
-            }
-
-#mySidenav {
- background:#ddd;
- color:black;
-}
-.closebtn {
- color:black;
-}
-        }
-
-        #txt_1, #txt_2, #txt_3, #txt_4, #txt_5, #txt_6, #txt_7, #txt_8, #txt_9, #txt_10, #txt_11, #txt_12, #name {
-            background: #fff;
-            color: black;
-            border: 1px solid black;
-        }
-
-        #myBtn {
-            width: 5%;
-            height: 46px;
-            background: transparent;
-            border: 0px solid black;
-            border-radius: 3px;
-            outline: none;
-            font-size: 25px;
-            position: relative;
-            left: -30px;
-            top: -1px;
-        }
-
-            #myBtn:hover {
-                box-shadow: none;
-            }
-
-        #myInput {
-            width: 66%;
-            height: 45px;
-            position: relative;
-            left: 30px;
-            box-sizing: border-box;
-            background-color: transparent;
-            padding: 12px 30px 12px 5px;
-            background-size: 30px;
-            background-repeat: no-repeat;
-            border-radius: 3px;
-        }
-
-        .rotate {
-            transition: 1s;
-        }
-
-            .rotate:hover {
-                transform: rotateZ(360deg);
-            }
-
-.popup {
-  position: relative;
-  display: inline-block;
+	top: 100%;
+	width: 50%;
+	left: 24.5%;
 }
 
-.popup .popuptext {
-  visibility: hidden;
-  width: 60%;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 8px 0;
-  position: absolute;
-  z-index: 1;
-  bottom:100px;
-  left: 50%;
-  margin-left: -80px;
+.autocomplete-items div {
+	padding: 10px;
+	cursor: pointer;
+	background-color: #2a363b;
 }
 
-.popup .popuptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
+.autocomplete-items div:hover {
+	background-color: #4a5f68;
+	color: #fff;
+	font-size: 20px;
 }
 
-.popup .show {
-  visibility: visible;
-  -webkit-animation: fadeIn 1s;
-  animation: FadeIn 1s;
+.autocomplete-active {
+	background-color: #4a5f68 !important;
+	color: #ffffff;
+	font-size: 20px;
+}
+
+button {
+	width: 10%;
+	min-width: 100px;
+	height: 8vmax;
+	border-radius: 8px;
+	border: 2px solid white;
+	bottom: 0px;
+	box-shadow: 0 0 0px grey;
+	background-size: 100% 200%;
+	background-image: linear-gradient(to top, #4a5f68 50%,  #20292d 50%);
+	transition: background-position 0.2s ,bottom ease 0.2s;
+}
+
+.btn {
+	margin: 15px;
+	font-size: 18px;
+}
+
+button:hover {
+	background-position: 0 -100%;
+	bottom: 10px;
+	position: relative;
+}
+
+body {
+	background: #20292d;
+}
+
+#myInput:hover {
+	background: #44444444;
+}
+
+#myInput {
+	z-index: 1px;
+}
+
+#overlay {
+	position: fixed;
+	display: none;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+           background:#20292d;
+           opacity:90%;
+	z-index: 0;
+}
+
+body {
+	margin: 0px;
+}
+
+#txt_1, #txt_2, #txt_3, #txt_4, #txt_5, #txt_6, #txt_7, #txt_8, #txt_9, #txt_10, #txt_11, #txt_12, #name , #customws ,#bg {
+	height: 20px;
+	font-size: 10px;
+	width: 150px;
+	border: 1px solid black;
+	background: white;
+	color: black;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	color: black;
+	overflow: hidden;
+	background-color: transparent;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+li {
+	float: left;
+}
+
+li a {
+	display: block;
+	text-align: center;
+	padding: 14px 16px;
+	color: black;
+	text-decoration: none;
+}
+
+#c {
+	text-decoration: none;
+	font-size: 11px;
+	position: absolute;
+	right: 0px;
+	bottom: 3px;
+	z-index: 10px;
+}
+
+#myInput {
+	border: 1px solid white;
+}
+
+#wss {
+	text-decoration: none;
+	color: white;
+	font-size: 11px;
+}
+
+#wss:hover {
+	text-decoration: underline;
+}
+
+#options {
+	position: relative;
+	left: 27%;
+	font-size: 15px;
+}
+
+#web:hover, #img:hover, #vid:hover, #map:hover, #news:hover {
+	text-decoration: underline;
+}
+
+#txt_1, #txt_2, #txt_3, #txt_4, #txt_5, #txt_6, #txt_7, #txt_8, #txt_9, #txt_10, #txt_11, #txt_12, #name , #customws , #bg {
+	background: #fff;
+	color: black;
+	border: 1px solid black;
+}
+
+@media only screen and (max-width: 530px) {
+	#myBtn {
+		display: none;
+	}
+}
+
+#myBtn {
+	width: 5%;
+	height: 46px;
+	background: transparent;
+	border: 0px solid black;
+	border-radius: 3px;
+	outline: none;
+	font-size: 25px;
+	position: relative;
+	left: -30px;
+	top: -1px;
+}
+
+#myBtn:hover {
+	box-shadow: none;
+}
+
+#myInput {
+	height: 45px;
+	position: relative;
+	left: 4%;
+	box-sizing: border-box;
+	background-color: transparent;
+	padding: 12px 30px 12px 5px;
+	background-size: 30px;
+	background-repeat: no-repeat;
+	border-radius: 3px;
 }
 
 .sidenav {
-  height: 90%;
-  width: 0;
-  position: fixed;
-  z-index: 3;
-  top: 0;
-  left: 0;
-  background-color: #333;
-  overflow-x:hidden;
-  transition: 0.5s;
-  padding-top: 60px;
+	height: 90%;
+	width: 0%;
+	position: fixed;
+	z-index: 3;
+	top: 0;
+	left: 0;
+	background-color: #20292d;
+	transition: 0.5s;
+	padding-top: 60px;
 }
 
-
-
 .sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  left:10px;
-  font-size:35px;
-  text-decoration:none;
-  outline:none;
+	position: absolute;
+	top: 0;
+	left: 10px;
+	font-size: 35px;
+	text-decoration: none;
+	outline: none;
 }
 
 @media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+	.sidenav {
+		padding-top: 15px;
+	}
+
+	.sidenav a {
+		font-size: 18px;
+	}
 }
+
 #overlaysidenav {
-  position: fixed; 
-  display: none; 
-  width: 100%; 
-  height: 100%; /* Full height (cover the whole page) */
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #222;
-  opacity:50%;
-  z-index: 2; 
-}
-#myPopup {
- font-size:1vw;
-}
-#gridbtn {
- resize: horizontal;
- overflow:hidden;
- max-height:8vw;
+	position: fixed;
+	display: none;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background:#20292d;
+           opacity:90%;
+	z-index: 2;
 }
 
+#more {
+	position: relative;
+	top: 7px;
+}
 
+#divmore {
+	height: 40%;
+	width: 0;
+	position: absolute;
+	z-index: 3;
+	top: 120px;
+	left: 28%;
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 60px;
+	background: #2a363b;
+}
 
+#recent {
+	display: none;
+	position: absolute;
+	left: 24.5%;
+	width: 48.5%;
+	padding: 10px;
+	top: 31px;
+	border: 1px solid white;
+}
+
+.rotate {
+	transition: 0.5s;
+}
+
+.rotate:hover {
+	transform: rotateZ(360deg);
+}
+
+.morebtn {
+	width: 20%;
+}
+
+.mob {
+	display: none;
+}
+
+#keycode {
+	border: 2px solid white;
+	width: 50%;
+	border-radius: 10px;
+	position: absolute;
+	top: 10%;
+	left: 25%;
+	background: #20292d;
+	overflow: auto;
+	height: 70%;
+	display: none;
+}
+
+@media only screen and (max-width:800px) {
+	#keycode , #release {
+		width: 90%;
+		left: 5%;
+	}
+
+	.autocomplete-items {
+		width: 100%;
+		left: 3%;
+	}
+
+	.mob {
+		display: inherit;
+	}
+
+	#myInput {
+		left: 2.8%;
+	}
+
+	#btngrid1 {
+		display: none;
+	}
+
+	#options {
+		left: 8%;
+	}
+}
+
+.morebtn {
+	margin: 10px;
+}
+
+.btn {
+	text-decoration: none;
+}
+
+.hidebtn {
+	margin: 5px;
+	left: 10px;
+	position: relative;
+	align-items: center;
+}
+
+#load {
+	background: #2a363b;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	z-index: 55;
+	display: none;
+}
+
+.btn {
+	text-overflow: ellipsis;
+}
+
+#recent , .btn , #user {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.loader {
+	border: 16px solid #fff;
+	border-radius: 50%;
+	border-top: 16px solid #999;
+	width: 120px;
+	height: 120px;
+	-webkit-animation: spin 2s linear infinite;
+	animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+#loaderdiv {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-color: #20292d;
+	z-index: 56;
+	display: none;
+}
+
+body , #mySidenav {
+	overflow-x: hidden;
+}
+
+.accordion {
+	padding: 18px;
+	width: 100%;
+	text-align: left;
+	outline: none;
+	font-size: 15px;
+	border: 0.5px solid white;
+	transition: 0.4s;
+}
+
+.panel {
+	padding: 0 18px;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+	border: 0.5px solid white;
+}
+
+.scroll::-webkit-scrollbar {
+	width: 7px;
+            background:#555;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background: #fff;
+}
+
+#mobmsg {
+	margin-right: 10px;
+	border: 1px solid white;
+	text-decoration: underline;
+	display: none;
+}
+
+#searchdiv {
+	position: relative;
+}
+
+.mode {
+	margin-right: 10px;
+	height: 50px;
+}
+
+#header {
+	display: none;
+}
+
+#btngrid2 {
+	display: inherit;
+}
+.invert {
+ filter: invert(100%);
+}
+#release {
+ width:50%;
+}
+#intro {
+ width:100%;
+}
     </style>
 </head>
-<body oncontextmenu='openNav();' id="body" class="disable-select" draggable="false">
-
-    <ul id='ul'>
-        <li onclick="openNav()" class="rotate"><a href="#menuopen"><i class="material-icons" style='font-size:20px;' id="menu1" accesskey='m'>menu</i></a></li>
-        <li><a href="https://webergstudios.github.io/CaltoTheCalculator/" style='font-size:15px;' class="darknav">Calculator</a></li>
-        <li><a href="converter.html" style='font-size:15px;' class="darknav">Converter</a></li>
-        <li><a href="https://webergstudios.github.io/weberg-to-do/" style='font-size:15px;' class="darknav">To-Do</a></li>
-        <li><a href="https://webergstudios.github.io/weberg-writepad/" style='font-size:15px;' class="darknav">WritePad</a></li>
-        <li style='float:right'><a href='https://github.com/webergstudios/webergsearch/blob/main/extensions/help.md' id="help"><i class="material-icons" style="font-size:20px;" accesskey="h">help</i></a></li>
-        <li style='float:right'><a href="https://webergstudios.github.io/weberghome" id="logonav"><img src='logo.png' id="navlogo" style="width:20px; height:20px;"></a></li>
-        <li style='float:right'><a href='https://webergstudios.github.io/webergsearchbeta/' style="font-size:15px;" class="darknav" id='user'>User</a></li>
-    </ul>
-    <br>
-  <br>
-<div id="overlaysidenav" onclick="off()"></div>
-<div id="mySidenav" class="sidenav">
-  <a href="#menuclose" accesskey="n" class="closebtn" onclick="closeNav()">&times;</a>
-<p id="version" style="position: relative; left: 10px;">Weberg Search v17&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-        <p style="position: relative;  left: 10px;">Type in the URL and NAME of your shortcut<br> and then click DONE or REFRESH THE PAGE to save them</p>
-
-        <input style="position: relative; left: 10px; width:310px;" type="text" id="name" placeholder="What is your name?" onkeyup="saveValue(this);"><br><br>
-
-        <input style="position: relative; left: 10px;" type="text" id="txt_1" placeholder='your 1st shortcut url' onkeyup='saveValue(this);' />
-
-        <input style="position: relative; left: 10px;" type="text" id="txt_2" placeholder='your 1st shortcut name' onkeyup='saveValue(this);' /><br><br>
-
-        <input style="position: relative; left: 10px;" type="text" id="txt_3" placeholder='your 2st shortcut url' onkeyup='saveValue(this);' />
-
-        <input style="position: relative; left: 10px;" type="text" id="txt_4" placeholder='your 2st shortcut name' onkeyup='saveValue(this);' /><br><br>
-
-        <input style="position: relative; left: 10px;" type="text" id="txt_5" placeholder='your 3rd shortcut url' onkeyup='saveValue(this);' />
-
-        <input style="position: relative; left: 10px;" type="text" id="txt_6" placeholder='your 3rd shortcut name' onkeyup='saveValue(this);' /><br><br>
-
-        <input style="position: relative; left: 10px;" type="text" id="txt_7" placeholder='your 4th shortcut url' onkeyup='saveValue(this);' />
-
-        <input style="position: relative; left: 10px;" type="text" id="txt_8" placeholder='your 4th shortcut name' onkeyup='saveValue(this);' /><br><br>
-
-        <input style="position: relative; left: 10px;" type="text" id="txt_9" placeholder='your 5th shortcut url' onkeyup='saveValue(this);' />
-
-        <input style="position: relative; left: 10px;" type="text" id="txt_10" placeholder='your 5th shortcut name' onkeyup='saveValue(this);' /><br><br>
-
-        <input style="position: relative; left: 10px;" type="text" id="txt_11" placeholder='your 6th shortcut url' onkeyup='saveValue(this);' />
-
-        <input style="position: relative; left: 10px;" type="text" id="txt_12" placeholder='your 6th shortcut name' onkeyup='saveValue(this);' /><br><br>
+<body oncontextmenu="contextmenu();" id="body" class="disable-select scroll" draggable="false">
 
 
+<div id="release" style="
+border: 2px solid white;
+	border-radius: 10px;
+	position: absolute;
+	top: 10%;
+	left: 25%;
+	background: #20292d;
+	overflow: auto;
+	height: 70%;
+z-index:100;
+">
+<center>
+<p onclick="closerelease();" style="font-size:50px; position:absolute; top:-60px;">&times;</p><br>
 
-        <button style="left: 10px; position: relative; width: 100px; height: 50px;" onclick="ok();">Done!</button><br>
-        <p id='helpp' style="left:10px; position:relative; font-size:12px;">download app by <a href="https://github.com/webergstudios/webergsearch">clicking here</a> and then<br>scroll down to see<br>download link<br><br>Have any issues or see a bug<br>or have a suggestion for Weberg Search<br>please click <a href="https://github.com/webergstudios/webergsearch/issues">here</a></p>
-
-
+<h1>Welcome to Weberg Search</h1>
+<p>New Year is here with the new weberg search</p>
+<p>Welcome to weberg search version 17.1</p><br><br>
+<p>To see what is new in this release please <a href="https://github.com/webergstudios/webergsearch/blob/main/README.md">click here</a></p>
+<p>Click on the weberg search logo on top right corner for help</p><br><br>
+</center>
 </div>
-    <script>
-function off() {
-  document.getElementById("mySidenav").style.width = "0";
-  document.getElementById("overlaysidenav").style.display = "none";
+<div id="shade" style="
+height:100%;
+width:100%;
+background:#20292d;
+position: absolute;
+z-index:99;
+opacity:80%;
+"> </div>
+<script>
+function closerelease() {
+ document.getElementById("release").style.display = "none";
+ document.getElementById("shade").style.display = "none";
+ var releasenone = document.getElementById("release").style.display = "none";
+ var shadenone = document.getElementById("shade").style.display = "none";
+ localStorage.setItem("release" , releasenone);
+ localStorage.setItem("shade" , shadenone);
 }
+window.onload = document.getElementById("release").style.display = localStorage.getItem("release");
+window.onload = document.getElementById("shade").style.display = localStorage.getItem("shade");
+</script>
+
+
+
+<ul id='ul'>
+	<li onclick="openNav()" class="slideRight"><a><i class="material-icons" style='font-size:20px;' id="settings" accesskey='m'>settings</i></a></li>
+	<li class="slideLeft" style='float:right' onclick="openhelp();"><a id="help"><img src="https://webergstudios.github.io/webergsearchbeta/extensions/logo.png" class="invert" height="20" width="20" accesskey="h" draggable="false"></a></li>
+	<li style='float:right'><a href='https://webergstudios.github.io/webergsearchbeta/' style="font-size:15px;" class="darknav" id='user'>User</a></li>
+</ul>
+<div id="divmore">
+	<h1>
+<center>Weberg Apps</center><br><center>
+<a href="https://webergstudios.github.io/CaltoTheCalculator/"><button class="morebtn">Calculator</button></a>
+<a href="https://webergstudios.github.io/webergsearch/webergconverter"><button class="morebtn">Converter</button></a>
+<a href="https://webergstudios.github.io/weberg-writepad/"><button class="morebtn">Write-Pad</button></a>
+<a href="https://webergstudios.github.io/weberg-to-do/"><button class="morebtn">To-Do</button></a></center>
+</h1></div>
+<br>
+<br>
+<div id="overlaysidenav" onclick="off()"></div>
+<div id="overlay" onclick="offinp();"></div>
+<div id="mySidenav" class="sidenav scroll"> <a accesskey="n" class="closebtn" onclick="closeNav()">&times; <span style="font-size:20px; position:relative; top:-5px;">Settings</span></a>
+	<p id="mobmsg" style="position: relative; left: 10px;">Your Device is slightly incompatible <span class="mob"><br></span>with this website please use a<span class="mob"><br></span> PC for better experience</p>
+	<p style="position: relative; left: 10px;">Weberg Search v17.1
+		<br>
+		<br>Remember to click done after tweaking
+		<br> settings if you dont click done please
+		<br> refresh the page to save the tweaks</p>
+	<div class="accordion" id="mh1">
+		<p style="position: relative;  left: 10px;">Edit The Shortcuts</p>
+	</div>
+	<div class="panel">
+		<p style="position: relative;  left: 10px;">Type in the URL and NAME of your shortcut
+			<br> and then click DONE or REFRESH THE<span class="mob"><br></span> PAGE to save them</p>
+		<input style="position: relative; left: 10px;" type="text" id="txt_1" placeholder='your 1st shortcut url' onkeyup='saveValue(this);' />
+		<input style="position: relative; left: 10px;" type="text" id="txt_2" placeholder='your 1st shortcut name' onkeyup='saveValue(this);' />
+		<br>
+		<br>
+		<input style="position: relative; left: 10px;" type="text" id="txt_3" placeholder='your 2st shortcut url' onkeyup='saveValue(this);' />
+		<input style="position: relative; left: 10px;" type="text" id="txt_4" placeholder='your 2st shortcut name' onkeyup='saveValue(this);' />
+		<br>
+		<br>
+		<input style="position: relative; left: 10px;" type="text" id="txt_5" placeholder='your 3rd shortcut url' onkeyup='saveValue(this);' />
+		<input style="position: relative; left: 10px;" type="text" id="txt_6" placeholder='your 3rd shortcut name' onkeyup='saveValue(this);' />
+		<br>
+		<br>
+		<input style="position: relative; left: 10px;" type="text" id="txt_7" placeholder='your 4th shortcut url' onkeyup='saveValue(this);' />
+		<input style="position: relative; left: 10px;" type="text" id="txt_8" placeholder='your 4th shortcut name' onkeyup='saveValue(this);' />
+		<br>
+		<br>
+		<input style="position: relative; left: 10px;" type="text" id="txt_9" placeholder='your 5th shortcut url' onkeyup='saveValue(this);' />
+		<input style="position: relative; left: 10px;" type="text" id="txt_10" placeholder='your 5th shortcut name' onkeyup='saveValue(this);' />
+		<br>
+		<br>
+		<input style="position: relative; left: 10px;" type="text" id="txt_11" placeholder='your 6th shortcut url' onkeyup='saveValue(this);' />
+		<input style="position: relative; left: 10px;" type="text" id="txt_12" placeholder='your 6th shortcut name' onkeyup='saveValue(this);' />
+		<br>
+		<br> </div>
+	<div class="accordion" id="mh2">
+		<p style="position: relative;  left: 10px;">Hide and Show The Shortcuts</p>
+	</div>
+	<div class="panel">
+		<br>
+		<button class="hidebtn" style="position: relative; width: 100px; height: 50px;" id="1" onclick="hidebtn1();">Hide Shortcut 1</button>
+		<button id="2" class="hidebtn" style=" position: relative; width: 100px; height: 50px;" onclick="hidebtn2();">Hide Shortcut 2</button>
+		<button id="3" class="hidebtn" style="position: relative; width: 100px; height: 50px;" onclick="hidebtn3();">Hide Shortcut 3</button><span class="mob"><br></span>
+		<button class="hidebtn" style="position: relative; width: 100px; height: 50px;" id="4" onclick="hidebtn4();">Hide Shortcut 4</button>
+		<button class="hidebtn" style=" position: relative; width: 100px; height: 50px;" id="5" onclick="hidebtn5();">Hide Shortcut 5</button>
+		<button class="hidebtn" style="position: relative; width: 100px; height: 50px;" id="6" onclick="hidebtn6();">Hide Shortcut 6</button> <span class="mob"><br></span>
+		<button class="hidebtn" style="position: relative; width: 100px; height: 50px;" id="7" onclick="showbtn();">Show All Shortcuts</button>
+                        <button class="hidebtn" id="8" style="position: relative; width: 100px; height: 50px;" onclick="hidebtn();">Hide All Shortcuts</button>
+		<br>
+<span class="mob"><br></span><span class="mob"><br></span>
+		<br><span class="mob"><br></span> </div>
+	<div class="accordion">
+		<p style="position: relative;  left: 10px;">Interface</p>
+	</div>
+	<div class="panel">
+		<br>
+		<button id='minimal' onclick="minimal();" class="mode">Classic Mode</button>
+		<button id='modern' onclick="modern();" class="mode">Modern Mode</button>
+                      <button id='defaultmode' onclick="defmode();" class="mode">Minimal Mode</button>
+		<br><br>
+	</div>
+	<div class="accordion">
+		<p style="position: relative;  left: 10px;">Personalize</p>
+	</div>
+	<div class="panel">
+		<br>
+		<p style="position: relative;  left: 9px;">use custom background color</p>
+		<input style="position: relative; left: 10px;width:310px;" type="text" id="bg" onkeydown="bg();" placeholder="type your background color">
+                       <p style="position:left:10px; font-size:10px;">Some colors may not work check solution using error code #004</p>
+		<br>
+		<p style="position: relative;  left: 9px;">what is your name?</p>
+		<input style="position: relative; left: 10px; width:310px;" type="text" id="name" placeholder="What is your name?" maxlength="50" onkeyup="saveValue(this);">
+		<br>
+		<br>
+	</div>
+	<div class="accordion">
+		<p style="position: relative;  left: 10px;">Reset</p>
+	</div>
+	<div class="panel">
+		<p style="position: relative;  left: 10px;">Reset Weberg Search. Doing this will clear<span class="mob"><br></span> all your data on weberg search</p>
+		<button style="left: 10px; position: relative; width: 100px; height: 50px;" onclick="reset();">Reset</button>
+		<br>
+		<br>
+	</div>
+	<br>
+	<button style="left: 10px; position: relative; width: 100px; height: 50px;" onclick="ok();">Done!</button>
+	<p class='helpp' style="left:10px; position:relative; font-size:12px;">download app by <a href="https://github.com/webergstudios/webergsearch">clicking here</a> and then
+		<br>scroll down to see
+		<br>download link
+		<br>
+		<br>Have any issues or see a bug
+		<br>or have a suggestion for Weberg Search
+		<br>please click <a href="https://github.com/webergstudios/webergsearch/issues">here</a>
+		<br>
+		<br> <a href="https://github.com/webergstudios/webergsearch/issues" id="wss">send feedback</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="mob"><br></span> </p>
+</div> <span draggable="true" ondragstart="drag(event)" id="c">
+            <span style="font-size:15px; bottom:-2px; position:relative;">©</span> Weberg Studios <span id="year"></span> </span>
+<button onclick="gsearch();" style="display:none;" accesskey="g"></button>
+<br>
+<br>
+
+<div id="header2">
+	<center>
+		<div id="header">
+			<h1 id="hdr" style="font-size: 45px;">Weberg Search</h1></div>
+	</center>
+</div>
+<p id="options" class="shake"><span id="web" accesskey="w" onclick="myfuncweb();">Web</span>&nbsp;&nbsp;&nbsp;<span id="img" accesskey="i" onclick="myfuncimg();">Images</span>&nbsp;&nbsp;&nbsp;<span id="vid" accesskey="v" onclick="myfuncvid();">Videos</span>&nbsp;&nbsp;&nbsp;<span id="map" onclick="myfuncmap();">Maps</span>&nbsp;&nbsp;&nbsp;<span id="news" onclick="myfuncnews();">News</span>&nbsp;&nbsp;&nbsp;<span id="more" onclick="moreopen();"><i class="material-icons">more_horiz</i></span></p>
+<center>
+	<div class="autocomplete" style="width:90%; border-width:1px; border-color:black; z-index: 0;">
+		<form style="z-index:0;" id="formsearch" method="GET" action="https://bing.com" autocomplete="off">
+			<div id="searchdiv">
+				<input id="myInput" class="slideUp" type="q" name="q" onkeyup="https();" accesskey="s" title="" placeholder="Search the web or enter a web address" style="outline: none; font-size: 20px;" autofocus="" required="" />&nbsp;&nbsp;
+				<button type="submit" title="" class="rotate" title="Search" onclick="funcurl();" name="search" id="myBtn"><i class="fa fa-search"></i></button>
+				<p id="recent" onclick="openrecent();"></p>
+			</div>
+		</form>
+	</div>
+	<div id="mh3">
+		<div id="btngrid2">
+			<div id="btngrid1">
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+			
+			<br>
+			<br>
+			<br>
+			<br>
+			<br></div>
+		</div>
+		<br>
+		<div id="btngrid" class="slideDown container">
+			 <a class="draggable" draggable="true" href='' id='a1'><button class="btn" id="btn1">Shortcut</button></a>
+        <a class="draggable" draggable="true" href='' id='a2'><button class="btn" title="" id="btn2">Shortcut</button></a>
+        <a class="draggable" draggable="true" href='' id='a3'><button class="btn" id="btn3">Shortcut</button></a>
+        <a class="draggable" draggable="true" href='' id='a4'><button class="btn" id="btn4">Shortcut</button></a>
+        <a class="draggable" draggable="true" href='' id='a5'><button class="btn" id="btn5">Shortcut</button></a>
+        <a class="draggable" draggable="true" href='' id='a6'><button  ondrop="drop(event)" ondragover="allowDrop(event)" class="btn" title="" id="btn6">Shortcut</button></a>
+		</div>
+	</div>
+	<br>
+	<br> </center>
+<div class="scroll slideDown" id="keycode">
+	<center>
+		<h1>Help</h1>
+		<h2>Shortcut keys</h2>
+		<p class="keycodep">press alt + w to search the web</p>
+		<p class="keycodep">press alt + i to search for images</p>
+		<p class="keycodep">press alt + v to search for videos</p>
+		<p class="keycodep">press alt + s to focus on search box</p>
+		<p class="keycodep">press alt + m to open settings</p>
+		<p class="keycodep">press alt + n to close settings</p>
+		<p class="keycodep">press alt + h to open help</p>
+		<p class="keycodep">press alt + g to search in google</p>
+		<br>
+		<h2>How to make shortcuts</h2> To make shortcuts in Weberg Search click on settings option located on top-left corner > click on edit the shortcuts section > type in the url and name of your shortcut.<br>if your shortcuts are not visible it means they are hidden, open settings>hide and show shortcuts>show all shortcuts.
+		<br>then click done or refresh the page to save them.
+		<br>
+		<h2>how to enter urls in search bar</h2> to enter urls in search bar start with "https://" then click enter or search button. to enter file url start with "file://C:/".
+		<h2>Personalization</h2> open settings and click on personalize
+		<br>
+		<br>
+		<h2>Version</h2>
+		<p class="keycodep">you are running the latest version 17.1
+			<br>
+<br>
+<p class="keycodep">
+Error Codes<br><br>
+<a href="error.html">click here for solutions</a> </center>
+</div>
+</body>
+<script>
+function hidebtn() {
+ document.getElementById("1").click();
+ document.getElementById("2").click();
+ document.getElementById("3").click();
+ document.getElementById("4").click();
+ document.getElementById("5").click();
+ document.getElementById("6").click();
+}
+
+
+
+window.onload = setTimeout(os, 100);
+function os() {
+ if (navigator.appVersion.indexOf("Mac") != -1) {
+  alert("error code #003");
+  window.location.reload();
+}
+}
+
+document.getElementById("year").innerHTML = (new Date().getFullYear());
+function contextmenu() {
+	event.preventDefault();
+	document.getElementById("mySidenav").style.width = "500px";
+	document.getElementById("overlaysidenav").style.display = "inline";
+}
+
+function gsearch() {
+	document.getElementById("formsearch").action = "https://www.google.com/search?q=";
+}
+if(screen.width <= 1133) {
+	document.getElementById("mobmsg").style.display = "inherit";
+	if(screen.availHeight < screen.availWidth) {
+		alert("Please use Portrait Mode");
+		window.location.reload();
+	}
+}
+var acc = document.getElementsByClassName("accordion");
+var i;
+for(i = 0; i < acc.length; i++) {
+	acc[i].addEventListener("click", function() {
+		this.classList.toggle("active");
+		var panel = this.nextElementSibling;
+		if(panel.style.maxHeight) {
+			panel.style.maxHeight = null;
+		} else {
+			panel.style.maxHeight = panel.scrollHeight + "px";
+		}
+	});
+}
+
+function bg() {
+	var bgval = document.getElementById("bg").value;
+	localStorage.setItem("wswsbg", bgval);
+	document.getElementById("body").style.backgroundColor = bgval;
+}
+var bgvalgo = localStorage.getItem("wswsbg");
+window.onload = document.getElementById("bg").value = bgvalgo;
+window.onload = document.getElementById("body").style.backgroundColor = bgvalgo;
+
+function reset() {
+	localStorage.clear();
+	window.location.reload();
+}
+
+function offinp() {
+	document.getElementById("keycode").style.display = "none";
+	document.getElementById("overlay").style.display = "none";
+	document.getElementById("recent").style.display = "none";
+	document.getElementById("searchdiv").style.top = "0px";
+	document.getElementById("options").style.opacity = "100%";
+}
+
+function off() {
+	document.getElementById("mySidenav").style.width = "0";
+	document.getElementById("divmore").style.width = "0";
+	document.getElementById("overlaysidenav").style.display = "none";
+}
+
 function openNav() {
-  document.getElementById("mySidenav").style.width = "30%";
-  document.getElementById("overlaysidenav").style.display = "inline";
+	document.getElementById("mySidenav").style.width = "500px";
+	document.getElementById("overlaysidenav").style.display = "inline";
+}
+
+function moreopen() {
+	document.getElementById("divmore").style.width = "45%";
+	document.getElementById("overlaysidenav").style.display = "inline";
 }
 
 function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-  document.getElementById("overlaysidenav").style.display = "none";
+	document.getElementById("mySidenav").style.width = "0";
+	document.getElementById("overlaysidenav").style.display = "none";
 }
 
-function popup() {
-  var popup = document.getElementById("myPopup");
-  popup.classList.toggle("show");
+function allowDrop(ev) {
+	ev.preventDefault();
 }
 
-    </script>
-    <center>
+function drag(ev) {
+	ev.dataTransfer.setData("text", ev.target.id);
+}
 
-        <br><br>
-<div class="popup" onclick="popup()">
-<p class="popuptext" id="myPopup">Tip: Press Tab on a auto-prediction to move it to the search bar</p>
-        <p style="font-size: 3vw;" id="ws" onclick="change();">
-            <picture>
-                <source srcset="https://webergstudios.github.io/webergsearch/extensions/logo2.png"
-                        media="(prefers-color-scheme: dark)">
-<img id="centerlogo" align="center" src="https://webergstudios.github.io/webergsearch/extensions/logo.png" style="width: 80px; text-decoration:none;" draggable="false">
-            </picture>
-            Weberg Search
-        </p>
-</div>
-    </center>
-    <p id="options"><span id="web" accesskey="w" onclick="myfuncweb();">Web</span>&nbsp;&nbsp;&nbsp;<span id="img" accesskey="i" onclick="myfuncimg();">Images</span>&nbsp;&nbsp;&nbsp;<span id="vid" accesskey="v" onclick="myfuncvid();">Videos</span>&nbsp;&nbsp;&nbsp;<span id="map" onclick="myfuncmap();">Maps</span>&nbsp;&nbsp;&nbsp;<span id="news" onclick="myfuncnews();">News</span></p>
-    <center>
-        <div class="autocomplete" style="width:90%; border-width:1px; border-color:black; z-index: 0;">
-            <form id="formsearch" autocomplete="off" action="https://bing.com" method="GET">
-                <div id="gridinp"><input id="myInput" type="q" name="q" onkeyup="https();" accesskey="s" placeholder="Search the web or enter a web address" style="outline: none; font-size: 1.5vw;" autofocus="" required="" />&nbsp;&nbsp;<button type="submit"  class="rotate"  title="Search" onclick="funcurl();" name="search" id="myBtn"><i class="fa fa-search"></i></button></div>
-            </form>
-        </div>
+function drop(ev) {
+	ev.preventDefault();
+	var data = ev.dataTransfer.getData("text");
+	ev.target.appendChild(document.getElementById(data));
+}
 
-
-        <br><br><div id="gridbtn">
-        <a href='' id='a1'><button  id="btn1">Shortcut</button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href='' id='a2'><button title="" id="btn2">Shortcut</button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href='' id='a3'><button id="btn3">Shortcut</button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href='' id='a4'><button id="btn4">Shortcut</button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href='' id='a5'><button id="btn5">Shortcut</button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href='' id='a6'><button title="" id="btn6">Shortcut</button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-        <script type="text/javascript">
-            document.getElementById("user").innerHTML = "Welcome, " + getSavedValue("name");
-            document.getElementById("a1").href = getSavedValue("txt_1");
-            document.getElementById("btn1").innerHTML = getSavedValue("txt_2");
-            document.getElementById("btn1").title = getSavedValue("txt_2");
-            document.getElementById("a2").href = getSavedValue("txt_3");
-            document.getElementById("btn2").innerHTML = getSavedValue("txt_4");
-            document.getElementById("btn2").title = getSavedValue("txt_4");
-            document.getElementById("a3").href = getSavedValue("txt_5");
-            document.getElementById("btn3").innerHTML = getSavedValue("txt_6");
-            document.getElementById("btn3").title = getSavedValue("txt_6");
-            document.getElementById("a4").href = getSavedValue("txt_7");
-            document.getElementById("btn4").innerHTML = getSavedValue("txt_8");
-            document.getElementById("btn4").title = getSavedValue("txt_8");
-            document.getElementById("a5").href = getSavedValue("txt_9");
-            document.getElementById("btn5").innerHTML = getSavedValue("txt_10");
-            document.getElementById("btn5").title = getSavedValue("txt_10");
-            document.getElementById("a6").href = getSavedValue("txt_11");
-            document.getElementById("btn6").innerHTML = getSavedValue("txt_12");
-            document.getElementById("btn6").title = getSavedValue("txt_12");
-
-            function change() {
-                document.title = "Weberg Studios";
-            }
-
-            function saveValue(e) {
-                var webergsearch = e.id;
-                var webergsearchval = e.value;
-                localStorage.setItem(webergsearch, webergsearchval);
-            }
-
-            function getSavedValue(v) {
-                if (!localStorage.getItem(v)) {
-                    return "";
-                }
-                return localStorage.getItem(v);
-            }
+function openrecent() {
+	var recent = document.getElementById("myInput").value;
+	window.open("https://www.bing.com/search?q=" + recent, target = "_self");
+}
+function showbtn() {
+	var show = "inherit";
+	localStorage.setItem("showbtn", show);
+	localStorage.removeItem("hide1");
+	localStorage.removeItem("hide2");
+	localStorage.removeItem("hide3");
+	localStorage.removeItem("hide4");
+	localStorage.removeItem("hide5");
+	localStorage.removeItem("hide6");
+}
+function modern() {
+            alert("if the buttons are blank check for error code #005");
+            document.getElementById("7").click();
+	localStorage.removeItem("minimalheadershow");
+            var grid1 = document.getElementById("btngrid1").style.display = "inherit";
+            localStorage.setItem("showgrid1" , grid1);
+            localStorage.removeItem("showgrid2");
+           window.location.reload();
+}
+/* hsm = header show minimal */
+function minimal() {
+            alert("if the buttons are blank check for error code #005");
+            document.getElementById("7").click();
+	var hsm = document.getElementById("header").style.display = "inherit";
+	localStorage.setItem("minimalheadershow", hsm);
+           var grid2 = document.getElementById("btngrid1").style.display = "none";
+            localStorage.setItem("showgrid2" , grid2);
+           localStorage.removeItem("showgrid1");
+           window.location.reload();
             
-            if (!localStorage.noFirstVisit) {
-                alert("welcome To Weberg Search. Click on the help button located on the top right corner of the webpage or press Alt+h to know how to use this website.");
-                localStorage.noFirstVisit = "1";
-            }
-        </script>
-        <br><br>
-    </center>
+}
+window.onload = document.getElementById("header").style.display = localStorage.getItem("minimalheadershow");
+window.onload = document.getElementById("btngrid1").style.display = localStorage.getItem("showgrid1");
+window.onload = document.getElementById("btngrid1").style.display = localStorage.getItem("showgrid2");
 
-    <h3 style="position: absolute; bottom: 0px; right: 0px;" align='right'><a href="https://www.surveymonkey.com/r/WC7B8TW" id="wss">send feedback</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="c">
-            Copyright (c) 2021, Weberg Studios
-            All rights reserved.
-        </span>
-    </h3>
-    <script>
-        function ok() {
-            window.location.reload();
-        }
-        function https() {
-            if (input.value === "h") {
-                input.value = "https://";
-            }
-          if (input.value === "file") {
-                input.value = "file://C:/";
-            }
-          if (input.value === "edge") {
-                input.value = "edge://";
-            }
-        }
-        function funcurl() {
-            var inp = document.getElementById("myInput").value;
-            if (inp.startsWith("https://")) {
-                window.open(inp);
-                document.getElementById('formsearch').action = " ";
-            }
-           if (inp.startsWith("file://")) {
-                window.open(inp);
-                document.getElementById('formsearch').action = " ";
-            }
-        }
-        if (navigator.offLine) {
-            alert('you are offline');
-            document.getElementById('formsearch').action = " ";
-        }
-        window.onoffline = function () {
-            alert('You are now offline please connect to internet to save changes if you choose to continue offline please click ok');
-        }
-        window.onload = setTimeout(cookie, 60000);
-        function cookie() {
-            alert('we use cookies to store your shortcuts in your local storage this wont take any extra space and slow down your pc you can always clear them by clearing your borwser cookies and site data [this will affect other sites]. our cookies takes maximum 0.01 mb');
-        }
-    </script>
+function defmode() {
+            document.getElementById("minimal").click();
+            document.getElementById("8").click();
+}
 
-    <script>
-        var input = document.getElementById("myInput");
-        input.addEventListener("keyup", function (event) {
-            if (event.keyCode === 13) {
-                event.preventDefault();
-                document.getElementById("myBtn").click();
-            }
-        });
-        if (screen.width <= 1133) {
-            alert('your device is not compatible with this website');
-            window.history.back();
-        }
+window.onload = document.getElementById("btn1").style.display = localStorage.getItem("showbtn");
+window.onload = document.getElementById("btn2").style.display = localStorage.getItem("showbtn");
+window.onload = document.getElementById("btn3").style.display = localStorage.getItem("showbtn");
+window.onload = document.getElementById("btn4").style.display = localStorage.getItem("showbtn");
+window.onload = document.getElementById("btn5").style.display = localStorage.getItem("showbtn");
+window.onload = document.getElementById("btn6").style.display = localStorage.getItem("showbtn");
 
+function hidebtn1() {
+	var hide1 = "none";
+	localStorage.setItem("hide1", hide1);
+	localStorage.removeItem("showbtn");
+}
+window.onload = document.getElementById("btn1").style.display = localStorage.getItem("hide1");
 
-        function myfuncweb() {
-            document.getElementById('formsearch').action = "https://bing.com";
-            document.getElementById('myInput').placeholder = "Search the web or enter a web address";
-        }
-        function myfuncimg() {
-            document.getElementById('formsearch').action = "https://www.bing.com/images/";
-            document.getElementById('myInput').placeholder = "Search for images or enter a web address";
-        }
-        function myfuncvid() {
-            document.getElementById('formsearch').action = "https://www.bing.com/videos/";
-            document.getElementById('myInput').placeholder = "Search for videos or enter a web address";
-        }
-        function myfuncmap() {
-            document.getElementById('formsearch').action = "https://www.bing.com/maps/";
-            document.getElementById('myInput').placeholder = "Search for places or enter a web address";
-        }
-        function myfuncnews() {
-            document.getElementById('formsearch').action = "https://www.bing.com/news";
-            document.getElementById('myInput').placeholder = "Search for news or enter a web address";
-        }
+function hidebtn2() {
+	var hide2 = "none";
+	localStorage.setItem("hide2", hide2);
+	localStorage.removeItem("showbtn");
+}
+window.onload = document.getElementById("btn2").style.display = localStorage.getItem("hide2");
 
+function hidebtn3() {
+	var hide3 = "none";
+	localStorage.setItem("hide3", hide3);
+	localStorage.removeItem("showbtn");
+}
+window.onload = document.getElementById("btn3").style.display = localStorage.getItem("hide3");
 
+function hidebtn4() {
+	var hide4 = "none";
+	localStorage.setItem("hide4", hide4);
+	localStorage.removeItem("showbtn");
+}
+window.onload = document.getElementById("btn4").style.display = localStorage.getItem("hide4");
 
+function hidebtn5() {
+	var hide5 = "none";
+	localStorage.setItem("hide5", hide5);
+	localStorage.removeItem("showbtn");
+}
+window.onload = document.getElementById("btn5").style.display = localStorage.getItem("hide5");
 
-        function autocomplete(inp, arr) {
-            /*the autocomplete function takes two arguments,
-            the text field element and an array of possible autocompleted values:*/
-            var currentFocus;
-            /*execute a function when someone writes in the text field:*/
-            inp.addEventListener("input", function (e) {
-                var a, b, i, val = this.value;
-                /*close any already open lists of autocompleted values*/
-                closeAllLists();
-                if (!val) { return false; }
-                currentFocus = -1;
-                /*create a DIV element that will contain the items (values):*/
-                a = document.createElement("DIV");
-                a.setAttribute("id", this.id + "autocomplete-list");
-                a.setAttribute("class", "autocomplete-items");
-                /*append the DIV element as a child of the autocomplete container:*/
-                this.parentNode.appendChild(a);
-                /*for each item in the array...*/
-                for (i = 0; i < arr.length; i++) {
-                    /*check if the item starts with the same letters as the text field value:*/
-                    if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
-                        /*create a DIV element for each matching element:*/
-                        b = document.createElement("DIV");
-                        /*make the matching letters bold:*/
-                        b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
-                        b.innerHTML += arr[i].substr(val.length);
-                        /*insert a input field that will hold the current array item's value:*/
-                        b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
-                        /*execute a function when someone clicks on the item value (DIV element):*/
-                        b.addEventListener("click", function (e) {
-                            /*insert the value for the autocomplete text field:*/
-                            inp.value = this.getElementsByTagName("input")[0].value;
-                            /*close the list of autocompleted values,
-                            (or any other open lists of autocompleted values:*/
-                            closeAllLists();
-                        });
-                        a.appendChild(b);
-                    }
-                }
-            });
-            /*execute a function presses a key on the keyboard:*/
-            inp.addEventListener("keydown", function (e) {
-                var x = document.getElementById(this.id + "autocomplete-list");
-                if (x) x = x.getElementsByTagName("div");
-                if (e.keyCode == 40) {
-                    /*If the arrow DOWN key is pressed,
-                    increase the currentFocus variable:*/
-                    currentFocus++;
-                    /*and and make the current item more visible:*/
-                    addActive(x);
-                } else if (e.keyCode == 38) { //up
-                    /*If the arrow UP key is pressed,
-                    decrease the currentFocus variable:*/
-                    currentFocus--;
-                    /*and and make the current item more visible:*/
-                    addActive(x);
-                } else if (e.keyCode == 9) {
-                    /*If the ENTER key is pressed, prevent the form from being submitted,*/
-                    e.preventDefault();
-                    if (currentFocus > -1) {
-                        /*and simulate a click on the "active" item:*/
-                        if (x) x[currentFocus].click();
-                    }
-                }
-            });
-            function addActive(x) {
-                /*a function to classify an item as "active":*/
-                if (!x) return false;
-                /*start by removing the "active" class on all items:*/
-                removeActive(x);
-                if (currentFocus >= x.length) currentFocus = 0;
-                if (currentFocus < 0) currentFocus = (x.length - 1);
-                /*add class "autocomplete-active":*/
-                x[currentFocus].classList.add("autocomplete-active");
-            }
-            function removeActive(x) {
-                /*a function to remove the "active" class from all autocomplete items:*/
-                for (var i = 0; i < x.length; i++) {
-                    x[i].classList.remove("autocomplete-active");
-                }
-            }
-            function closeAllLists(elmnt) {
-                /*close all autocomplete lists in the document,
-                except the one passed as an argument:*/
-                var x = document.getElementsByClassName("autocomplete-items");
-                for (var i = 0; i < x.length; i++) {
-                    if (elmnt != x[i] && elmnt != inp) {
-                        x[i].parentNode.removeChild(x[i]);
-                    }
-                }
-            }
-            /*execute a function when someone clicks in the document:*/
-            document.addEventListener("click", function (e) {
-                closeAllLists(e.target);
-            });
-        }
-        /*An array containing all the country names in the world:*/
-        var countries = ['meaning of', 'what is meant by', "hello", "hi", "what", "what is", "what is the", "what is the meaning of", "which", "which is", "which is the", "how", 'how many', 'google', 'bing', 'amazon', 'flipkart', 'a', 'animals', 'quara', 'wikipedia', 'usa', 'canva', 'china', 'russia', 'india', 'who', 'who is', 'who is the', 'who was the', 'why', 'why did', 'office', 'onedrive', 'outlook', 'run', 'translate', 'youtube', 'youtube downloader', 'iconfinder', 'pintrest', 'prime video', 'amazon prime', 'sublime text', 'sublime text 3 download', 'sublime text download', 'discord', 'facebook', 'whatsapp', 'gmail', 'google meet', 'microsoft teams', 'hotstar', 'jpg to png', 'png to jpg', 'linkedin', 'zoho presentaion', 'zoom', 'zoom meeting', 'bbc news', 'msn news', 'netflix', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'msn weather', 'msn', 'euro', 'europe', 'k', 'x', 'v', 'microsoft', 'what is the difference between', 'remove bg', 'remove background', 'meet', 'png to ico', 'word to pdf', 'png to jpeg', 'png to jpg', 'jpeg to png', 'Visual Code Studio', 'Visual Code Studio download', 'skype', 'github', 'weberg studios', 'weberg search', 'weberg converter', 'weberg to-do', 'weberg writepad', 'weather', 'https://', 'https://bing.com', 'https://youtube.com', 'https://google.com', 'difference between', 'youtube.com', 'bing.com', 'https://discord.com/app', 'microsoft.com', 'https://github.com', 'github.com', 'w3schools', 'stackoverflow', 'https://w3schools.com', 'https://stackoverflow.com'];
+function hidebtn6() {
+	var hide6 = "none";
+	localStorage.setItem("hide6", hide6);
+	localStorage.removeItem("showbtn");
+}
+window.onload = document.getElementById("btn6").style.display = localStorage.getItem("hide6");
+document.getElementById("user").innerHTML = "Welcome, " + getSavedValue("name");
+document.getElementById("a1").href = getSavedValue("txt_1");
+document.getElementById("btn1").innerHTML = getSavedValue("txt_2");
+document.getElementById("a2").href = getSavedValue("txt_3");
+document.getElementById("btn2").innerHTML = getSavedValue("txt_4");
+document.getElementById("a3").href = getSavedValue("txt_5");
+document.getElementById("btn3").innerHTML = getSavedValue("txt_6");
+document.getElementById("a4").href = getSavedValue("txt_7");
+document.getElementById("btn4").innerHTML = getSavedValue("txt_8");
+document.getElementById("a5").href = getSavedValue("txt_9");
+document.getElementById("btn5").innerHTML = getSavedValue("txt_10");
+document.getElementById("a6").href = getSavedValue("txt_11");
+document.getElementById("btn6").innerHTML = getSavedValue("txt_12");
 
-        /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
-        autocomplete(document.getElementById("myInput"), countries);
-    </script>
-    <script type="text/javascript">
-        window.onload = function () {
-            document.addEventListener("contextmenu", function (e) {
-                e.preventDefault();
-            }, false);
-            document.addEventListener("keydown", function (e) {
-                //document.onkeydown = function(e) {
-                // "I" key
-                if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
-                    disabledEvent(e);
-                }
-                // "J" key
-                if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
-                    disabledEvent(e);
-                }
-                // "S" key + macOS
-                if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
-                    disabledEvent(e);
-                }
-                // "U" key
-                if (e.ctrlKey && e.keyCode == 85) {
-                    disabledEvent(e);
-                }
-                // "F12" key
-                if (event.keyCode == 123) {
-                    disabledEvent(e);
-                }
-            }, false);
-            function disabledEvent(e) {
-                if (e.stopPropagation) {
-                    e.stopPropagation();
-                } else if (window.event) {
-                    window.event.cancelBubble = true;
-                }
-                e.preventDefault();
-                return false;
-            }
-        };
-    </script>
-</body>
+function change() {
+	document.title = "Weberg Studios";
+}
 
+function saveValue(e) {
+	var webergsearch = e.id;
+	var webergsearchval = e.value;
+	localStorage.setItem(webergsearch, webergsearchval);
+}
+
+function getSavedValue(v) {
+	if(!localStorage.getItem(v)) {
+		return "";
+	}
+	return localStorage.getItem(v);
+}
+if(!localStorage.noFirstVisit) {
+ document.getElementById("minimal").click();
+ document.getElementById("1").click();
+ document.getElementById("2").click();
+ document.getElementById("3").click();
+ document.getElementById("4").click();
+ document.getElementById("5").click();
+ document.getElementById("6").click();
+ alert("welcome To Weberg Search. Click on the help button located on the top right corner of the webpage or press Alt+h to know how to use this website.");
+ alert("interface is set to minimal by default you can change it in settings");
+ window.location.reload();
+ localStorage.noFirstVisit = "1";
+}
+
+function ok() {
+	window.location.reload();
+}
+
+function https() {
+	document.getElementById("searchdiv").style.top = "-100px";
+	var recent = document.getElementById("myInput").value;
+	var recentitem = document.getElementById("recent").value;
+	document.getElementById("recent").innerHTML = recent;
+	document.getElementById("recent").style.display = "block";
+	document.getElementById("overlay").style.display = "block";
+	document.getElementById("options").style.opacity = "0%";
+	if(input.value === "ht") {
+		input.value = "https://";
+	}
+	if(input.value === "file") {
+		input.value = "file:///C:/";
+	}
+	if(input.value === "/ctrl") {
+		document.getElementById("mySidenav").style.width = "500px";
+		document.getElementById("overlaysidenav").style.display = "inherit";
+	}
+	if(input.value === "/r") {
+		window.location.reload();
+	}
+	if(input.value === "/b") {
+		window.history.back();
+	}
+if(input.value === "wses") {
+		window.open("error.html");
+	}
+	if(input.value === "bot") {
+		alert("loading...");
+		alert("hi, my name is weberg bot in short web-bot");
+		var selec1 = confirm("can i ask you a question?");
+		if(selec1 == true) {
+			alert("ok. what do you think weberg search needs? open settings and then click on send feedback to tell what weberg search needs");
+		} else {
+			alert("ok bye");
+		}
+	}
+}
+
+function funcurl() {
+	var inp = document.getElementById("myInput").value;
+	if(inp.startsWith("https://")) {
+		window.open(inp);
+		document.getElementById('formsearch').action = " ";
+	}
+if(inp.startsWith("http://")) {
+		alert("error code #002");
+                       document.getElementById('formsearch').action = " ";
+	}
+	if(inp.startsWith("file:///C:/")) {
+		window.open(inp);
+		document.getElementById('formsearch').action = " ";
+	}
+}
+if(navigator.offLine) {
+	alert('you are offline');
+	document.getElementById('formsearch').action = " ";
+}
+window.onoffline = function() {
+	alert('error code #001');
+}
+var input = document.getElementById("myInput");
+input.addEventListener("keyup", function(event) {
+	if(event.keyCode === 13) {
+		document.getElementById("myBtn").click();
+	}
+});
+
+function myfuncweb() {
+	document.getElementById('formsearch').action = "https://bing.com";
+	document.getElementById('myInput').placeholder = "Search the web or enter a web address";
+}
+
+function myfuncimg() {
+	document.getElementById('formsearch').action = "https://www.bing.com/images/";
+	document.getElementById('myInput').placeholder = "Search for images or enter a web address";
+}
+
+function myfuncvid() {
+	document.getElementById('formsearch').action = "https://www.bing.com/videos/";
+	document.getElementById('myInput').placeholder = "Search for videos or enter a web address";
+}
+
+function myfuncmap() {
+	document.getElementById('formsearch').action = "https://www.bing.com/maps/";
+	document.getElementById('myInput').placeholder = "Search for places or enter a web address";
+}
+
+function myfuncnews() {
+	document.getElementById('formsearch').action = "https://www.bing.com/news";
+	document.getElementById('myInput').placeholder = "Search for news or enter a web address";
+}
+
+function autocomplete(inp, arr) {
+	/*the autocomplete function takes two arguments,
+	the text field element and an array of possible autocompleted values:*/
+	var currentFocus;
+	/*execute a function when someone writes in the text field:*/
+	inp.addEventListener("input", function(e) {
+		var a, b, i, val = this.value;
+		/*close any already open lists of autocompleted values*/
+		closeAllLists();
+		if(!val) {
+			return false;
+		}
+		currentFocus = -1;
+		/*create a DIV element that will contain the items (values):*/
+		a = document.createElement("DIV");
+		a.setAttribute("id", this.id + "autocomplete-list");
+		a.setAttribute("class", "autocomplete-items");
+		/*append the DIV element as a child of the autocomplete container:*/
+		this.parentNode.appendChild(a);
+		/*for each item in the array...*/
+		for(i = 0; i < arr.length; i++) {
+			/*check if the item starts with the same letters as the text field value:*/
+			if(arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+				/*create a DIV element for each matching element:*/
+				b = document.createElement("DIV");
+				/*make the matching letters bold:*/
+				b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+				b.innerHTML += arr[i].substr(val.length);
+				/*insert a input field that will hold the current array item's value:*/
+				b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+				/*execute a function when someone clicks on the item value (DIV element):*/
+				b.addEventListener("click", function(e) {
+					/*insert the value for the autocomplete text field:*/
+					inp.value = this.getElementsByTagName("input")[0].value;
+					/*close the list of autocompleted values,
+					(or any other open lists of autocompleted values:*/
+					closeAllLists();
+				});
+				a.appendChild(b);
+			}
+		}
+	});
+	/*execute a function presses a key on the keyboard:*/
+	inp.addEventListener("keydown", function(e) {
+		var x = document.getElementById(this.id + "autocomplete-list");
+		if(x) x = x.getElementsByTagName("div");
+		if(e.keyCode == 40) {
+			/*If the arrow DOWN key is pressed,
+			increase the currentFocus variable:*/
+			currentFocus++;
+			/*and and make the current item more visible:*/
+			addActive(x);
+		} else if(e.keyCode == 38) { //up
+			/*If the arrow UP key is pressed,
+			decrease the currentFocus variable:*/
+			currentFocus--;
+			/*and and make the current item more visible:*/
+			addActive(x);
+		} else if(e.keyCode == 9) {
+			e.preventDefault();
+			if(currentFocus > -1) {
+				/*and simulate a click on the "active" item:*/
+				if(x) x[currentFocus].click();
+			}
+		}
+	});
+
+	function addActive(x) {
+		/*a function to classify an item as "active":*/
+		if(!x) return false;
+		/*start by removing the "active" class on all items:*/
+		removeActive(x);
+		if(currentFocus >= x.length) currentFocus = 0;
+		if(currentFocus < 0) currentFocus = (x.length - 1);
+		/*add class "autocomplete-active":*/
+		x[currentFocus].classList.add("autocomplete-active");
+	}
+
+	function removeActive(x) {
+		/*a function to remove the "active" class from all autocomplete items:*/
+		for(var i = 0; i < x.length; i++) {
+			x[i].classList.remove("autocomplete-active");
+		}
+	}
+
+	function closeAllLists(elmnt) {
+		/*close all autocomplete lists in the document,
+		except the one passed as an argument:*/
+		var x = document.getElementsByClassName("autocomplete-items");
+		for(var i = 0; i < x.length; i++) {
+			if(elmnt != x[i] && elmnt != inp) {
+				x[i].parentNode.removeChild(x[i]);
+			}
+		}
+	}
+	/*execute a function when someone clicks in the document:*/
+	document.addEventListener("click", function(e) {
+		closeAllLists(e.target);
+	});
+}
+/*An array containing all the country names in the world:*/
+var countries = ['calculate time difference', 'how to make a', 'how to', 'when is the', 'when is', 'when is the next solar eclipse', 'when is the next lunar eclipse', 'what happenes when', 'meaning of', 'what is meant by', "hello", "hi", "what", "what is", "what is the", "what is the meaning of", "which", "which is", "which is the", "how", 'how many', 'google', 'bing', 'amazon', 'flipkart', 'a', 'animals', 'quara', 'wikipedia', 'usa', 'canva', 'china', 'russia', 'india', 'who', 'who is', 'who is the', 'who was the', 'why', 'why did', 'office', 'onedrive', 'outlook', 'run', 'translate', 'youtube', 'youtube downloader', 'iconfinder', 'pintrest', 'prime video', 'amazon prime', 'sublime text', 'sublime text 3 download', 'sublime text download', 'discord', 'facebook', 'whatsapp', 'gmail', 'google meet', 'microsoft teams', 'hotstar', 'jpg to png', 'png to jpg', 'linkedin', 'zoho presentaion', 'zoom', 'zoom meeting', 'bbc news', 'msn news', 'netflix', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'msn weather', 'msn', 'euro', 'europe', 'k', 'x', 'v', 'microsoft', 'what is the difference between', 'remove bg', 'remove background', 'meet', 'png to ico', 'word to pdf', 'png to jpeg', 'png to jpg', 'jpeg to png', 'Visual Code Studio', 'Visual Code Studio download', 'skype', 'github', 'weberg studios', 'weberg search', 'weberg converter', 'weberg to-do', 'weberg writepad', 'weather', 'https://', 'https://bing.com', 'https://youtube.com', 'https://google.com', 'difference between', 'youtube.com', 'bing.com', 'https://discord.com/app', 'microsoft.com', 'https://github.com', 'github.com', 'w3schools', 'stackoverflow', 'https://w3schools.com', 'https://stackoverflow.com'];
+/*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
+autocomplete(document.getElementById("myInput"), countries);
+window.onload = function() {
+
+	document.addEventListener("keydown", function(e) {
+		if(e.ctrlKey && e.shiftKey && e.keyCode == 13) {
+			window.open("https://webergstudios.github.io/weberghome/");
+		}
+		//document.onkeydown = function(e) {
+		// "I" key
+		if(e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+			disabledEvent(e);
+		}
+		// "J" key
+		if(e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+			disabledEvent(e);
+		}
+		// "S" key + macOS
+		if(e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+			disabledEvent(e);
+		}
+		// "U" key
+		if(e.ctrlKey && e.keyCode == 85) {
+			disabledEvent(e);
+		}
+		// "F12" key
+		if(event.keyCode == 123) {
+			disabledEvent(e);
+		}
+	}, false);
+
+	function disabledEvent(e) {
+		if(e.stopPropagation) {
+			e.stopPropagation();
+		} else if(window.event) {
+			window.event.cancelBubble = true;
+		}
+		e.preventDefault();
+		return false;
+	}
+};
+
+function openhelp() {
+	document.getElementById("keycode").style.display = "inherit";
+	document.getElementById("overlay").style.display = "inherit";
+}
+</script>
 </html>
 
+<!-- line wrap -  lines-->
+<!-- no line wrap -  lines-->
+
+<!-- full webpage including storages takes less than 100 bits-->
