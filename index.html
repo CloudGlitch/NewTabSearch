@@ -1,1 +1,2202 @@
 
+<!-- created and published by CloudGlitch-->
+<!--source code of CLoud NewTab Search v1-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="msvalidate.01" content="985E31D4671410081DE1A38A31F66B02" />
+    <meta name='author' content='CloudGlitch'>
+    <meta name="description" content="best new tab extension. Customize you new tab in youe way. Create Shortcuts and options to search the web or images , videos , maps directly . Find us on github to contact , report bug or issues and suggestions." />
+    <title>NewTab</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel="icon" href="https://CloudGlitch.github.io/NewTabSearch/extensions/logo.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+
+    <style>
+* {
+	font-family: Roboto Slab;
+	cursor: url("normal.cur"),default;
+	color: white;
+}
+.disable-select {
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+#hdr::-moz-selection{
+	background: white;
+            color:black;
+}
+#hdr::selection{
+	background: white;
+            color:black;
+}
+#keycode::-moz-selection {
+ background: white;
+ color:black;
+}
+#keycode::selection {
+ background:white;
+ color:black;
+}
+
+#myInput::-moz-selection{
+	background: white;
+            color:black;
+}
+#myInput::selection{
+	background: white;
+            color:black;
+}
+.barrelRoll,.fadeIn,.floater,.heartbeat,.pulse,.rollerLeft,.rollerRight,.rotateIn,.rotateInLeft,.rotateInRight,.rotation,.shake,.sideToSide,.slideDown,.slideLeft,.slideRight,.slideUp,.spinner,.wiggle,.zoomer,.zoomerOut {
+	visibility: visible!important;
+}
+
+.rotation {
+	animation-name: rotation;
+	-webkit-animation-name: rotation;
+	animation-duration: 4s;
+	-webkit-animation-duration: 4s;
+	animation-timing-function: linear;
+	-webkit-animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+.rotation,.sideToSide {
+	-webkit-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes rotation {
+	from {
+		-webkit-transform: rotate(0) translateX(50%) rotate(0);
+	}
+
+	to {
+		-webkit-transform: rotate(360deg) translateX(50%) rotate(-360deg);
+	}
+}
+
+@keyframes rotation {
+	from {
+		transform: rotate(0) translateX(50%) rotate(0);
+	}
+
+	to {
+		transform: rotate(360deg) translateX(50%) rotate(-360deg);
+	}
+}
+
+.sideToSide {
+	animation-name: sideToSide;
+	-webkit-animation-name: sideToSide;
+	animation-duration: 3s;
+	-webkit-animation-duration: 3s;
+	animation-timing-function: ease;
+	-webkit-animation-timing-function: ease;
+	animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes sideToSide {
+	0%,100% {
+		-webkit-transform: translate(100%,0);
+	}
+
+	50% {
+		-webkit-transform: translate(-100%,0);
+	}
+}
+
+@keyframes sideToSide {
+	0%,100% {
+		transform: translate(100%,0);
+	}
+
+	50% {
+		transform: translate(-100%,0);
+	}
+}
+
+.zoomer {
+	animation-name: zoomer;
+	-webkit-animation-name: zoomer;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-timing-function: cubic-bezier(.5,.2,.3,1);
+	animation-iteration-count: 1;
+}
+
+.zoomer,.zoomerOut {
+	-webkit-animation-iteration-count: 1;
+	animation-timing-function: cubic-bezier(.5,.2,.3,1);
+	animation-duration: 1s;
+}
+
+@-webkit-keyframes zoomer {
+	0% {
+		-webkit-transform: scale(.3);
+	}
+
+	100% {
+		-webkit-transform: scale(1);
+	}
+}
+
+@keyframes zoomer {
+	0% {
+		transform: scale(.3);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+.zoomerOut {
+	animation-name: zoomerOut;
+	-webkit-animation-name: zoomerOut;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-timing-function: cubic-bezier(.5,.2,.3,1);
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
+.rollerRight,.zoomerOut {
+	-webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes zoomerOut {
+	0% {
+		-webkit-transform: scale(1);
+	}
+
+	100% {
+		-webkit-transform: scale(0);
+	}
+}
+
+@keyframes zoomerOut {
+	0% {
+		transform: scale(1);
+	}
+
+	100% {
+		transform: scale(0);
+	}
+}
+
+.spinner {
+	animation-name: spinner;
+	-webkit-animation-name: spinner;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+}
+
+.pulse,.spinner {
+	animation-timing-function: linear;
+	animation-duration: 2s;
+}
+
+@-webkit-keyframes spinner {
+	from {
+		-webkit-transform: rotate(0);
+	}
+
+	to {
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+@keyframes spinner {
+	from {
+		transform: rotate(0);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.pulse {
+	animation-name: pulse;
+	-webkit-animation-name: pulse;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+}
+
+@keyframes pulse {
+	0%,100% {
+		transform: scale(.9);
+		opacity: .9;
+	}
+
+	50% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes pulse {
+	0%,100% {
+		-webkit-transform: scale(.95);
+		opacity: .9;
+	}
+
+	50% {
+		-webkit-transform: scale(1);
+		opacity: 1;
+	}
+}
+
+.shake {
+	animation-name: shake;
+	-webkit-animation-name: shake;
+	-webkit-animation-duration: .4s;
+	-webkit-animation-timing-function: ease;
+	-webkit-animation-iteration-count: 1;
+}
+
+.barrelRoll,.shake {
+	animation-iteration-count: 1;
+	animation-timing-function: ease;
+	animation-duration: .4s;
+}
+
+@keyframes shake {
+	0%,100% {
+		transform: translateX(0);
+	}
+
+	16%,50%,83% {
+		transform: translateX(-10px);
+	}
+
+	33%,66% {
+		transform: translateX(10px);
+	}
+}
+
+@-webkit-keyframes shake {
+	0%,100% {
+		-webkit-transform: translateX(0);
+	}
+
+	16%,50%,83% {
+		-webkit-transform: translateX(-10px);
+	}
+
+	33%,66% {
+		-webkit-transform: translateX(10px);
+	}
+}
+
+.barrelRoll {
+	animation-name: barrelRoll;
+	-webkit-animation-name: barrelRoll;
+	-webkit-animation-duration: .4s;
+	-webkit-animation-timing-function: ease;
+	-webkit-animation-iteration-count: 1;
+}
+
+@keyframes barrelRoll {
+	from {
+		transform: rotate(0);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@-webkit-keyframes barrelRoll {
+	from {
+		-webkit-transform: rotate(0);
+	}
+
+	to {
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+.floater {
+	animation-name: floater;
+	-webkit-animation-name: floater;
+	animation-duration: 1.5s;
+	-webkit-animation-duration: 1.5s;
+	-webkit-animation-iteration-count: infinite;
+}
+
+.floater,.wiggle {
+	animation-iteration-count: infinite;
+}
+
+@keyframes floater {
+	0%,100% {
+		transform: translateY(0);
+	}
+
+	50% {
+		transform: translateY(8%);
+	}
+}
+
+@-webkit-keyframes floater {
+	0%,100% {
+		-webkit-transform: translateY(0);
+	}
+
+	50% {
+		-webkit-transform: translateY(8%);
+	}
+}
+
+.wiggle {
+	animation-name: wiggle;
+	-webkit-animation-name: wiggle;
+	animation-duration: 2.5s;
+	-webkit-animation-duration: 2.5s;
+	-webkit-animation-iteration-count: infinite;
+}
+
+@keyframes wiggle {
+	0%,100% {
+		transform: rotate(-4deg);
+	}
+
+	50% {
+		transform: rotate(4deg);
+	}
+}
+
+@-webkit-keyframes wiggle {
+	0%,100% {
+		-webkit-transform: rotate(-4deg);
+	}
+
+	50% {
+		-webkit-transform: rotate(4deg);
+	}
+}
+
+.pound {
+	animation-name: pound;
+	-webkit-animation-name: pound;
+	animation-duration: .5s;
+	-webkit-animation-duration: .5s;
+	-webkit-animation-timing-function: ease;
+	-webkit-animation-iteration-count: infinite;
+	visibility: visible!important;
+}
+
+.heartbeat,.pound {
+	animation-iteration-count: infinite;
+	animation-timing-function: ease;
+}
+
+@keyframes pound {
+	to {
+		transform: scale(1.2);
+	}
+}
+
+@-webkit-keyframes pound {
+	to {
+		transform: scale(1.2);
+	}
+}
+
+.heartbeat {
+	animation-name: heartbeat;
+	-webkit-animation-name: heartbeat;
+	animation-duration: 3s;
+	-webkit-animation-duration: 3s;
+	-webkit-animation-timing-function: ease;
+	-webkit-animation-iteration-count: infinite;
+}
+
+@keyframes heartbeat {
+	0%,100% {
+		transform: scale(1);
+	}
+
+	10% {
+		transform: scale(1.2);
+	}
+
+	20% {
+		transform: scale(1.4);
+	}
+}
+
+@-webkit-keyframes heartbeat {
+	0%,100% {
+		-webkit-transform: scale(1);
+	}
+
+	10% {
+		-webkit-transform: scale(1.2);
+	}
+
+	20% {
+		-webkit-transform: scale(1.4);
+	}
+}
+
+.rollerRight {
+	animation-name: rollerRight;
+	-webkit-animation-name: rollerRight;
+	animation-duration: 2s;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-timing-function: ease;
+	-webkit-animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
+.rollerLeft,.rollerRight {
+	animation-iteration-count: 1;
+	animation-timing-function: ease;
+}
+
+@keyframes rollerRight {
+	0% {
+		transform: translateX(-200px) rotate(0);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateX(0) rotate(2turn);
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes rollerRight {
+	0% {
+		-webkit-transform: translateX(-200px) rotate(0);
+		opacity: 0;
+	}
+
+	100% {
+		-webkit-transform: translateX(0) rotate(2turn);
+		opacity: 1;
+	}
+}
+
+.rollerLeft {
+	animation-name: rollerLeft;
+	-webkit-animation-name: rollerLeft;
+	animation-duration: 2s;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-timing-function: ease;
+	-webkit-animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
+.fadeOut,.rollerLeft {
+	-webkit-animation-fill-mode: forwards;
+}
+
+@keyframes rollerLeft {
+	0% {
+		transform: translateX(200px) rotate(0);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateX(0) rotate(-2turn);
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes rollerLeft {
+	0% {
+		-webkit-transform: translateX(200px) rotate(0);
+		opacity: 0;
+	}
+
+	100% {
+		-webkit-transform: translateX(0) rotate(-2turn);
+		opacity: 1;
+	}
+}
+
+.slideDown {
+	animation-name: slideDown;
+	-webkit-animation-name: slideDown;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-timing-function: ease;
+}
+
+.slideDown,.slideUp {
+	animation-timing-function: ease;
+	animation-duration: 1s;
+}
+
+@keyframes slideDown {
+	0% {
+		transform: translateY(-100%);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes slideDown {
+	0% {
+		-webkit-transform: translateY(-100%);
+		opacity: 0;
+	}
+
+	100% {
+		-webkit-transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+.slideUp {
+	animation-name: slideUp;
+	-webkit-animation-name: slideUp;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-timing-function: ease;
+}
+
+@keyframes slideUp {
+	0% {
+		transform: translateY(100%);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes slideUp {
+	0% {
+		-webkit-transform: translateY(100%);
+		opacity: 0;
+	}
+
+	100% {
+		-webkit-transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+.slideLeft {
+	animation-name: slideLeft;
+	-webkit-animation-name: slideLeft;
+	animation-duration: 1s;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-timing-function: ease;
+}
+
+.slideLeft,.slideRight {
+	animation-timing-function: ease;
+}
+
+@keyframes slideLeft {
+	0% {
+		transform: translateX(150%);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes slideLeft {
+	0% {
+		-webkit-transform: translateX(150%);
+		opacity: 0;
+	}
+
+	100% {
+		-webkit-transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+.slideRight {
+	animation-name: slideRight;
+	-webkit-animation-name: slideRight;
+	animation-duration: 1s;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-timing-function: ease;
+}
+
+@keyframes slideRight {
+	0% {
+		transform: translateX(-150%);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes slideRight {
+	0% {
+		-webkit-transform: translateX(-150%);
+		opacity: 0;
+	}
+
+	100% {
+		-webkit-transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+.fadeIn {
+	animation-name: fadeIn;
+	-webkit-animation-name: fadeIn;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-timing-function: ease;
+}
+
+.fadeIn,.fadeOut {
+	animation-timing-function: ease;
+	animation-duration: 2s;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.fadeOut {
+	animation-name: fadeOut;
+	-webkit-animation-name: fadeOut;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-timing-function: ease;
+	animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+@-webkit-keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+.rotateInRight {
+	animation-name: rotateInRight;
+	-webkit-animation-name: rotateInRight;
+	animation-duration: 3s;
+	-webkit-animation-duration: 3s;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count: 1;
+	animation-iteration-count: 1;
+}
+
+.rotateInLeft,.rotateInRight {
+	animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes rotateInRight {
+	from {
+		-webkit-transform: rotate(0) translateX(100%) rotate(0);
+	}
+
+	to {
+		-webkit-transform: rotate(360deg) translateX(0) rotate(-360deg);
+	}
+}
+
+@keyframes rotateInRight {
+	from {
+		transform: rotate(0) translateX(100%) rotate(0);
+	}
+
+	to {
+		transform: rotate(360deg) translateX(0) rotate(-360deg);
+	}
+}
+
+.rotateInLeft {
+	animation-name: rotateInLeft;
+	-webkit-animation-name: rotateInLeft;
+	animation-duration: 3s;
+	-webkit-animation-duration: 3s;
+	-webkit-animation-timing-function: ease-in-out;
+	animation-iteration-count: 1;
+}
+
+.rotateIn,.rotateInLeft {
+	-webkit-animation-iteration-count: 1;
+}
+
+@-webkit-keyframes rotateInLeft {
+	from {
+		-webkit-transform: rotate(0) translateX(-100%) rotate(0);
+	}
+
+	to {
+		-webkit-transform: rotate(360deg) translateX(0) rotate(-360deg);
+	}
+}
+
+@keyframes rotateInLeft {
+	from {
+		transform: rotate(0) translateX(-100%) rotate(0);
+	}
+
+	to {
+		transform: rotate(360deg) translateX(0) rotate(-360deg);
+	}
+}
+
+.rotateIn {
+	animation-name: rotateIn;
+	-webkit-animation-name: rotateIn;
+	animation-duration: 3s;
+	-webkit-animation-duration: 3s;
+	animation-timing-function: ease;
+	-webkit-animation-timing-function: ease;
+	animation-iteration-count: 1;
+	-webkit-transform-origin: center;
+	transform-origin: center;
+}
+
+@-webkit-keyframes rotateIn {
+	0% {
+		-webkit-transform: rotate3d(0,0,1,-720deg);
+		transform: rotate3d(0,0,1,-720deg);
+		opacity: 0;
+	}
+
+	100% {
+		-webkit-transform-origin: center;
+		transform-origin: center;
+		-webkit-transform: none;
+		transform: none;
+		opacity: 1;
+	}
+}
+
+@keyframes rotateIn {
+	0% {
+		-webkit-transform: rotate3d(0,0,1,-720deg);
+		transform: rotate3d(0,0,1,-720deg);
+		opacity: 0;
+	}
+
+	100% {
+		-webkit-transform: none;
+		transform: none;
+		opacity: 1;
+	}
+}
+
+.bounceIn {
+	-webkit-animation-name: bounceIn;
+	animation-name: bounceIn;
+	-webkit-animation-duration: .8s;
+	animation-duration: .8s;
+	-webkit-animation-timing-function: cubic-bezier(.215,.61,.355,1);
+	animation-timing-function: cubic-bezier(.215,.61,.355,1);
+}
+
+@-webkit-keyframes bounceIn {
+	0% {
+		opacity: 0;
+		-webkit-transform: scale3d(.3,.3,.3);
+		transform: scale3d(.3,.3,.3);
+	}
+
+	20% {
+		-webkit-transform: scale3d(1.1,1.1,1.1);
+		transform: scale3d(1.1,1.1,1.1);
+	}
+
+	40% {
+		-webkit-transform: scale3d(.9,.9,.9);
+		transform: scale3d(.9,.9,.9);
+	}
+
+	60% {
+		opacity: 1;
+		-webkit-transform: scale3d(1.03,1.03,1.03);
+		transform: scale3d(1.03,1.03,1.03);
+	}
+
+	80% {
+		-webkit-transform: scale3d(.97,.97,.97);
+		transform: scale3d(.97,.97,.97);
+	}
+
+	100% {
+		opacity: 1;
+		-webkit-transform: scale3d(1,1,1);
+		transform: scale3d(1,1,1);
+	}
+}
+
+@keyframes bounceIn {
+	0% {
+		opacity: 0;
+		-webkit-transform: scale3d(.3,.3,.3);
+		transform: scale3d(.3,.3,.3);
+	}
+
+	20% {
+		-webkit-transform: scale3d(1.1,1.1,1.1);
+		transform: scale3d(1.1,1.1,1.1);
+	}
+
+	40% {
+		-webkit-transform: scale3d(.9,.9,.9);
+		transform: scale3d(.9,.9,.9);
+	}
+
+	60% {
+		opacity: 1;
+		-webkit-transform: scale3d(1.03,1.03,1.03);
+		transform: scale3d(1.03,1.03,1.03);
+	}
+
+	80% {
+		-webkit-transform: scale3d(.97,.97,.97);
+		transform: scale3d(.97,.97,.97);
+	}
+
+	100% {
+		opacity: 1;
+		-webkit-transform: scale3d(1,1,1);
+		transform: scale3d(1,1,1);
+	}
+}
+
+
+#myInput {
+	width: 50%;
+	min-width: 280px;
+}
+
+body {
+	width: 100%;
+	height: 100vh;
+}
+
+form {
+	position: relative;
+}
+
+.tasksInput {
+	margin-right: 150px;
+}
+
+.submit-and-options {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+#user {
+	color: white;
+}    
+}
+
+.autocomplete {
+	position: relative;
+	display: inline-block;
+}
+
+.autocomplete-items {
+	position: absolute;
+	border-bottom: none;
+	border-top: none;
+	font-size: 18px;
+	z-index: 99;
+            /*position the autocomplete items to be the same width as the container:*/
+	top: 100%;
+	width: 50%;
+	left: 24.5%;
+            border:1px solid black;
+}
+
+.autocomplete-items div {
+	padding: 10px;
+	background-color: #fff;
+           color:#000;
+}
+
+.autocomplete-items div:hover {
+	background-color: #eee;
+	color: #000;
+	font-size: 20px;
+}
+
+.autocomplete-active {
+	background-color: #eee !important;
+	color: #000;
+	font-size: 20px;
+}
+
+button {
+	width: 10%;
+	min-width: 100px;
+	height: 8vmax;
+	border-radius: 8px;
+	border: 2px solid white;
+	bottom: 0px;
+            background-color:transparent;
+	box-shadow: 0 0 0px grey;
+	transition:bottom ease 0.2s;
+}
+
+.btn {
+	margin: 15px;
+	font-size: 18px;
+}
+
+button:hover {
+	background-position: 0 -100%;
+	bottom: 10px;
+	position: relative;
+}
+
+body {
+	background: #2a363c;
+           background-size:cover;
+}
+
+
+
+#myInput , #myBtn {
+	z-index: 6;
+}
+
+#overlay {
+	position: fixed;
+	display: none;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+           background:#20292d;
+           opacity:90%;
+	z-index: 1;
+}
+
+body {
+	margin: 0px;
+}
+
+#txt_1, #txt_2, #txt_3, #txt_4, #txt_5, #txt_6, #txt_7, #txt_8, #txt_9, #txt_10, #txt_11, #txt_12, #name , #customws ,#bg {
+	height: 20px;
+	font-size: 10px;
+	width: 150px;
+	border: 1px solid black;
+	background: white;
+	color: black;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	color: black;
+	overflow: hidden;
+	background-color: transparent;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+li {
+	float: left;
+}
+
+li a {
+	display: block;
+	text-align: center;
+	padding: 14px 16px;
+	color: black;
+	text-decoration: none;
+}
+
+#c {
+	text-decoration: none;
+	font-size: 11px;
+	position: absolute;
+	right: 0px;
+	bottom: 3px;
+	z-index: 999;
+}
+
+#myInput {
+	border: 1px solid white;
+}
+
+#wss {
+	text-decoration: none;
+	color: white;
+	font-size: 11px;
+}
+
+#wss:hover {
+	text-decoration: underline;
+}
+
+#options {
+	position: relative;
+	left: 27%;
+	font-size: 15px;
+}
+
+#web:hover, #img:hover, #vid:hover, #map:hover {
+	text-decoration: underline;
+}
+#web , #img , #vid , #map {
+ padding:5px;
+}
+
+#txt_1, #txt_2, #txt_3, #txt_4, #txt_5, #txt_6, #txt_7, #txt_8, #txt_9, #txt_10, #txt_11, #txt_12, #name , #customws , #bg {
+	background: #fff;
+	color: black;
+	border: 1px solid black;
+}
+
+@media only screen and (max-width: 530px) {
+	#myBtn {
+		display: none;
+	}
+}
+
+#myBtn {
+	width: 5%;
+	height: 46px;
+	background: transparent;		
+	border: 0px solid black;
+	border-radius: 3px;
+	outline: none;
+	font-size: 25px;
+	position: relative;
+	left: -40px;
+	top: 2px;
+}
+
+#myBtn:hover {
+	box-shadow: none;
+}
+
+#myInput {
+	height: 45px;
+	position: relative;
+	left: 4%;
+	box-sizing: border-box;
+	background-color: white;
+	padding: 12px 30px 12px 5px;
+	background-size: 30px;
+	background-repeat: no-repeat;
+	border-radius: 10px;
+            color:black;
+}
+
+.sidenav {
+	height: 90%;
+	width: 0%;
+	position: fixed;
+	z-index: 3;
+	top: 0;
+	left: 0;
+	background-color: #2a363c;
+	transition: 0.5s;
+	padding-top: 60px;
+}
+
+.sidenav .closebtn {
+	position: absolute;
+	top: 0;
+	left: 10px;
+	font-size: 35px;
+	text-decoration: none;
+	outline: none;
+}
+
+@media screen and (max-height: 450px) {
+	.sidenav {
+		padding-top: 15px;
+	}
+
+	.sidenav a {
+		font-size: 18px;
+	}
+}
+
+#overlaysidenav {
+	position: fixed;
+	display: none;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background:#20292d;
+           opacity:90%;
+	z-index: 2;
+}
+
+#more {
+	position: relative;
+	top: 3px;
+             font-size:15px;
+}
+
+#divmore {
+	height: 40%;
+	width: 0;
+	position: absolute;
+	z-index: 3;
+	top: 120px;
+	left: 28%;
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 60px;
+	background: #2a363c;
+            border-radius:10px;
+}
+#notify {
+ border:1px solid white;
+ position:absolute;
+ top:45px;
+ border-radius:10px;
+ width:300px;
+ right:5px;
+ height:300px;
+ z-index:4;
+ background:#2a363c;
+ display:none;
+}
+
+
+
+.rotate {
+	transition: 0.5s;
+}
+
+.rotate:hover {
+	transform: rotateZ(360deg);
+}
+
+.morebtn {
+	width: 20%;
+}
+
+.mob {
+	display: none;
+}
+
+#keycode {
+	border: 2px solid white;
+	width: 50%;
+	border-radius: 10px;
+	position: absolute;
+	top: 10%;
+	left: 25%;
+	background: #2a363c;
+	overflow: auto;
+	height: 70%;
+	display: none;
+           z-index:4;
+}
+
+@media only screen and (max-width:800px) {
+	#keycode , #release {
+		width: 90%;
+		left: 5%;
+	}
+
+	.autocomplete-items {
+		display:none;
+	}
+
+	.mob {
+		display: inherit;
+	}
+
+	#myInput {
+		left: 2.8%;
+	}
+
+	#btngrid1 {
+		display: none;
+	}
+
+	#options {
+		left: 8%;
+	}
+}
+
+.morebtn {
+	margin: 10px;
+}
+
+.btn {
+	text-decoration: none;
+}
+
+.hidebtn {
+	margin: 5px;
+	left: 10px;
+	position: relative;
+	align-items: center;
+}
+
+#load {
+	background: #2a363b;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	z-index: 55;
+	display: none;
+}
+
+.btn {
+	text-overflow: ellipsis;
+}
+
+.btn , #user {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.loader {
+	border: 16px solid #fff;
+	border-radius: 50%;
+	border-top: 16px solid #999;
+	width: 120px;
+	height: 120px;
+	-webkit-animation: spin 2s linear infinite;
+	animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+#loaderdiv {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-color: #20292d;
+	z-index: 56;
+	display: none;
+}
+
+body , #mySidenav {
+	overflow-x: hidden;
+}
+
+.accordion {
+	padding: 18px;
+	width: 100%;
+	text-align: left;
+	outline: none;
+	font-size: 15px;
+	border: 0.5px solid white;
+	transition: 0.4s;
+}
+
+.panel {
+	padding: 0 18px;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+	border: 0.5px solid white;
+}
+
+.scroll::-webkit-scrollbar {
+	width: 7px;
+            background:#555;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background: #fff;
+}
+
+#mobmsg {
+	margin-right: 10px;
+	border: 1px solid white;
+	text-decoration: underline;
+	display: none;
+}
+
+#searchdiv {
+	position: relative;
+}
+
+.mode {
+	margin-right: 10px;
+	height: 50px;
+}
+
+#header {
+	display: none;
+}
+
+#btngrid2 {
+	display: inherit;
+}
+.invert {
+ filter: invert(100%);
+}
+#release {
+ width:50%;
+}
+#intro {
+ width:100%;
+}
+#bg {
+ display:none;
+}
+strong {
+ color:black;
+}
+#txt {
+ font-size:100px;
+}
+#sleep {
+ display:none;
+}
+    </style>
+</head>
+<body oncontextmenu="contextmenu();" id="body" class="disable-select scroll" draggable="false">
+<div class="slideDown" onclick="sleepoff();" id="sleep" style="
+	position: absolute;
+	background: #20292d;
+	overflow: auto;
+	height: 100%;
+            width:100%;
+z-index:998;
+"><h2>NewTab</h2>
+<center>
+<h1 id="txt"></h1>
+<h2>sleep mode activated</h2>
+<p>click to exit sleep mode</p>
+</center></div>
+<script>
+function sleepoff() {
+ document.getElementById("sleep").style.display = "none";
+}
+GetTime();
+
+function GetTime(){
+  var CurrentTime = new Date()
+  var hour = CurrentTime.getHours()
+  var minute = CurrentTime.getMinutes()
+  var second = CurrentTime.getSeconds()
+
+  if(minute < 10){
+    minute = "0" + minute
+  }
+
+  if(second < 10){
+    second = "0" + second
+  }
+
+  var GetCurrentTime = hour + ":" + minute + ":" + second + " ";
+
+  if(hour > 11){
+    GetCurrentTime += "PM"
+  }else{
+    GetCurrentTime += "AM"
+  }
+
+  document.getElementById("txt").innerHTML = GetCurrentTime;
+  setTimeout(GetTime,1000)
+}
+
+</script>
+
+
+<div id="release" style="
+border: 2px solid white;
+	border-radius: 10px;
+	position: absolute;
+	top: 10%;
+	left: 25%;
+	background: #20292d;
+	overflow: auto;
+	height: 70%;
+z-index:100;
+">
+<center>
+<p onclick="closerelease();" style="font-size:50px; position:absolute; top:-60px;">&times;</p><br>
+
+<p>Welcome to Cloud NewTab Search version 1</p><br><br>
+<p>To see what is new in this release please <a href="https://github.com/CloudGlitch/NewTabSearch/blob/main/README.md">click here</a></p>
+<p>Click on the flag on top right corner for help</p><br><br>
+</center>
+</div>
+<div id="shade" style="
+height:100%;
+width:100%;
+background:#20292d;
+position: absolute;
+z-index:99;
+opacity:80%;
+"> </div>
+<script>
+function closerelease() {
+ document.getElementById("release").style.display = "none";
+ document.getElementById("shade").style.display = "none";
+ var releasenone = document.getElementById("release").style.display = "none";
+ var shadenone = document.getElementById("shade").style.display = "none";
+ localStorage.setItem("release" , releasenone);
+ localStorage.setItem("shade" , shadenone);
+}
+window.onload = document.getElementById("release").style.display = localStorage.getItem("release");
+window.onload = document.getElementById("shade").style.display = localStorage.getItem("shade");
+</script>
+
+
+
+<ul id='ul'>
+	<li onclick="openNav()" class="slideRight"><a><i class="fi-rr-apps-add" style='font-size:20px;' id="settings" accesskey='m'></i></a></li>
+	<li class="slideLeft" style='float:right' onclick="openhelp();"><a id="help"><i accesskey="h" class="fi-rr-interrogation"></i></a></li>
+            <li class="slideLeft" style='float:right' onclick="notification();"><a><i class="fi-rr-bell"></i></a></li>
+            <li class="slideLeft" style='float:right' onclick="sleepon();"><a><i class="fi-rr-moon"></i></a></li>
+	<li style='float:right'><a style="font-size:15px;" class="darknav" id='user'>User</a></li>
+</ul>
+<div class="slideLeft" id="notify"><center>
+<h2>Notifications</h2>
+<hr width="100">
+<h4>no new notifications</h4>
+</center></div>
+<script>
+function notification() {
+ document.getElementById("notify").style.display = "inherit";
+ document.getElementById("overlay").style.display = "inherit";
+}
+ function sleepon() {
+  document.getElementById("sleep").style.display = "inherit";
+}
+</script>
+<div id="divmore">
+	<h1>
+<center>Apps</center><br><center>
+<a href="https://CloudGlitch.github.io/CaltoTheCalculator/"><button class="morebtn">Calculator</button></a>
+<a href="https://CloudGlitch.github.io/converter"><button class="morebtn">Converter</button></a>
+<a href="https://cloudglitch.github.io/WritePad/"><button class="morebtn">Write-Pad</button></a>
+<a href="https://CloudGlitch.github.io/ToDo/"><button class="morebtn">To-Do</button></a></center>
+</h1></div>
+<br>
+<br>
+<div id="overlaysidenav" onclick="off()"></div>
+<div id="overlay" onclick="offinp();"></div>
+<div id="mySidenav" class="sidenav scroll"> <a accesskey="n" class="closebtn" onclick="closeNav()"><span class="fi-rr-cross-circle" style="font-size:20px; position:relative; top:-5px;"> Settings</span></a>
+	<p id="mobmsg" style="position: relative; left: 10px;">Your Device is slightly incompatible <span class="mob"><br></span>with this website please use a<span class="mob"><br></span> PC for better experience</p>
+	<p style="position: relative; left: 10px;">NewTab Search v1
+		<br>
+		<br>Remember to click done after tweaking
+		<br> settings if you dont click done please
+		<br> refresh the page to save the tweaks</p>
+	<div class="accordion" id="mh1">
+		<p style="position: relative;  left: 10px;">Edit The Shortcuts</p>
+	</div>
+	<div class="panel">
+		<p style="position: relative;  left: 10px;">Type in the URL and NAME of your shortcut
+			<br> and then click DONE or REFRESH THE<span class="mob"><br></span> PAGE to save them</p>
+		<input style="position: relative; left: 10px;" type="text" id="txt_1" placeholder='your 1st shortcut url' onkeyup='saveValue(this);' />
+		<input style="position: relative; left: 10px;" type="text" id="txt_2" placeholder='your 1st shortcut name' onkeyup='saveValue(this);' />
+		<br>
+		<br>
+		<input style="position: relative; left: 10px;" type="text" id="txt_3" placeholder='your 2st shortcut url' onkeyup='saveValue(this);' />
+		<input style="position: relative; left: 10px;" type="text" id="txt_4" placeholder='your 2st shortcut name' onkeyup='saveValue(this);' />
+		<br>
+		<br>
+		<input style="position: relative; left: 10px;" type="text" id="txt_5" placeholder='your 3rd shortcut url' onkeyup='saveValue(this);' />
+		<input style="position: relative; left: 10px;" type="text" id="txt_6" placeholder='your 3rd shortcut name' onkeyup='saveValue(this);' />
+		<br>
+		<br>
+		<input style="position: relative; left: 10px;" type="text" id="txt_7" placeholder='your 4th shortcut url' onkeyup='saveValue(this);' />
+		<input style="position: relative; left: 10px;" type="text" id="txt_8" placeholder='your 4th shortcut name' onkeyup='saveValue(this);' />
+		<br>
+		<br>
+		<input style="position: relative; left: 10px;" type="text" id="txt_9" placeholder='your 5th shortcut url' onkeyup='saveValue(this);' />
+		<input style="position: relative; left: 10px;" type="text" id="txt_10" placeholder='your 5th shortcut name' onkeyup='saveValue(this);' />
+		<br>
+		<br>
+		<input style="position: relative; left: 10px;" type="text" id="txt_11" placeholder='your 6th shortcut url' onkeyup='saveValue(this);' />
+		<input style="position: relative; left: 10px;" type="text" id="txt_12" placeholder='your 6th shortcut name' onkeyup='saveValue(this);' />
+		<br>
+		<br> </div>
+	<div class="accordion" id="mh2">
+		<p style="position: relative;  left: 10px;">Hide and Show The Shortcuts</p>
+	</div>
+	<div class="panel">
+		<br>
+		<button class="hidebtn" style="position: relative; width: 100px; height: 50px;" id="1" onclick="hidebtn1();">Hide Shortcut 1</button>
+		<button id="2" class="hidebtn" style=" position: relative; width: 100px; height: 50px;" onclick="hidebtn2();">Hide Shortcut 2</button>
+		<button id="3" class="hidebtn" style="position: relative; width: 100px; height: 50px;" onclick="hidebtn3();">Hide Shortcut 3</button><span class="mob"><br></span>
+		<button class="hidebtn" style="position: relative; width: 100px; height: 50px;" id="4" onclick="hidebtn4();">Hide Shortcut 4</button>
+		<button class="hidebtn" style=" position: relative; width: 100px; height: 50px;" id="5" onclick="hidebtn5();">Hide Shortcut 5</button>
+		<button class="hidebtn" style="position: relative; width: 100px; height: 50px;" id="6" onclick="hidebtn6();">Hide Shortcut 6</button> <span class="mob"><br></span>
+		<button class="hidebtn" style="position: relative; width: 100px; height: 50px;" id="7" onclick="showbtn();">Show All Shortcuts</button>
+                        <button class="hidebtn" id="8" style="position: relative; width: 100px; height: 50px;" onclick="hidebtn();">Hide All Shortcuts</button>
+		<br>
+<span class="mob"><br></span><span class="mob"><br></span>
+		<br><span class="mob"><br></span> </div>
+	<div class="accordion">
+		<p style="position: relative;  left: 10px;">Interface</p>
+	</div>
+	<div class="panel">
+		<br>
+		<button id='minimal' onclick="minimal();" class="mode">Classic Mode</button>
+		<button id='modern' onclick="modern();" class="mode">Modern Mode</button>
+                      <button id='defaultmode' onclick="defmode();" class="mode">Minimal Mode</button>
+		<br><br>
+	</div>
+	<div class="accordion">
+		<p style="position: relative;  left: 10px;">Personalize</p>
+	</div>
+	<div class="panel">
+		<br>
+		<p style="position: relative;  left: 9px;">use custom background color</p>
+<input style="position: relative; left: 10px;width:310px;" type="text" id="bg" onfocus="bg();" placeholder="type your background color">
+<button onclick="bg1();" class="mode">pink</button><button onclick="bg2();" class="mode">red</button><button onclick="bg3();" class="mode">yellow</button><br><br>
+<button onclick="bg4();" class="mode">normal</button><button onclick="bg5();" class="mode">dark grey</button><button onclick="bg6();" class="mode">peach</button>
+	<br>
+		<p style="position: relative;  left: 9px;">what is your name?</p>
+		<input style="position: relative; left: 10px; width:310px;" type="text" id="name" placeholder="What is your name?" maxlength="50" onkeyup="saveValue(this);">
+		<br>
+		<br>
+	</div>
+	<div class="accordion">
+		<p style="position: relative;  left: 10px;">Reset</p>
+	</div>
+	<div class="panel">
+		<p style="position: relative;  left: 10px;">Reset Cloud NewTabSearch Search. Doing this will clear<span class="mob"><br></span> all your data on Cloud NewTab Search</p>
+		<button style="left: 10px; position: relative; width: 100px; height: 50px;" onclick="reset();">Reset</button>
+		<br>
+		<br>
+	</div>
+	<br>
+	<button style="left: 10px; position: relative; width: 100px; height: 50px;" onclick="ok(); bg();">Done!</button>
+	<p class='helpp' style="left:10px; position:relative; font-size:12px;">
+		<br>Have any issues or see a bug
+		<br>or have a suggestion for this website
+		<br>please click <a href="https://github.com/CloudGlitch/NewTabSearch/issues">here</a>
+		<br>
+		<br> <a href="https://github.com/CloudGlitch/NewTabSearch/issues" id="wss">send feedback</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="mob"><br></span> </p>
+</div>
+<button onclick="gsearch();" style="display:none;" accesskey="g"></button>
+<br>
+<br>
+
+<div id="header2">
+	<center>
+		<div id="header">
+			<h1 id="hdr" style="font-size: 45px;">New Tab</h1></div>
+	</center>
+</div>
+<p id="options" class="shake"><i class="fi-rr-globe" id="web" accesskey="w" onclick="myfuncweb();"></i>&nbsp;&nbsp;&nbsp;<i class="fi-rr-picture" id="img" accesskey="i" onclick="myfuncimg();"></i>&nbsp;&nbsp;&nbsp;<i class="fi-rr-play-alt" id="vid" accesskey="v" onclick="myfuncvid();"></i>&nbsp;&nbsp;&nbsp;<i class="fi-rr-map-marker" id="map" onclick="myfuncmap();"></i>&nbsp;&nbsp;&nbsp;<span id="more" onclick="moreopen();"><i class="fi-rr-menu-dots"></i></span></p>
+<center>
+	<div class="autocomplete" style="width:90%; border-width:1px; border-color:black; z-index: 0;">
+		<form style="z-index:0;" id="formsearch" method="GET" action="https://bing.com" autocomplete="off">
+			<div id="searchdiv">
+				<input id="myInput" class="slideUp" type="q" name="q" onkeyup="https();" accesskey="s" title="" placeholder="Search the web or enter a web address" style="outline: none; font-size: 20px;" autofocus="" required="" />&nbsp;&nbsp;
+				<button type="submit" title="" class="rotate" title="Search" onclick="funcurl();" name="search" id="myBtn"><i class="invert fi-rr-search"></i></button>
+			</div>
+		</form>
+	</div>
+	<div id="mh3">
+		<div id="btngrid2">
+			<div id="btngrid1">
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+			
+			<br>
+			<br>
+			<br>
+			<br>
+			<br></div>
+		</div>
+		<br>
+		<div id="btngrid" class="slideDown container">
+			 <a class="draggable" draggable="true" href='' id='a1'><button class="btn" id="btn1">Shortcut</button></a>
+        <a class="draggable" draggable="true" href='' id='a2'><button class="btn" title="" id="btn2">Shortcut</button></a>
+        <a class="draggable" draggable="true" href='' id='a3'><button class="btn" id="btn3">Shortcut</button></a>
+        <a class="draggable" draggable="true" href='' id='a4'><button class="btn" id="btn4">Shortcut</button></a>
+        <a class="draggable" draggable="true" href='' id='a5'><button class="btn" id="btn5">Shortcut</button></a>
+        <a class="draggable" draggable="true" href='' id='a6'><button  ondrop="drop(event)" ondragover="allowDrop(event)" class="btn" title="" id="btn6">Shortcut</button></a>
+		</div>
+	</div>
+	<br>
+	<br> </center>
+<div class="scroll slideDown" id="keycode">
+	<center>
+		<h1>Help</h1>
+		<h2>Shortcut keys</h2>
+		<p class="keycodep">press alt + w to search the web</p>
+		<p class="keycodep">press alt + i to search for images</p>
+		<p class="keycodep">press alt + v to search for videos</p>
+		<p class="keycodep">press alt + s to focus on search box</p>
+		<p class="keycodep">press alt + m to open settings</p>
+		<p class="keycodep">press alt + n to close settings</p>
+		<p class="keycodep">press alt + h to open help</p>
+		<p class="keycodep">press alt + g to search in google</p>
+		<br>
+		<h2>How to make shortcuts</h2> To make shortcuts in NewTabSearch click on settings option located on top-left corner > click on edit the shortcuts section > type in the url and name of your shortcut.<br>if your shortcuts are not visible it means they are hidden, open settings>hide and show shortcuts>show all shortcuts.
+		<br>then click done or refresh the page to save them.
+		<br>
+		<h2>how to enter urls in search bar</h2> to enter urls in search bar start with "https://" then click enter or search button. to enter file url start with "file://C:/".
+		<h2>Personalization</h2> open settings and click on personalize
+		<br>
+		<br>
+		<h2>Version</h2>
+		<p class="keycodep">you are running the latest version 17.2
+			<br>
+<br>
+<p class="keycodep">
+ </center>
+</div>
+</body>
+<script>
+function bg1() {
+ document.getElementById("bg").value = "#eab9ac";
+}
+function bg2() {
+ document.getElementById("bg").value = "#e24848";
+}
+function bg3() {
+ document.getElementById("bg").value = "#fbb117";
+}
+function bg4() {
+ document.getElementById("bg").value = "#2a363c";
+}
+function bg5() {
+ document.getElementById("bg").value = "#536878";
+}
+function bg6() {
+ document.getElementById("bg").value = "#f4b273";
+}
+function bg() {
+	var bg = document.getElementById("bg").value;
+	localStorage.setItem("wswsbg", bg);
+	document.getElementById("body").style.backgroundColor = bg;
+}
+window.onload = document.getElementById("bg").value = localStorage.getItem("wswsbg");
+var bgval = document.getElementById("bg").value;
+window.onload = document.getElementById("body").style.backgroundColor = bgval;
+function hidebtn() {
+ document.getElementById("1").click();
+ document.getElementById("2").click();
+ document.getElementById("3").click();
+ document.getElementById("4").click();
+ document.getElementById("5").click();
+ document.getElementById("6").click();
+}
+
+window.onload = setTimeout(os, 100);
+function os() {
+ if (navigator.appVersion.indexOf("Mac") != -1) {
+  alert("unsupported os");
+  window.location.reload();
+}
+}
+
+function contextmenu() {
+	event.preventDefault();
+	document.getElementById("mySidenav").style.width = "500px";
+	document.getElementById("overlaysidenav").style.display = "inline";
+}
+
+function gsearch() {
+	document.getElementById("formsearch").action = "https://www.google.com/search?q=";
+}
+if(screen.width <= 1133) {
+	document.getElementById("mobmsg").style.display = "inherit";
+	if(screen.availHeight < screen.availWidth) {
+		alert("Please use Portrait Mode");
+		window.location.reload();
+	}
+}
+var acc = document.getElementsByClassName("accordion");
+var i;
+for(i = 0; i < acc.length; i++) {
+	acc[i].addEventListener("click", function() {
+		this.classList.toggle("active");
+		var panel = this.nextElementSibling;
+		if(panel.style.maxHeight) {
+			panel.style.maxHeight = null;
+		} else {
+			panel.style.maxHeight = panel.scrollHeight + "px";
+		}
+	});
+}
+
+function reset() {
+            window.localStorage.clear();
+	window.location.reload();
+}
+
+function offinp() {
+	document.getElementById("keycode").style.display = "none";
+	document.getElementById("overlay").style.display = "none";
+           document.getElementById("notify").style.display = "none";
+	document.getElementById("searchdiv").style.top = "0px";
+	document.getElementById("options").style.opacity = "100%";
+}
+
+function off() {
+	document.getElementById("mySidenav").style.width = "0";
+	document.getElementById("divmore").style.width = "0";
+	document.getElementById("overlaysidenav").style.display = "none";
+}
+
+function openNav() {
+	document.getElementById("mySidenav").style.width = "500px";
+	document.getElementById("overlaysidenav").style.display = "inline";
+}
+
+function moreopen() {
+	document.getElementById("divmore").style.width = "45%";
+	document.getElementById("overlaysidenav").style.display = "inline";
+}
+
+function closeNav() {
+	document.getElementById("mySidenav").style.width = "0";
+	document.getElementById("overlaysidenav").style.display = "none";
+}
+
+function allowDrop(ev) {
+	ev.preventDefault();
+}
+
+function drag(ev) {
+	ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+	ev.preventDefault();
+	var data = ev.dataTransfer.getData("text");
+	ev.target.appendChild(document.getElementById(data));
+}
+
+function showbtn() {
+	var show = "inherit";
+	localStorage.setItem("showbtn", show);
+	localStorage.removeItem("hide1");
+	localStorage.removeItem("hide2");
+	localStorage.removeItem("hide3");
+	localStorage.removeItem("hide4");
+	localStorage.removeItem("hide5");
+	localStorage.removeItem("hide6");
+}
+function modern() {
+            alert("if the buttons are blank it means that you have not set any shortcuts");
+            document.getElementById("7").click();
+	localStorage.removeItem("minimalheadershow");
+            var grid1 = document.getElementById("btngrid1").style.display = "inherit";
+            localStorage.setItem("showgrid1" , grid1);
+            localStorage.removeItem("showgrid2");
+           window.location.reload();
+}
+/* hsm = header show minimal */
+function minimal() {
+            alert("if the buttons are blank it means that you have not set any shortcuts");
+            document.getElementById("7").click();
+	var hsm = document.getElementById("header").style.display = "inherit";
+	localStorage.setItem("minimalheadershow", hsm);
+           var grid2 = document.getElementById("btngrid1").style.display = "none";
+            localStorage.setItem("showgrid2" , grid2);
+           localStorage.removeItem("showgrid1");
+           window.location.reload();
+            
+}
+window.onload = document.getElementById("header").style.display = localStorage.getItem("minimalheadershow");
+window.onload = document.getElementById("btngrid1").style.display = localStorage.getItem("showgrid1");
+window.onload = document.getElementById("btngrid1").style.display = localStorage.getItem("showgrid2");
+
+function defmode() {
+            document.getElementById("minimal").click();
+            document.getElementById("8").click();
+}
+
+window.onload = document.getElementById("btn1").style.display = localStorage.getItem("showbtn");
+window.onload = document.getElementById("btn2").style.display = localStorage.getItem("showbtn");
+window.onload = document.getElementById("btn3").style.display = localStorage.getItem("showbtn");
+window.onload = document.getElementById("btn4").style.display = localStorage.getItem("showbtn");
+window.onload = document.getElementById("btn5").style.display = localStorage.getItem("showbtn");
+window.onload = document.getElementById("btn6").style.display = localStorage.getItem("showbtn");
+
+function hidebtn1() {
+	var hide1 = "none";
+	localStorage.setItem("hide1", hide1);
+	localStorage.removeItem("showbtn");
+}
+window.onload = document.getElementById("btn1").style.display = localStorage.getItem("hide1");
+
+function hidebtn2() {
+	var hide2 = "none";
+	localStorage.setItem("hide2", hide2);
+	localStorage.removeItem("showbtn");
+}
+window.onload = document.getElementById("btn2").style.display = localStorage.getItem("hide2");
+
+function hidebtn3() {
+	var hide3 = "none";
+	localStorage.setItem("hide3", hide3);
+	localStorage.removeItem("showbtn");
+}
+window.onload = document.getElementById("btn3").style.display = localStorage.getItem("hide3");
+
+function hidebtn4() {
+	var hide4 = "none";
+	localStorage.setItem("hide4", hide4);
+	localStorage.removeItem("showbtn");
+}
+window.onload = document.getElementById("btn4").style.display = localStorage.getItem("hide4");
+
+function hidebtn5() {
+	var hide5 = "none";
+	localStorage.setItem("hide5", hide5);
+	localStorage.removeItem("showbtn");
+}
+window.onload = document.getElementById("btn5").style.display = localStorage.getItem("hide5");
+
+function hidebtn6() {
+	var hide6 = "none";
+	localStorage.setItem("hide6", hide6);
+	localStorage.removeItem("showbtn");
+}
+window.onload = document.getElementById("btn6").style.display = localStorage.getItem("hide6");
+document.getElementById("user").innerHTML = "Welcome, " + getSavedValue("name");
+document.getElementById("a1").href = getSavedValue("txt_1");
+document.getElementById("btn1").innerHTML = getSavedValue("txt_2");
+document.getElementById("a2").href = getSavedValue("txt_3");
+document.getElementById("btn2").innerHTML = getSavedValue("txt_4");
+document.getElementById("a3").href = getSavedValue("txt_5");
+document.getElementById("btn3").innerHTML = getSavedValue("txt_6");
+document.getElementById("a4").href = getSavedValue("txt_7");
+document.getElementById("btn4").innerHTML = getSavedValue("txt_8");
+document.getElementById("a5").href = getSavedValue("txt_9");
+document.getElementById("btn5").innerHTML = getSavedValue("txt_10");
+document.getElementById("a6").href = getSavedValue("txt_11");
+document.getElementById("btn6").innerHTML = getSavedValue("txt_12");
+
+function change() {
+	document.title = "CloudGlitch";
+}
+
+function saveValue(e) {
+	var nts = e.id;
+	var ntsval = e.value;
+	localStorage.setItem(nts, ntsval);
+}
+
+function getSavedValue(v) {
+	if(!localStorage.getItem(v)) {
+		return "";
+	}
+	return localStorage.getItem(v);
+}
+if(!localStorage.noFirstVisit) {
+ document.getElementById("minimal").click();
+ document.getElementById("1").click();
+ document.getElementById("2").click();
+ document.getElementById("3").click();
+ document.getElementById("4").click();
+ document.getElementById("5").click();
+ document.getElementById("6").click();
+ alert("welcome To NewTabSearch. Click on the help button located on the top right corner of the webpage or press Alt+h to know how to use this website.");
+ alert("interface is set to minimal by default you can change it in settings");
+ window.location.reload();
+ localStorage.noFirstVisit = "1";
+}
+
+function ok() {
+	window.location.reload();
+}
+
+function https() {
+document.getElementById("myInput").style.border = "1px solid black";
+	if(input.value === "ht") {
+		input.value = "https://";
+	}
+	if(input.value === "file") {
+		input.value = "file:///C:/";
+	}
+	if(input.value === "/ctrl") {
+		document.getElementById("mySidenav").style.width = "500px";
+		document.getElementById("overlaysidenav").style.display = "inherit";
+	}
+	if(input.value === "/r") {
+		window.location.reload();
+	}
+	if(input.value === "/b") {
+		window.history.back();
+	}
+if(input.value === "wses") {
+		window.open("error.html");
+	}
+	
+}
+
+function funcurl() {
+	var inp = document.getElementById("myInput").value;
+	if(inp.startsWith("https://")) {
+		window.open(inp);
+		document.getElementById('formsearch').action = " ";
+	}
+if(inp.startsWith("http://")) {
+		alert("website you tried to enter is not secure");
+                       document.getElementById('formsearch').action = " ";
+	}
+	if(inp.startsWith("file:///C:/")) {
+		window.open(inp);
+		document.getElementById('formsearch').action = " ";
+	}
+}
+if(navigator.offLine) {
+	alert('you are offline');
+	document.getElementById('formsearch').action = " ";
+}
+window.onoffline = function() {
+	alert('you are offline');
+}
+var input = document.getElementById("myInput");
+input.addEventListener("keyup", function(event) {
+	if(event.keyCode === 13) {
+		document.getElementById("myBtn").click();
+	}
+});
+
+function myfuncweb() {
+	document.getElementById('formsearch').action = "https://bing.com";
+	document.getElementById('myInput').placeholder = "Search the web or enter a web address";
+}
+
+function myfuncimg() {
+	document.getElementById('formsearch').action = "https://www.bing.com/images/";
+	document.getElementById('myInput').placeholder = "Search for images or enter a web address";
+}
+
+function myfuncvid() {
+	document.getElementById('formsearch').action = "https://www.bing.com/videos/";
+	document.getElementById('myInput').placeholder = "Search for videos or enter a web address";
+}
+
+function myfuncmap() {
+	document.getElementById('formsearch').action = "https://www.bing.com/maps/";
+	document.getElementById('myInput').placeholder = "Search for places or enter a web address";
+}
+
+function autocomplete(inp, arr) {
+	/*the autocomplete function takes two arguments,
+	the text field element and an array of possible autocompleted values:*/
+	var currentFocus;
+	/*execute a function when someone writes in the text field:*/
+	inp.addEventListener("input", function(e) {
+		var a, b, i, val = this.value;
+		/*close any already open lists of autocompleted values*/
+		closeAllLists();
+		if(!val) {
+			return false;
+		}
+		currentFocus = -1;
+		/*create a DIV element that will contain the items (values):*/
+		a = document.createElement("DIV");
+		a.setAttribute("id", this.id + "autocomplete-list");
+		a.setAttribute("class", "autocomplete-items");
+		/*append the DIV element as a child of the autocomplete container:*/
+		this.parentNode.appendChild(a);
+		/*for each item in the array...*/
+		for(i = 0; i < arr.length; i++) {
+			/*check if the item starts with the same letters as the text field value:*/
+			if(arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+				/*create a DIV element for each matching element:*/
+				b = document.createElement("DIV");
+				/*make the matching letters bold:*/
+				b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+				b.innerHTML += arr[i].substr(val.length);
+				/*insert a input field that will hold the current array item's value:*/
+				b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+				/*execute a function when someone clicks on the item value (DIV element):*/
+				b.addEventListener("click", function(e) {
+					/*insert the value for the autocomplete text field:*/
+					inp.value = this.getElementsByTagName("input")[0].value;
+					/*close the list of autocompleted values,
+					(or any other open lists of autocompleted values:*/
+					closeAllLists();
+				});
+				a.appendChild(b);
+			}
+		}
+	});
+	/*execute a function presses a key on the keyboard:*/
+	inp.addEventListener("keydown", function(e) {
+		var x = document.getElementById(this.id + "autocomplete-list");
+		if(x) x = x.getElementsByTagName("div");
+		if(e.keyCode == 40) {
+			/*If the arrow DOWN key is pressed,
+			increase the currentFocus variable:*/
+			currentFocus++;
+			/*and and make the current item more visible:*/
+			addActive(x);
+		} else if(e.keyCode == 38) { //up
+			/*If the arrow UP key is pressed,
+			decrease the currentFocus variable:*/
+			currentFocus--;
+			/*and and make the current item more visible:*/
+			addActive(x);
+		} else if(e.keyCode == 9) {
+			e.preventDefault();
+			if(currentFocus > -1) {
+				/*and simulate a click on the "active" item:*/
+				if(x) x[currentFocus].click();
+			}
+		}
+	});
+
+	function addActive(x) {
+		/*a function to classify an item as "active":*/
+		if(!x) return false;
+		/*start by removing the "active" class on all items:*/
+		removeActive(x);
+		if(currentFocus >= x.length) currentFocus = 0;
+		if(currentFocus < 0) currentFocus = (x.length - 1);
+		/*add class "autocomplete-active":*/
+		x[currentFocus].classList.add("autocomplete-active");
+	}
+
+	function removeActive(x) {
+		/*a function to remove the "active" class from all autocomplete items:*/
+		for(var i = 0; i < x.length; i++) {
+			x[i].classList.remove("autocomplete-active");
+		}
+	}
+
+	function closeAllLists(elmnt) {
+		/*close all autocomplete lists in the document,
+		except the one passed as an argument:*/
+		var x = document.getElementsByClassName("autocomplete-items");
+		for(var i = 0; i < x.length; i++) {
+			if(elmnt != x[i] && elmnt != inp) {
+				x[i].parentNode.removeChild(x[i]);
+			}
+		}
+	}
+	/*execute a function when someone clicks in the document:*/
+	document.addEventListener("click", function(e) {
+		closeAllLists(e.target);
+	});
+}
+/*An array containing all the country names in the world:*/
+var countries = ['calculate time difference', 'how to make a', 'how to', 'when is the', 'when is', 'when is the next solar eclipse', 'when is the next lunar eclipse', 'what happenes when', 'meaning of', 'what is meant by', "hello", "hi", "what", "what is", "what is the", "what is the meaning of", "which", "which is", "which is the", "how", 'how many', 'google', 'bing', 'amazon', 'flipkart', 'a', 'animals', 'quara', 'wikipedia', 'usa', 'canva', 'china', 'russia', 'india', 'who', 'who is', 'who is the', 'who was the', 'why', 'why did', 'office', 'onedrive', 'outlook', 'run', 'translate', 'youtube', 'youtube downloader', 'iconfinder', 'pintrest', 'prime video', 'amazon prime', 'sublime text', 'sublime text 3 download', 'sublime text download', 'discord', 'facebook', 'whatsapp', 'gmail', 'google meet', 'microsoft teams', 'hotstar', 'jpg to png', 'png to jpg', 'linkedin', 'zoho presentaion', 'zoom', 'zoom meeting', 'bbc news', 'msn news', 'netflix', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'msn weather', 'msn', 'euro', 'europe', 'k', 'x', 'v', 'microsoft', 'what is the difference between', 'remove bg', 'remove background', 'meet', 'png to ico', 'word to pdf', 'png to jpeg', 'png to jpg', 'jpeg to png', 'Visual Code Studio', 'Visual Code Studio download', 'skype', 'github', 'weather', 'https://', 'https://bing.com', 'https://youtube.com', 'https://google.com', 'difference between', 'youtube.com', 'bing.com', 'https://discord.com/app', 'microsoft.com', 'https://github.com', 'github.com', 'w3schools', 'stackoverflow', 'https://w3schools.com', 'https://stackoverflow.com'];
+/*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
+autocomplete(document.getElementById("myInput"), countries);
+window.onload = function() {
+
+	document.addEventListener("keydown", function(e) {
+		//document.onkeydown = function(e) {
+		// "I" key
+		if(e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+			disabledEvent(e);
+		}
+		// "J" key
+		if(e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+			disabledEvent(e);
+		}
+		// "S" key + macOS
+		if(e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+			disabledEvent(e);
+		}
+		// "U" key
+		if(e.ctrlKey && e.keyCode == 85) {
+			disabledEvent(e);
+		}
+		// "F12" key
+		if(event.keyCode == 123) {
+			disabledEvent(e);
+		}
+	}, false);
+
+	function disabledEvent(e) {
+		if(e.stopPropagation) {
+			e.stopPropagation();
+		} else if(window.event) {
+			window.event.cancelBubble = true;
+		}
+		e.preventDefault();
+		return false;
+	}
+};
+
+function openhelp() {
+	document.getElementById("keycode").style.display = "inherit";
+	document.getElementById("overlay").style.display = "inherit";
+}
+
+window.onload =  setTimeout(sleepon, 300000);
+</script>
+</html>
+
+<!-- line wrap -  lines-->
+<!-- no line wrap -  lines-->
+
+<!-- full webpage including storages takes less than 100 bits-->
