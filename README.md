@@ -4,7 +4,7 @@ Any part of this <a href="https://CloudGlitch.github.io/NewTabSearch">website</a
 
 Welcome to Cloud NewTabSearch (cloud nts)
 
-<a href="https://cloudglitch.github.io/NewTabSearch">click here</a>
+<a href="https://cloudglitch.github.io/NewTabSearch">click here</a> to goto the webpage
 
 ## Compatability 
 
