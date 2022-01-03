@@ -18,7 +18,44 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+<script>
+	window.onload = function() {
 
+	document.addEventListener("keydown", function(e) {
+		//document.onkeydown = function(e) {
+		// "I" key
+		if(e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+			disabledEvent(e);
+		}
+		// "J" key
+		if(e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+			disabledEvent(e);
+		}
+		// "S" key + macOS
+		if(e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+			disabledEvent(e);
+		}
+		// "U" key
+		if(e.ctrlKey && e.keyCode == 85) {
+			disabledEvent(e);
+		}
+		// "F12" key
+		if(event.keyCode == 123) {
+			disabledEvent(e);
+		}
+	}, false);
+
+	function disabledEvent(e) {
+		if(e.stopPropagation) {
+			e.stopPropagation();
+		} else if(window.event) {
+			window.event.cancelBubble = true;
+		}
+		e.preventDefault();
+		return false;
+	}
+};
+	</script>
     <style>
 * {
 	font-family: Roboto Slab;
@@ -2152,42 +2189,6 @@ function autocomplete(inp, arr) {
 var countries = ['calculate time difference', 'how to make a', 'how to', 'when is the', 'when is', 'when is the next solar eclipse', 'when is the next lunar eclipse', 'what happenes when', 'meaning of', 'what is meant by', "hello", "hi", "what", "what is", "what is the", "what is the meaning of", "which", "which is", "which is the", "how", 'how many', 'google', 'bing', 'amazon', 'flipkart', 'a', 'animals', 'quara', 'wikipedia', 'usa', 'canva', 'china', 'russia', 'india', 'who', 'who is', 'who is the', 'who was the', 'why', 'why did', 'office', 'onedrive', 'outlook', 'run', 'translate', 'youtube', 'youtube downloader', 'iconfinder', 'pintrest', 'prime video', 'amazon prime', 'sublime text', 'sublime text 3 download', 'sublime text download', 'discord', 'facebook', 'whatsapp', 'gmail', 'google meet', 'microsoft teams', 'hotstar', 'jpg to png', 'png to jpg', 'linkedin', 'zoho presentaion', 'zoom', 'zoom meeting', 'bbc news', 'msn news', 'netflix', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'msn weather', 'msn', 'euro', 'europe', 'k', 'x', 'v', 'microsoft', 'what is the difference between', 'remove bg', 'remove background', 'meet', 'png to ico', 'word to pdf', 'png to jpeg', 'png to jpg', 'jpeg to png', 'Visual Code Studio', 'Visual Code Studio download', 'skype', 'github', 'weather', 'https://', 'https://bing.com', 'https://youtube.com', 'https://google.com', 'difference between', 'youtube.com', 'bing.com', 'https://discord.com/app', 'microsoft.com', 'https://github.com', 'github.com', 'w3schools', 'stackoverflow', 'https://w3schools.com', 'https://stackoverflow.com'];
 /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
 autocomplete(document.getElementById("myInput"), countries);
-window.onload = function() {
-
-	document.addEventListener("keydown", function(e) {
-		//document.onkeydown = function(e) {
-		// "I" key
-		if(e.ctrlKey && e.shiftKey && e.keyCode == 73) {
-			disabledEvent(e);
-		}
-		// "J" key
-		if(e.ctrlKey && e.shiftKey && e.keyCode == 74) {
-			disabledEvent(e);
-		}
-		// "S" key + macOS
-		if(e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
-			disabledEvent(e);
-		}
-		// "U" key
-		if(e.ctrlKey && e.keyCode == 85) {
-			disabledEvent(e);
-		}
-		// "F12" key
-		if(event.keyCode == 123) {
-			disabledEvent(e);
-		}
-	}, false);
-
-	function disabledEvent(e) {
-		if(e.stopPropagation) {
-			e.stopPropagation();
-		} else if(window.event) {
-			window.event.cancelBubble = true;
-		}
-		e.preventDefault();
-		return false;
-	}
-};
 
 function openhelp() {
 	document.getElementById("keycode").style.display = "inherit";
