@@ -10,19 +10,7 @@ Any part of this <a href="https://webergstudios.github.io/webergsearch">website<
 
 operating system should be above windows 10.
 
-Weberg Search v17.1 or Weberg New Tab Search is a New Tab page for browsers [the browser should support html5 , css3 and javascript for example Microsoft Edge]
+Cloud New Tab Search is a New Tab page for browsers [the browser should support html5 , css3 and javascript for example Microsoft Edge]
 This New Tab Page is based on bing search.
- 
- ## How To?
 
-download link: <a href="https://webergstudios.github.io/webergsearch/extensions/download">Download</a> to download the file
-
-report bugs or errors and contact us <a href='https://github.com/webergstudios/webergsearch/issues'>over here</a><br>
-check out this project online <a href='https://webergstudios.github.io/webergsearch'>over here</a>
-
-<a href="https://webergstudios.github.io/webergsearch">Weberg Search Link</a>
-
-This Website is ad-free 
-<br>
-Enjoy :smile:
 
