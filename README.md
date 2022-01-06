@@ -8,9 +8,13 @@ Welcome to Cloud NewTabSearch (cloud nts)
 
 ## Compatability 
 
-operating system should be above windows 10.
+operating system should be above windows 10 for pc's
 
-Cloud New Tab Search is a New Tab page for browsers [the browser should support html5 , css3 and javascript for example Microsoft Edge]
+mobiles should be android
+
+tablets and other any devices wont work 
+
+#### Cloud New Tab Search is a New Tab page for browsers [the browser should support html5 , css3 and javascript for example Microsoft Edge]
 This New Tab Page is based on bing search.
 
 ## Cloud NewTab Search v1.2 is coming soon
