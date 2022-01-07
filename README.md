@@ -24,10 +24,10 @@ the new version of cloud new tab search (v1.2) will be released on 10th January 
  - reset bug fixed
 
 ## wiki
- <a href="https://github.com/CloudGlitch/NewTabSearch/wiki">click to open wiki</a>
+-  <a href="https://github.com/CloudGlitch/NewTabSearch/wiki">click to open wiki</a>
  
- <a href="https://github.com/CloudGlitch/NewTabSearch/wiki#links">links</a>
+-  <a href="https://github.com/CloudGlitch/NewTabSearch/wiki#links">links</a>
  
- <a href="https://github.com/CloudGlitch/NewTabSearch/wiki#versions">versions</a>
+-  <a href="https://github.com/CloudGlitch/NewTabSearch/wiki#versions">versions</a>
  
- <a href="https://github.com/CloudGlitch/NewTabSearch/wiki#fonts-and-icons">fonts and icons</a>
+-  <a href="https://github.com/CloudGlitch/NewTabSearch/wiki#fonts-and-icons">fonts and icons</a>
