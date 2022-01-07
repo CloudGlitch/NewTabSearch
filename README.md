@@ -8,11 +8,10 @@ Any part of this <a href="https://CloudGlitch.github.io/NewTabSearch">website</a
 
 ## Compatability 
 
-operating system should be above windows 10 for pc's
-
-mobiles should be android
-
-tablets and other any devices wont work 
+cloud new tab search works good on these operating systems.
+- <a href="https://www.microsoft.com/en-in/windows/get-windows-10">windows 10</a>
+- <a href="https://www.microsoft.com/en-in/windows/get-windows-11">windows 11</a>
+- <a href="https://www.android.com/">android</a>
 
 ## Cloud NewTab Search v1.2 is coming soon
 
