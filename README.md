@@ -1,5 +1,7 @@
 # NewTabSearch
 
+current version : 1
+
 Any part of this <a href="https://CloudGlitch.github.io/NewTabSearch">website</a> is not allowed to redistribute , reproduce or recreate. 
 
 <a href="https://cloudglitch.github.io/NewTabSearch">click here</a> to goto the webpage
