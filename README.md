@@ -21,6 +21,8 @@ the new version of cloud new tab search (v1.2) will be released on 10th January 
 
  - included hide and show tools option in settings
  - reset bug fixed
+ 
+ <a href="https://github.com/CloudGlitch/NewTabSearch/releases/tag/v1.2">Cloud NewTab Search 1.2 Preview</a>
 
 ## wiki
 -  <a href="https://github.com/CloudGlitch/NewTabSearch/wiki">click to open wiki</a>
