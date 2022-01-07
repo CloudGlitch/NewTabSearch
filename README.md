@@ -6,10 +6,6 @@ Any part of this <a href="https://CloudGlitch.github.io/NewTabSearch">website</a
 
 #### Cloud New Tab Search is a New Tab page for browsers [the browser should support html5 , css3 and javascript for example Microsoft Edge] This New Tab Page is based on bing search.
 
-## wiki
- <a href="https://github.com/CloudGlitch/NewTabSearch/wiki">click to open wiki</a>
- <a href="https://github.com/CloudGlitch/NewTabSearch/wiki#links">wiki section links</a>
-
 ## Compatability 
 
 operating system should be above windows 10 for pc's
@@ -26,3 +22,12 @@ the new version of cloud new tab search (v1.2) will be released on 10th January 
 
  - included hide and show tools option in settings
  - reset bug fixed
+
+## wiki
+ <a href="https://github.com/CloudGlitch/NewTabSearch/wiki">click to open wiki</a>
+ 
+ <a href="https://github.com/CloudGlitch/NewTabSearch/wiki#links">links</a>
+ 
+ <a href="https://github.com/CloudGlitch/NewTabSearch/wiki#versions">versions</a>
+ 
+ <a href="https://github.com/CloudGlitch/NewTabSearch/wiki#fonts-and-icons">fonts and icons</a>
