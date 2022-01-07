@@ -8,7 +8,7 @@ Any part of this <a href="https://CloudGlitch.github.io/NewTabSearch">website</a
 
 ## Compatability 
 
-cloud new tab search works good on these operating systems.
+these are the recommended operating systems.
 - <a href="https://www.microsoft.com/en-in/windows/get-windows-10">windows 10</a>
 - <a href="https://www.microsoft.com/en-in/windows/get-windows-11">windows 11</a>
 - <a href="https://www.android.com/">android</a>
