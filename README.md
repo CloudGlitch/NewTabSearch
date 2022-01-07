@@ -7,7 +7,8 @@ Any part of this <a href="https://CloudGlitch.github.io/NewTabSearch">website</a
 #### Cloud New Tab Search is a New Tab page for browsers [the browser should support html5 , css3 and javascript for example Microsoft Edge] This New Tab Page is based on bing search.
 
 ## wiki
- <a href="https://github.com/CloudGlitch/NewTabSearch/wiki">wiki link</a>
+ <a href="https://github.com/CloudGlitch/NewTabSearch/wiki">click to open wiki</a>
+ <a href="https://github.com/CloudGlitch/NewTabSearch/wiki#links">wiki section links</a>
 
 ## Compatability 
 
