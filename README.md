@@ -2,7 +2,7 @@
 
 current version : Cloud NewTab Search v1 alpha 
 
-beta version : <a href="https://github.com/CloudGlitch/NewTabSearch/releases/tag/v1.2-pre">Cloud NewTab Search v1.2 preview</a>
+ v1.2 alpha preview : <a href="https://github.com/CloudGlitch/NewTabSearch/releases/tag/v1.2-pre">Cloud NewTab Search v1.2 preview</a>
 
 Any part of this <a href="https://CloudGlitch.github.io/NewTabSearch">website</a> is not allowed to redistribute , reproduce or recreate. 
 
