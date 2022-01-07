@@ -1,6 +1,7 @@
 # NewTabSearch
 
 current version : 1
+
 beta version : <a href="https://github.com/CloudGlitch/NewTabSearch/releases/tag/v1.2-beta">v1.2-beta</a>
 
 Any part of this <a href="https://CloudGlitch.github.io/NewTabSearch">website</a> is not allowed to redistribute , reproduce or recreate. 
