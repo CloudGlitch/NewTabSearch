@@ -18,7 +18,6 @@ these are the recommended operating systems.
  - included hide and show tools option in settings
  - reset bug fixed
  
- <a href="https://github.com/CloudGlitch/NewTabSearch/releases/tag/v1.2">Cloud NewTab Search 1.2 Preview</a>
 
 ## wiki
 -  <a href="https://github.com/CloudGlitch/NewTabSearch/wiki">click to open wiki</a>
