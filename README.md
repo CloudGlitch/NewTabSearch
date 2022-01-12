@@ -15,10 +15,10 @@ these are the recommended operating systems.
 
 # Cloud NewTab <a href="https://github.com/CloudGlitch/NewTabSearch/releases/tag/v1.3-prev">1.3</a> is coming soon
 ## what will be new in v1.3?
--new modern mode [ the look of modern mode will be changed ]
--add upto 8 shortcuts in modern mode
--automatically changing dark & light mode
--set default search engine [ google or bing ]
+- new modern mode [ the look of modern mode will be changed ]
+- add upto 8 shortcuts in modern mode
+- automatically changing dark & light mode
+- set default search engine [ google or bing ]
 
 ## wiki
 -  <a href="https://github.com/CloudGlitch/NewTabSearch/wiki">click to open wiki</a>
