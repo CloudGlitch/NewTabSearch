@@ -19,6 +19,10 @@ these are the recommended operating systems.
 ## what is new in v1.3?
 - automatically changing dark & light mode
 - set default search engine [ google or bing ]
+## version 1.4 is coming soon
+ cloud newtab search v1.4 will be released on February 5th 2022.
+ 
+ <a href="https://github.com/CloudGlitch/NewTabSearch/releases/tag/v1.4-pre">Click here to see more on v1.4</a>
 
 ## wiki
 -  <a href="https://github.com/CloudGlitch/NewTabSearch/wiki">click to open wiki</a>
