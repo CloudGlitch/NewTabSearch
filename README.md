@@ -15,13 +15,11 @@ these are the recommended operating systems.
 - <a href="https://www.microsoft.com/en-in/windows/get-windows-11">windows 11</a>
 - <a href="https://www.android.com/">android</a>
 
-# Cloud NewTab <a href="https://github.com/CloudGlitch/NewTabSearch/releases/tag/v1.3-prev">1.3</a> is coming on 19th jan 2022
 ## what is new in v1.3?
 - automatically changing dark & light mode
 - small UI changes
 - set default search engine [ google or bing ]
- 
- <a href="https://github.com/CloudGlitch/NewTabSearch/releases/tag/v1.4-pre">Click here to see more on v1.4</a>
+
 
 ## wiki
 -  <a href="https://github.com/CloudGlitch/NewTabSearch/wiki">click to open wiki</a>
