@@ -1,4 +1,4 @@
-# NewTabSearch
+# NewTab Search
 
 Any part of this <a href="https://CloudGlitch.github.io/NewTabSearch">website</a> is not allowed to redistribute , reproduce or recreate. 
 
