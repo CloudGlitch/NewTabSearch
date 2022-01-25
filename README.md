@@ -15,11 +15,6 @@ these are the recommended operating systems.
 - <a href="https://www.microsoft.com/en-in/windows/get-windows-11">windows 11</a>
 - <a href="https://www.android.com/">android</a>
 
-## what is new in v1.3?
-- automatically changing dark & light mode
-- small UI changes
-- set default search engine [ google or bing ]
-
 
 ## wiki
 -  <a href="https://github.com/CloudGlitch/NewTabSearch/wiki">click to open wiki</a>
