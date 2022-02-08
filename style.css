@@ -1,25 +1,23 @@
 #hdr::-moz-selection{
-	background: #333;
-            color:white;
+	background: #f2f2f2;
+            color:#000;
 }
 #hdr::selection{
-	background:#333;
-            color:white;
+	background:#f2f2f2;
+            color:#000;
 }
-body { 
- color:#000;
-}
+body {
+ color:#fff;
  * {
 
-  background:#f2f2f2;
-  color:#000;
+  background:#393939;
+  color:#fff;
 	font-family: Roboto Slab;
 	cursor: url("https://cloudglitch.github.io/NewTabSearch/normal.cur"),default;
-	color: white;
 }
 #mySidenav , .btn , .accordion , .autocomplete-active , .autocomplete-items , .autocomplete-items div:hover , .panel , #release , #keycode , .hidebtn , .mode , .bdblack , .morebtn {
- border:1px solid black;
- color:#000;
+ border:1px solid white;
+ color:#fff;
 }
 #searchicon {
  background:transparent;
@@ -28,10 +26,10 @@ body {
 #myInput , #txt_1, #txt_2, #txt_3, #txt_4, #txt_5, #txt_6, #txt_7, #txt_8, #txt_9, #txt_10, #txt_11, #txt_12, #name {
  background:#fff;
  color:#000;
- border:1px solid black;
+ border:1px solid white;
 }
 strong , #user {
- color:#000;
+ color:#fff;
 }@media (prefers-color-scheme:dark){#hdr::-moz-selection{background:#f2f2f2;color:#000}#hdr::selection{background:#f2f2f2;color:#000}*{background:#393939;color:#fff}#mySidenav,.btn,.accordion,.autocomplete-active,.autocomplete-items,.autocomplete-items div:hover,.panel,#release,#keycode,.hidebtn,.mode,.bdblack,.morebtn{border:1px solid #fff;color:#fff}#searchicon{background:0 0;color:#000}#myInput,#txt_1,#txt_2,#txt_3,#txt_4,#txt_5,#txt_6,#txt_7,#txt_8,#txt_9,#txt_10,#txt_11,#txt_12,#name{background:#fff;color:#000;border:1px solid #fff}strong,#user{color:#fff}}@media (prefers-color-scheme:light){#hdr::-moz-selection{background:#333;color:#fff}#hdr::selection{background:#333;color:#fff}*{background:#f2f2f2;color:#000}#mySidenav,.btn,.accordion,.autocomplete-active,.autocomplete-items,.autocomplete-items div:hover,.panel,#release,#keycode,.hidebtn,.mode,.bdblack,.morebtn{border:1px solid #000;color:#000}#searchicon{background:0 0;color:#000}
 #myInput,#txt_1,#txt_2,#txt_3,#txt_4,#txt_5,#txt_6,#txt_7,#txt_8,#txt_9,#txt_10,#txt_11,#txt_12,#name{background:#fff;color:#000;border:1px solid #000}strong,#user{color:#000}}::-moz-selection{background:0 0}::selection{background:0 0}#myInput::-moz-selection{background:#333;color:#fff}#myInput::selection{background:#333;color:#fff}.barrelRoll,.fadeIn,.floater,.heartbeat,.pulse,.rollerLeft,.rollerRight,.rotateIn,.rotateInLeft,.rotateInRight,.rotation,.shake,.sideToSide,.slideDown,.slideLeft,.slideRight,.slideUp,.spinner,.wiggle,.zoomer,.zoomerOut{visibility:visible!important}.rotation{animation-name:rotation;-webkit-animation-name:rotation;animation-duration:4s;-webkit-animation-duration:4s;animation-timing-function:linear;-webkit-animation-timing-function:linear;animation-iteration-count:infinite}.rotation,.sideToSide{-webkit-animation-iteration-count:infinite}@-webkit-keyframes rotation{from{-webkit-transform:rotate(0) translateX(50%) rotate(0)}to{-webkit-transform:rotate(360deg) translateX(50%) rotate(-360deg)}
 }@keyframes rotation{from{transform:rotate(0) translateX(50%) rotate(0)}to{transform:rotate(360deg) translateX(50%) rotate(-360deg)}}.sideToSide{animation-name:sideToSide;-webkit-animation-name:sideToSide;animation-duration:3s;-webkit-animation-duration:3s;animation-timing-function:ease;-webkit-animation-timing-function:ease;animation-iteration-count:infinite}@-webkit-keyframes sideToSide{0%,100%{-webkit-transform:translate(100%,0)}50%{-webkit-transform:translate(-100%,0)}}@keyframes sideToSide{0%,100%{transform:translate(100%,0)}50%{transform:translate(-100%,0)}}.zoomer{animation-name:zoomer;-webkit-animation-name:zoomer;-webkit-animation-duration:1s;-webkit-animation-timing-function:cubic-bezier(.5,.2,.3,1);animation-iteration-count:1}.zoomer,.zoomerOut{-webkit-animation-iteration-count:1;animation-timing-function:cubic-bezier(.5,.2,.3,1);animation-duration:1s}@-webkit-keyframes zoomer{0%{-webkit-transform:scale(.3)}100%{-webkit-transform:scale(1)}}@keyframes zoomer{0%{transform:scale(.3)}
