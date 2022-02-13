@@ -4,6 +4,8 @@ Any part of this <a href="https://CloudGlitch.github.io/NewTabSearch">website</a
 
 <a href="https://cloudglitch.github.io/NewTabSearch">click here</a> to goto the webpage
 
+`Note : All Features May Not Be Able To Use In Unsupported Devices`
+
 #### Cloud New Tab Search is a New Tab page for browsers [the browser should support html5 , css3 and javascript for example Microsoft Edge] This New Tab Page is based on bing search.
 
 ## Compatability 
