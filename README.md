@@ -2,7 +2,7 @@
 
 Any part of this <a href="https://CloudGlitch.github.io/NewTabSearch">website</a> is not allowed to redistribute , reproduce or recreate. 
 
-<a href="https://cloudglitch.github.io/NewTabSearch">click here</a> to goto the webpage
+<a href="bit.ly/cloudnewtab">click here</a> to goto the webpage
 
 `Note : All Features May Not Be Able To Use In Unsupported Devices`
 
