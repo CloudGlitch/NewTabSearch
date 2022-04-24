@@ -1,0 +1,1155 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="msvalidate.01" content="985E31D4671410081DE1A38A31F66B02" />
+    <meta name='author' content='CloudGlitch'>
+    <meta name="description" content="best new tab extension. Customize you new tab in youe way. Create Shortcuts and options to search the web or images , videos , maps directly . Find us on github to contact , report bug or issues and suggestions." />
+    <title>NewTab</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel="icon" href="logo.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+
+    <style>
+
+
+ * {
+	font-family: Roboto Slab;
+	cursor: url("https://cloudglitch.github.io/NewTabSearch/normal.cur"),default;
+}
+
+ body {
+  background-image:url("https://images.pexels.com/photos/1328879/pexels-photo-1328879.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-repeat: no-repeat;
+  color:#fff;
+
+
+}
+#user , #options , #title , #settingsbtn , #helpbtn , #clock {
+ text-shadow:1px 1px 1px black;
+}
+#settingsbtn , #helpbtn {
+ color:#fff;
+}
+#user {
+ position:relative;
+ right:0px;
+}
+.autocomplete-active , .autocomplete-items , .autocomplete-items div:hover {
+ color:#000;
+}
+#myBtn {
+ background:transparent;
+}
+ .accordion , .panel , #keycode , .hidebtn , .mode , .bdblack , .morebtn {
+ border:1px solid black;
+ color:#000;
+}
+#searchicon {
+ background:transparent;
+ color:#000;
+}
+#myInput , #txt_1, #txt_2, #txt_3, #txt_4, #txt_5, #txt_6, #txt_7, #txt_8, #txt_9, #txt_10, #txt_11, #txt_12, #txt_13 , #txt_14 , #txt_15 , #txt_16, #name , #bginp {
+ background:#fff;
+ color:#000;
+ border:1px solid black;
+}
+#user {
+ color:#fff;
+}
+strong {
+ color:#000;
+}
+::-moz-selection{
+	background: transparent;
+}
+::selection{
+	background:transparent;
+}
+#myInput::-moz-selection{
+	background: #333;
+            color:white;
+}
+#myInput::selection{
+	background:#333;
+            color:white;
+}
+#mySidenav , #keycode {
+  background:#fff;
+ color:#000;
+}
+.barrelRoll,.fadeIn,.floater,.heartbeat,.pulse,.rollerLeft,.rollerRight,.rotateIn,.rotateInLeft,.rotateInRight,.rotation,.shake,.sideToSide,.slideDown,.slideLeft,.slideRight,.slideUp,.spinner,.wiggle,.zoomer,.zoomerOut{visibility:visible!important}.rotation{animation-name:rotation;-webkit-animation-name:rotation;animation-duration:4s;-webkit-animation-duration:4s;animation-timing-function:linear;-webkit-animation-timing-function:linear;animation-iteration-count:infinite}.rotation,.sideToSide{-webkit-animation-iteration-count:infinite}@-webkit-keyframes rotation{from{-webkit-transform:rotate(0) translateX(50%) rotate(0)}to{-webkit-transform:rotate(360deg) translateX(50%) rotate(-360deg)}}@keyframes rotation{from{transform:rotate(0) translateX(50%) rotate(0)}to{transform:rotate(360deg) translateX(50%) rotate(-360deg)}}.sideToSide{animation-name:sideToSide;-webkit-animation-name:sideToSide;animation-duration:3s;-webkit-animation-duration:3s;animation-timing-function:ease;-webkit-animation-timing-function:ease;animation-iteration-count:infinite}
+@-webkit-keyframes sideToSide{0%,100%{-webkit-transform:translate(100%,0)}50%{-webkit-transform:translate(-100%,0)}}@keyframes sideToSide{0%,100%{transform:translate(100%,0)}50%{transform:translate(-100%,0)}}.zoomer{animation-name:zoomer;-webkit-animation-name:zoomer;-webkit-animation-duration:1s;-webkit-animation-timing-function:cubic-bezier(.5,.2,.3,1);animation-iteration-count:1}.zoomer,.zoomerOut{-webkit-animation-iteration-count:1;animation-timing-function:cubic-bezier(.5,.2,.3,1);animation-duration:1s}@-webkit-keyframes zoomer{0%{-webkit-transform:scale(.3)}100%{-webkit-transform:scale(1)}}@keyframes zoomer{0%{transform:scale(.3)}100%{transform:scale(1)}}.zoomerOut{animation-name:zoomerOut;-webkit-animation-name:zoomerOut;-webkit-animation-duration:1s;-webkit-animation-timing-function:cubic-bezier(.5,.2,.3,1);animation-iteration-count:1;animation-fill-mode:forwards}.rollerRight,.zoomerOut{-webkit-animation-fill-mode:forwards}@-webkit-keyframes zoomerOut{0%{-webkit-transform:scale(1)}
+100%{-webkit-transform:scale(0)}}@keyframes zoomerOut{0%{transform:scale(1)}100%{transform:scale(0)}}.spinner{animation-name:spinner;-webkit-animation-name:spinner;-webkit-animation-duration:2s;-webkit-animation-timing-function:linear;-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite}.pulse,.spinner{animation-timing-function:linear;animation-duration:2s}@-webkit-keyframes spinner{from{-webkit-transform:rotate(0)}to{-webkit-transform:rotate(360deg)}}@keyframes spinner{from{transform:rotate(0)}to{transform:rotate(360deg)}}.pulse{animation-name:pulse;-webkit-animation-name:pulse;-webkit-animation-duration:2s;-webkit-animation-timing-function:linear;animation-iteration-count:infinite;-webkit-animation-iteration-count:infinite}@keyframes pulse{0%,100%{transform:scale(.9);opacity:.9}50%{transform:scale(1);opacity:1}}@-webkit-keyframes pulse{0%,100%{-webkit-transform:scale(.95);opacity:.9}50%{-webkit-transform:scale(1);opacity:1}}.shake{animation-name:shake;-webkit-animation-name:shake;-webkit-animation-duration:.4s;-webkit-animation-timing-function:ease;-webkit-animation-iteration-count:1}
+.barrelRoll,.shake{animation-iteration-count:1;animation-timing-function:ease;animation-duration:.4s}@keyframes shake{0%,100%{transform:translateX(0)}16%,50%,83%{transform:translateX(-10px)}33%,66%{transform:translateX(10px)}}@-webkit-keyframes shake{0%,100%{-webkit-transform:translateX(0)}16%,50%,83%{-webkit-transform:translateX(-10px)}33%,66%{-webkit-transform:translateX(10px)}}.barrelRoll{animation-name:barrelRoll;-webkit-animation-name:barrelRoll;-webkit-animation-duration:.4s;-webkit-animation-timing-function:ease;-webkit-animation-iteration-count:1}@keyframes barrelRoll{from{transform:rotate(0)}to{transform:rotate(360deg)}}@-webkit-keyframes barrelRoll{from{-webkit-transform:rotate(0)}to{-webkit-transform:rotate(360deg)}}.floater{animation-name:floater;-webkit-animation-name:floater;animation-duration:1.6s;-webkit-animation-duration:1.6s;-webkit-animation-iteration-count:infinite}.floater,.wiggle{animation-iteration-count:infinite}@keyframes floater{0%,100%{transform:translateY(0)}
+50%{transform:translateY(8%)}}@-webkit-keyframes floater{0%,100%{-webkit-transform:translateY(0)}50%{-webkit-transform:translateY(8%)}}.wiggle{animation-name:wiggle;-webkit-animation-name:wiggle;animation-duration:2.5s;-webkit-animation-duration:2.5s;-webkit-animation-iteration-count:infinite}@keyframes wiggle{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}@-webkit-keyframes wiggle{0%,100%{-webkit-transform:rotate(-4deg)}50%{-webkit-transform:rotate(4deg)}}.pound{animation-name:pound;-webkit-animation-name:pound;animation-duration:.5s;-webkit-animation-duration:.5s;-webkit-animation-timing-function:ease;-webkit-animation-iteration-count:infinite;visibility:visible!important}.heartbeat,.pound{animation-iteration-count:infinite;animation-timing-function:ease}@keyframes pound{to{transform:scale(1.2)}}@-webkit-keyframes pound{to{transform:scale(1.2)}}.heartbeat{animation-name:heartbeat;-webkit-animation-name:heartbeat;animation-duration:3s;-webkit-animation-duration:3s;-webkit-animation-timing-function:ease;-webkit-animation-iteration-count:infinite}
+@keyframes heartbeat{0%,100%{transform:scale(1)}10%{transform:scale(1.2)}20%{transform:scale(1.6)}}@-webkit-keyframes heartbeat{0%,100%{-webkit-transform:scale(1)}10%{-webkit-transform:scale(1.2)}20%{-webkit-transform:scale(1.6)}}.rollerRight{animation-name:rollerRight;-webkit-animation-name:rollerRight;animation-duration:2s;-webkit-animation-duration:2s;-webkit-animation-timing-function:ease;-webkit-animation-iteration-count:1;animation-fill-mode:forwards}.rollerLeft,.rollerRight{animation-iteration-count:1;animation-timing-function:ease}@keyframes rollerRight{0%{transform:translateX(-200px) rotate(0);opacity:0}100%{transform:translateX(0) rotate(2turn);opacity:1}}@-webkit-keyframes rollerRight{0%{-webkit-transform:translateX(-200px) rotate(0);opacity:0}100%{-webkit-transform:translateX(0) rotate(2turn);opacity:1}}.rollerLeft{animation-name:rollerLeft;-webkit-animation-name:rollerLeft;animation-duration:2s;-webkit-animation-duration:2s;-webkit-animation-timing-function:ease;-webkit-animation-iteration-count:1;animation-fill-mode:forwards}
+.fadeOut,.rollerLeft{-webkit-animation-fill-mode:forwards}@keyframes rollerLeft{0%{transform:translateX(200px) rotate(0);opacity:0}100%{transform:translateX(0) rotate(-2turn);opacity:1}}@-webkit-keyframes rollerLeft{0%{-webkit-transform:translateX(200px) rotate(0);opacity:0}100%{-webkit-transform:translateX(0) rotate(-2turn);opacity:1}}.slideDown{animation-name:slideDown;-webkit-animation-name:slideDown;-webkit-animation-duration:1s;-webkit-animation-timing-function:ease}.slideDown,.slideUp{animation-timing-function:ease;animation-duration:1s}@keyframes slideDown{0%{transform:translateY(-100%);opacity:0}100%{transform:translateY(0);opacity:1}}@-webkit-keyframes slideDown{0%{-webkit-transform:translateY(-100%);opacity:0}100%{-webkit-transform:translateY(0);opacity:1}}.slideUp{animation-name:slideUp;-webkit-animation-name:slideUp;-webkit-animation-duration:1s;-webkit-animation-timing-function:ease}@keyframes slideUp{0%{transform:translateY(100%);opacity:0}100%{transform:translateY(0);opacity:1}
+}@-webkit-keyframes slideUp{0%{-webkit-transform:translateY(100%);opacity:0}100%{-webkit-transform:translateY(0);opacity:1}}.slideLeft{animation-name:slideLeft;-webkit-animation-name:slideLeft;animation-duration:1s;-webkit-animation-duration:1s;-webkit-animation-timing-function:ease}.slideLeft,.slideRight{animation-timing-function:ease}@keyframes slideLeft{0%{transform:translateX(150%);opacity:0}100%{transform:translateX(0);opacity:1}}@-webkit-keyframes slideLeft{0%{-webkit-transform:translateX(150%);opacity:0}100%{-webkit-transform:translateX(0);opacity:1}}.slideRight{animation-name:slideRight;-webkit-animation-name:slideRight;animation-duration:1s;-webkit-animation-duration:1s;-webkit-animation-timing-function:ease}@keyframes slideRight{0%{transform:translateX(-150%);opacity:0}100%{transform:translateX(0);opacity:1}}@-webkit-keyframes slideRight{0%{-webkit-transform:translateX(-150%);opacity:0}100%{-webkit-transform:translateX(0);opacity:1}}.fadeIn{animation-name:fadeIn;-webkit-animation-name:fadeIn;-webkit-animation-duration:2s;-webkit-animation-timing-function:ease}
+.fadeIn,.fadeOut{animation-timing-function:ease;animation-duration:2s}@keyframes fadeIn{0%{opacity:0}100%{opacity:1}}@-webkit-keyframes fadeIn{0%{opacity:0}100%{opacity:1}}.fadeOut{animation-name:fadeOut;-webkit-animation-name:fadeOut;-webkit-animation-duration:2s;-webkit-animation-timing-function:ease;animation-fill-mode:forwards}@keyframes fadeOut{0%{opacity:1}100%{opacity:0}}@-webkit-keyframes fadeOut{0%{opacity:1}100%{opacity:0}}.rotateInRight{animation-name:rotateInRight;-webkit-animation-name:rotateInRight;animation-duration:3s;-webkit-animation-duration:3s;-webkit-animation-timing-function:ease-in-out;-webkit-animation-iteration-count:1;animation-iteration-count:1}.rotateInLeft,.rotateInRight{animation-timing-function:ease-in-out}@-webkit-keyframes rotateInRight{from{-webkit-transform:rotate(0) translateX(100%) rotate(0)}to{-webkit-transform:rotate(360deg) translateX(0) rotate(-360deg)}}@keyframes rotateInRight{from{transform:rotate(0) translateX(100%) rotate(0)}to{transform:rotate(360deg) translateX(0) rotate(-360deg)}
+}.rotateInLeft{animation-name:rotateInLeft;-webkit-animation-name:rotateInLeft;animation-duration:3s;-webkit-animation-duration:3s;-webkit-animation-timing-function:ease-in-out;animation-iteration-count:1}.rotateIn,.rotateInLeft{-webkit-animation-iteration-count:1}@-webkit-keyframes rotateInLeft{from{-webkit-transform:rotate(0) translateX(-100%) rotate(0)}to{-webkit-transform:rotate(360deg) translateX(0) rotate(-360deg)}}@keyframes rotateInLeft{from{transform:rotate(0) translateX(-100%) rotate(0)}to{transform:rotate(360deg) translateX(0) rotate(-360deg)}}.rotateIn{animation-name:rotateIn;-webkit-animation-name:rotateIn;animation-duration:3s;-webkit-animation-duration:3s;animation-timing-function:ease;-webkit-animation-timing-function:ease;animation-iteration-count:1;-webkit-transform-origin:center;transform-origin:center}@-webkit-keyframes rotateIn{0%{-webkit-transform:rotate3d(0,0,1,-720deg);transform:rotate3d(0,0,1,-720deg);opacity:0}100%{-webkit-transform-origin:center;transform-origin:center;-webkit-transform:none;transform:none;opacity:1}
+}@keyframes rotateIn{0%{-webkit-transform:rotate3d(0,0,1,-720deg);transform:rotate3d(0,0,1,-720deg);opacity:0}100%{-webkit-transform:none;transform:none;opacity:1}}.bounceIn{-webkit-animation-name:bounceIn;animation-name:bounceIn;-webkit-animation-duration:.8s;animation-duration:.8s;-webkit-animation-timing-function:cubic-bezier(.215,.61,.355,1);animation-timing-function:cubic-bezier(.215,.61,.355,1)}@-webkit-keyframes bounceIn{0%{opacity:0;-webkit-transform:scale3d(.3,.3,.3);transform:scale3d(.3,.3,.3)}20%{-webkit-transform:scale3d(1.1,1.1,1.1);transform:scale3d(1.1,1.1,1.1)}40%{-webkit-transform:scale3d(.9,.9,.9);transform:scale3d(.9,.9,.9)}60%{opacity:1;-webkit-transform:scale3d(1.03,1.03,1.03);transform:scale3d(1.03,1.03,1.03)}80%{-webkit-transform:scale3d(.97,.97,.97);transform:scale3d(.97,.97,.97)}100%{opacity:1;-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}}@keyframes bounceIn{0%{opacity:0;-webkit-transform:scale3d(.3,.3,.3);transform:scale3d(.3,.3,.3)}20%{-webkit-transform:scale3d(1.1,1.1,1.1);transform:scale3d(1.1,1.1,1.1)}40%{-webkit-transform:scale3d(.9,.9,.9);transform:scale3d(.9,.9,.9)}60%{opacity:1;-webkit-transform:scale3d(1.03,1.03,1.03);transform:scale3d(1.03,1.03,1.03)}80%{-webkit-transform:scale3d(.97,.97,.97);transform:scale3d(.97,.97,.97)}100%{opacity:1;-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}}
+
+#myInput {
+	width: 45%;
+	min-width: 280px;
+}
+
+body {
+	width: 100%;
+	height: 100vh;
+}
+
+form {
+	position: relative;
+}
+
+
+.autocomplete {
+	position: relative;
+	display: inline-block;
+}
+
+.autocomplete-items {
+	position: absolute;
+                border:1px solid black;
+	font-size: 18px;
+	z-index: 99;
+	top: 100%;
+	width: 45%;
+	left: 27%;
+                background:#fff;
+                color:#000;
+                 border-radius:25px;
+}
+
+.autocomplete-items div {
+	padding: 10px;
+                color:#000;
+}
+
+.autocomplete-items div:hover {
+	font-size: 20px;
+                border:1px solid black;
+}
+
+.autocomplete-active {
+	font-size: 20px;
+                border:1px solid black;
+}
+#divmore {
+ background:#333;
+}
+
+button {
+	width: 10%;
+	min-width: 100px;
+	height: 8vmax;
+	border-radius: 10px;
+	bottom: 0px;
+               color:#000;
+            background-color:#fff;
+	box-shadow: 0 0 0px grey;
+	transition:bottom ease 0.2s;
+}
+
+.btn {
+	margin: 15px;
+	font-size: 18px;
+}
+
+button:hover {
+	background-position: 0 -100%;
+	bottom: 10px;
+	position: relative;
+}
+
+body {
+           background-size:cover;
+}
+
+
+
+#myInput , #myBtn {
+	z-index: 6;
+}
+
+#overlay {
+	position: fixed;
+	display: none;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+           opacity:90%;
+	z-index: 1;
+}
+
+body {
+	margin: 0px;
+}
+
+#txt_1, #txt_2, #txt_3, #txt_4, #txt_5, #txt_6, #txt_7, #txt_8, #txt_9, #txt_10, #txt_11, #txt_12, #txt_13 , #txt_14 , #txt_15 , #txt_16, #name , #bginp {
+	height: 20px;
+	font-size: 10px;
+	width: 150px;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	color: black;
+	overflow: hidden;
+	background-color: transparent;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+li {
+	float: left;
+}
+
+li a {
+	display: block;
+	text-align: center;
+	padding: 14px 16px;
+	color: black;
+	text-decoration: none;
+}
+
+#mySidenav {
+ display:none;
+}
+
+#options {
+	position: relative;
+	left: 30%;
+	font-size: 15px;
+}
+
+#web:hover, #img:hover, #vid:hover, #map:hover {
+	text-decoration: underline;
+}
+#web , #img , #vid , #map {
+ padding:5px;
+}
+
+
+#myBtn {
+	width: 5%;
+	height: 46px;
+	border: none;
+	outline: none;
+	font-size: 25px;
+	position: relative;
+	left: -40px;
+	top: 2px;
+}
+
+
+#myInput {
+	height: 50px;
+	position: relative;
+	left: 4%;
+	box-sizing: border-box;
+	padding: 5px 45px 5px 20px;
+	background-size: 30px;
+	background-repeat: no-repeat;
+	border-radius: 25px;
+}
+
+.sidenav {
+	height: 90%;
+	width: 0%;
+	position: fixed;
+	z-index: 3;
+	top: 0;
+	left: 0;
+	transition: 0.5s;
+	padding-top: 60px;
+}
+
+.sidenav .closebtn {
+	position: absolute;
+	top: 0;
+	left: 10px;
+	font-size: 35px;
+	text-decoration: none;
+	outline: none;
+}
+#mySidenav {
+ width:500px;
+}
+
+@media screen and (max-height: 450px) {
+	.sidenav {
+		padding-top: 15px;
+	}
+
+	.sidenav a {
+		font-size: 18px;
+	}
+}
+
+#overlaysidenav {
+	position: fixed;
+	display: none;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+           opacity:50%;
+	z-index: 2;
+}
+
+#more {
+	position: relative;
+	top: 3px;
+             font-size:15px;
+}
+
+#divmore {
+	height: 40%;
+	width: 0;
+	position: absolute;
+	z-index: 3;
+	top: 120px;
+	left: 28%;
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 60px;
+            border-radius:10px;
+}
+.rotate {
+	transition: 0.5s;
+}
+
+.rotate:hover {
+	transform: rotateZ(360deg);
+}
+
+.morebtn {
+	width: 20%;
+}
+
+.mob {
+	display: none;
+}
+
+#keycode {
+	width: 50%;
+	border-radius: 10px;
+	position: absolute;
+	top: 10%;
+	left: 25%;
+	overflow: auto;
+	height: 70%;
+	display: none;
+           z-index:4;
+}
+@media only screen and (max-width:790px) {
+  #intefacespan , #name , #namewhat , #editshortcuts , #a1 , #a2 , #a3 , #a4 , #a5 , #a6 , #a7 , #a8  {
+     display:none;
+}
+}
+
+@media only screen and (max-width:800px) {
+	#keycode {
+		color:#000;
+		width: 90%;
+		left: 5%;
+	}
+
+	.autocomplete-items {
+		display:none;
+	}
+
+	.mob {
+		display: inherit;
+	}
+
+	#myInput {
+		left: 2.8%;
+	}
+
+	#btngrid1 {
+		display: none;
+	}
+
+	#options {
+		left: 8%;
+	}
+}
+
+.morebtn {
+	margin: 10px;
+}
+
+.btn {
+	text-decoration: none;
+}
+
+.hidebtn {
+	margin: 5px;
+	left: 10px;
+	position: relative;
+	align-items: center;
+}
+
+
+.btn {
+	text-overflow: ellipsis;
+}
+
+.btn , #user {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+body , #mySidenav {
+	overflow-x: hidden;
+}
+
+.accordion {
+	padding: 18px;
+	width: 100%;
+	text-align: left;
+	outline: none;
+	font-size: 15px;
+	transition: 0.4s;
+}
+
+.panel {
+	padding: 0 18px;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+}
+
+.scroll::-webkit-scrollbar {
+	width: 7px;
+            background:grey;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+                border-radius:10px;
+	background: #333;
+}
+body::-webkit-scrollbar {
+	width: 0px;
+            background:#000;
+}
+
+bodyl::-webkit-scrollbar-thumb {
+
+	background: #fff;
+}
+
+
+#searchdiv {
+	position: relative;
+}
+
+.mode {
+	margin-right: 10px;
+	height: 50px;
+}
+
+
+.invert {
+ filter: invert(100%);
+}
+
+@media only screen and (max-width:800px) {
+ #user , #options, .hidespan {
+   display:none;
+}
+#myBtn {
+ position:absolute;
+ left:85%;
+}
+#myInput {
+ width:90%;
+}
+}
+@media only screen and (max-width:535px) {
+#clock , #disabletime , #enabletime , #enablemsg , #disablemsg , #timetxt , #msgtxt {
+ display:none;
+}
+ #myBtn {
+  position:absolute;
+  left:80%;
+}
+}
+@media only screen and (max-width: 782px) {
+  #a5 , #a6 , #a7 , #a8 , #txt_9 , #txt_10 , #txt_11 , #txt_12 , #txt_13 , #txt_14 , #txt_15 , #txt_16  {
+       display:none;
+}
+#btn1 , #btn2 , #btn3 , #btn4  {
+  margin-top:20px;
+}
+}
+#btn1 , #btn2 , #btn3 , #btn4 , #btn5 , #btn6 , #btn7 , #btn8 {
+  border-radius: 40px ;
+  height: 130px ;
+  width: 130px ;
+  border:none;
+margin-top:10px;
+}
+#a1 , #a2 , #a3 , #a4 , #a5 , #a6 , #a7 , #a8 {
+ padding:30px;
+}
+#title {
+ font-size:50px;
+ display:none;
+ position:relative;
+ top:100px;
+}
+#startmsg {
+ border-radius:10px;
+ border:2px solid black;
+ position:fixed;
+ bottom:0px;
+ width:100%;
+ height:100%;
+ background:#fff;
+ color:#000;
+ display:none;
+}
+.linkcolor {
+ color:#000;
+ text-decoration:underline;
+}
+
+    </style>
+</head>
+<body oncontextmenu="contextmenu();" id="body" class="disable-select" draggable="false">
+<ul id='ul'>
+
+	<li style='float:right'><a style="font-size:15px;" onclick="openhelp();" id="helpbtn"  accesskey="h" ><i class="fi-rr-interrogation "></i></a></li>
+	<li  style='float:right'><a style="font-size:15px;" id="user">User</a></li>
+	<li style='float:left'><a style="font-size:15px;" onclick="openNav();" id="settingsbtn"  accesskey="m" ><i class="fi-rr-settings"></i></a></li>
+<li style='float:left'><a style="font-size:16px ; position:relative; bottom:3px; right:13px; color:#fff;" id="clock">
+ <div class="container">
+        <span id="hours">00</span>
+        <span>:</span>
+        <span id="minutes">00</span>
+        <span> </span>
+        <span id="session">AM</span>
+    </div>
+</a></li>
+</ul>
+<br>
+<center><h1 id="title">New Tab</h1></center>
+<div id="divmore">
+	<h1>
+<center>Apps</center><br><center>
+<a href="https://CloudGlitch.github.io/calto"><button class="morebtn">Calculator</button></a>
+<a href="https://CloudGlitch.github.io/converter"><button class="morebtn">Converter</button></a>
+<a href="https://cloudglitch.github.io/WritePad/"><button class="morebtn">Write-Pad</button></a>
+<a href="https://CloudGlitch.github.io/ToDo/"><button class="morebtn">To-Do</button></a>
+<a href="https://CloudGlitch.github.io/stopwatch"><button class="morebtn">Stopwatch</button></a></center>
+</h1></div>
+<br>
+<br>
+<div id="overlaysidenav" onclick="off()"></div>
+<div id="overlay" onclick="offinp();"></div>
+<div id="mySidenav" class="sidenav slideRight scroll"> <a accesskey="n" class="closebtn" onclick="closeNav()"><span class="fi-rr-cross-circle" style="font-size:20px; position:relative; top:-5px;"> Settings</span></a>
+	<p style="position: relative; left: 10px;">Cloud NewTab Search v.1.9<br>Created By <a href="https://github.com/cloudglitch">CloudGlitch</a>
+		<br>
+		<br>Remember to click done after tweaking
+		<br> settings if you dont click done please
+		<br> refresh the page to save the tweaks<br><br></p>
+	<div class="accordion" id="editshortcuts">
+		<p style="position: relative;  left: 10px;">Edit The Shortcuts</p>
+	</div>
+	<div class="panel">
+		<p style="position: relative;  left: 10px;">Type in the URL and NAME of your shortcut
+			<br> and then click DONE or REFRESH THE<span class="mob"><br></span> PAGE to save them</p>
+		<input style="position: relative; left: 10px;" type="text" id="txt_1" placeholder='your 1st shortcut url' onkeyup='saveValue(this);' />
+		<input style="position: relative; left: 10px;" type="text" id="txt_2" placeholder='your 1st shortcut name' onkeyup='saveValue(this);' />
+		<br>
+		<br>
+		<input style="position: relative; left: 10px;" type="text" id="txt_3" placeholder='your 2st shortcut url' onkeyup='saveValue(this);' />
+		<input style="position: relative; left: 10px;" type="text" id="txt_4" placeholder='your 2st shortcut name' onkeyup='saveValue(this);' />
+		<br>
+		<br>
+		<input style="position: relative; left: 10px;" type="text" id="txt_5" placeholder='your 3rd shortcut url' onkeyup='saveValue(this);' />
+		<input style="position: relative; left: 10px;" type="text" id="txt_6" placeholder='your 3rd shortcut name' onkeyup='saveValue(this);' />
+		<br>
+		<br>
+		<input style="position: relative; left: 10px;" type="text" id="txt_7" placeholder='your 4th shortcut url' onkeyup='saveValue(this);' />
+		<input style="position: relative; left: 10px;" type="text" id="txt_8" placeholder='your 4th shortcut name' onkeyup='saveValue(this);' />
+		<br>
+		<br>
+		<input style="position: relative; left: 10px;" type="text" id="txt_9" placeholder='your 5th shortcut url' onkeyup='saveValue(this);' />
+		<input style="position: relative; left: 10px;" type="text" id="txt_10" placeholder='your 5th shortcut name' onkeyup='saveValue(this);' />
+		<br>
+		<br>
+		<input style="position: relative; left: 10px;" type="text" id="txt_11" placeholder='your 6th shortcut url' onkeyup='saveValue(this);' />
+		<input style="position: relative; left: 10px;" type="text" id="txt_12" placeholder='your 6th shortcut name' onkeyup='saveValue(this);' />
+		<br>
+		<br>
+
+		<input style="position: relative; left: 10px;" type="text" id="txt_13" placeholder='your 7th shortcut url' onkeyup='saveValue(this);' />
+		<input style="position: relative; left: 10px;" type="text" id="txt_14" placeholder='your 7th shortcut name' onkeyup='saveValue(this);' /><br><br>
+		<input style="position: relative; left: 10px;" type="text" id="txt_15" placeholder='your 8th shortcut url' onkeyup='saveValue(this);' />
+		<input style="position: relative; left: 10px;" type="text" id="txt_16" placeholder='your 8th shortcut name' onkeyup='saveValue(this);' /><br><br> </div>
+	
+
+	<div class="accordion" id="pdiv">
+		<p style="position: relative;  left: 10px;">Personalize</p>
+	</div>
+	<div class="panel" id="pdiv2">
+                                <p style="position: relative;  left: 9px;" id="timetxt">Time</p><button style="left: 10px; position: relative; width: 100px; height: 50px;" id="enabletime" class="bdblack">Enable Time</button>&nbsp;
+<button style="left: 10px; position: relative; width: 100px; height: 50px;" id="disabletime" class="bdblack">Disable Time</button>
+<p style="position: relative;  left: 9px;" id="msgtxt">Welcome Message</p>
+<button style="left: 10px; position: relative; width: 100px; height: 50px;" id="enablemsg" class="bdblack">Enable Message</button>&nbsp;
+<button style="left: 10px; position: relative; width: 100px; height: 50px;" id="disablemsg" class="bdblack">Disable Message</button>
+		<br>
+		<p style="position: relative;  left: 9px;">select background image</p>
+
+<input style="position: relative; left: 10px; width:310px;" type="text" id="bginp" onkeyup="savebg();" placeholder="enter your desired background image url"><br><br>
+	<button style="left: 10px; position: relative; width: 100px; height: 50px;" id="resetbg" class="bdblack">Reset Background</button>
+
+
+		<p id="namewhat" style="position: relative;  left: 9px;">what is your name?</p>
+		<input style="position: relative; left: 10px; width:310px;" type="text" id="name" placeholder="What is your name?" maxlength="50" onkeyup="saveValue(this);">
+<br>
+
+		<span id="intefacespan"><p style="position: relative;  left: 9px;">Select Interface</p>
+
+	<button style="left: 10px; position: relative; width: 100px; height: 50px;" id="minimal" class="bdblack">Minimal</button>&nbsp;&nbsp;
+	<button style="left: 10px; position: relative; width: 100px; height: 50px;" id="modern" class="bdblack">Modern</button>
+</span>
+		<br><br>
+	</div>
+	<div class="accordion">
+		<p style="position: relative;  left: 10px;">Reset</p>
+	</div>
+	<div class="panel">
+		<p style="position: relative;  left: 10px;">Reset Cloud NewTabSearch Search. Doing this will clear<span class="mob"><br></span> all your data on Cloud NewTab Search</p>
+		<button style="left: 10px; position: relative; width: 100px; height: 50px;" onclick="reset();" class="bdblack">Reset</button>
+		<br>
+		<br>
+	</div>
+	<br>
+	<button style="left: 10px; position: relative; width: 100px; height: 50px;"  class="bdblack" onclick="ok();">Done!</button>
+	<p class='helpp' style="left:10px; position:relative; font-size:12px;">
+		<br>Have any issues or see a bug
+		<br>or have a suggestion for this website
+		<br>please click <a href="https://github.com/CloudGlitch/NewTabSearch/issues">here</a>
+		<br>
+		<br> <a href="https://github.com/CloudGlitch/NewTabSearch/issues" id="wss">send feedback</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="mob"><br></span> </p>
+</div><br>
+<br>
+<p id="options" class="shake"><i class="fi-rr-globe" id="web" accesskey="w" onclick="myfuncweb();"></i>&nbsp;&nbsp;&nbsp;<i class="fi-rr-picture" id="img" accesskey="i" onclick="myfuncimg();"></i>&nbsp;&nbsp;&nbsp;<i class="fi-rr-play-alt" id="vid" accesskey="v" onclick="myfuncvid();"></i>&nbsp;&nbsp;&nbsp;<i class="fi-rr-map-marker" id="map" onclick="myfuncmap();"></i>&nbsp;&nbsp;&nbsp;<span id="more" onclick="moreopen();"><i class="fi-rr-menu-dots"></i></span></p>
+<center>
+	<div id="auto" class="autocomplete" style="width:90%; border-width:1px; border-color:black; z-index: 0;">
+		<form style="z-index:0;" id="formsearch" method="GET" action="https://bing.com" autocomplete="off">
+			<div id="searchdiv">
+				<input id="myInput" class="slideUp" type="q" name="q" onkeyup="https();" accesskey="s" title="" placeholder="Search the web or enter a web address" style="outline: none; font-size: 20px;" autofocus="" required="" />&nbsp;&nbsp;
+				<button type="submit" class="rotate" title="Search" onclick="funcurl();" name="search" id="myBtn"><i id="searchicon" class="fi-rr-search"></i></button>
+			</div>
+		</form>
+	</div><br><br>
+		<br>
+		<div id="btngrid" class="slideDown container">
+			 <a class="draggable" draggable="true" href='' id='a1'><button id="btn1">Shortcut</button></a>
+        <a class="draggable" draggable="true" href='' id='a2'><button title="" id="btn2">Shortcut</button></a>
+        <a class="draggable" draggable="true" href='' id='a3'><button id="btn3">Shortcut</button></a>
+        <a class="draggable" draggable="true" href='' id='a4'><button id="btn4">Shortcut</button></a><br><br>
+        <a class="draggable" draggable="true" href='' id='a5'><button id="btn5">Shortcut</button></a>
+        <a class="draggable" draggable="true" href='' id='a6'><button  title="" id="btn6">Shortcut</button></a>
+        <a class="draggable" draggable="true" href='' id='a7'><button id="btn7">Shortcut</button></a>
+        <a class="draggable" draggable="true" href='' id='a8'><button  title="" id="btn8">Shortcut</button></a>
+		</div>
+	</div>
+	 </center>
+<div class="scroll slideDown" id="keycode">
+	<center>
+		<h1>Help</h1>
+
+		<h2>Ease of access</h2>
+
+
+		<span class="hidespan"><p class="keycodep">press alt + b to search in bing</p>
+		<p class="keycodep">press alt + g to search in google</p>
+
+		<p class="keycodep">press alt + w to search the web</p>
+		<p class="keycodep">press alt + i to search for images</p>
+		<p class="keycodep">press alt + v to search for videos</p>
+		<p class="keycodep">press alt + s to focus on search box</p>
+		<p class="keycodep">press alt + m to open settings</p>
+		<p class="keycodep">press alt + n to close settings</p>
+		<p class="keycodep">press alt + h to open help</p></span>
+<p>enter "/b" in the search box to go back</p>
+<p>enter "/ctrl" in the search box to open settings</p>
+<p>enter "/r" in the search box to reload</p>
+<span class="hidespan">
+<p>press down arrow or up arrow to navigate<br>in autopredictions. press shift key to select the autoprediction</p>
+		<br><h2>Open Settings</h2>Click on settings button located on top-left corner
+		<h2>How to make shortcuts</h2>open settings > click on edit the shortcuts
+		<br></span>
+		<h2>how to enter urls in search bar</h2> to enter urls in search bar start with "https://" then click enter or search button. to enter file url start with "file://C:/".
+		<span class="hidespan"><h2>Personalization</h2> open settings and click on personalize to see personalization options</span>
+
+<h2>other</h2>buttons are blank because you have not set up any shortcuts<br><br>
+if icons and fonts are not loading try restarting the browser or the page you can reload the page by entering "/r" in the search box
+		<br>
+		<br>
+		<h2>Version</h2>
+		<p class="keycodep">you are running the latest version 1.9
+			<br>
+<br>
+<p class="keycodep">
+ </center>
+</div>
+<div id="startmsg">
+<center><br>
+<h2>Welcome To Cloud NewTab Search</h2><br>
+<h4>Please read the <a class="linkcolor"  href="https://github.com/CloudGlitch/CloudGlitch/blob/main/Terms%20of%20use%20and%20Privacy.md#the-terms-of-use-and-privacy-is-affected-for-all-the-cloudglitch-products--services-and-softwares">Terms of Use and Privacy</a> before using this website.</h4>
+<br>
+<h4>Open settings to personalize your newtab</h4>
+<h4>click on the help button located on top-right corner for any help</h4>
+<h4>Send Feedbacks or Report Issues <a class="linkcolor"  href="https://github.com/CloudGlitch/NewTabSearch/issues">here</a></h4>
+<h4><a class="linkcolor" href="https://github.com/CloudGlitch/NewTabSearch">Github Page</a></h4>
+<h4><a class="linkcolor"  href="https://github.com/CloudGlitch/NewTabSearch/releases">Releases</a></h4>
+<h4><a class="linkcolor"  href="https://github.com/CloudGlitch/NewTabSearch/releases/tag/v1.9">Latest Release Info</a></h4>
+<br>
+<button style="width:100px; height:50px;background:white; border:2px solid black;" onclick="newpage();">Ok</button>
+</center>
+</div>
+</body>
+<script>
+disablemsg.addEventListener("click" , function () {
+document.getElementById("user").style.display = "none";
+ var dmsg = document.getElementById("user").style.display = "none";
+ localStorage.setItem("disablemsg",dmsg)
+});
+window.onload = document.getElementById("user").style.display = localStorage.getItem("disablemsg");
+enablemsg.addEventListener("click" , function () {
+document.getElementById("user").style.display = "inherit";
+ localStorage.removeItem("disablemsg");
+});
+
+function newpage() {
+ document.getElementById("minimal").click();
+ window.location.reload();
+}
+if (! localStorage.noFirstVisit) {
+
+    document.getElementById('startmsg').style.display = 'inherit';
+
+    localStorage.noFirstVisit = "1";
+}
+
+disabletime.addEventListener("click" , function () {
+document.getElementById("clock").style.display = "none";
+ var dt = document.getElementById("clock").style.display = "none";
+ localStorage.setItem("disabletime",dt)
+});
+window.onload = document.getElementById("clock").style.display = localStorage.getItem("disabletime");
+enabletime.addEventListener("click" , function () {
+document.getElementById("clock").style.display = "inherit";
+ localStorage.removeItem("disabletime");
+});
+function displayTime(){
+    var dateTime = new Date();
+    var hrs = dateTime.getHours();
+    var min = dateTime.getMinutes();
+    var session = document.getElementById('session');
+
+    if(hrs >= 12){
+        session.innerHTML = 'PM';
+    }else{
+        session.innerHTML = 'AM';
+    }
+
+
+    document.getElementById('hours').innerHTML = hrs;
+    document.getElementById('minutes').innerHTML = min;
+
+}
+setInterval(displayTime, 10);
+function savebg() {
+ var bgget = document.getElementById("bginp").value;
+ document.getElementById("body").style.backgroundImage = "url(" + bgget + ")"
+ var bgvar =  document.getElementById("body").style.backgroundImage = "url(" + bgget + ")"
+ localStorage.setItem("bgset",bgvar)
+}
+window.onload = document.getElementById("body").style.backgroundImage = localStorage.getItem("bgset");
+
+resetbg.addEventListener("click" , function () {
+  document.getElementById("body").style.backgroundImage = "url('https://images.pexels.com/photos/1328879/pexels-photo-1328879.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')";
+  localStorage.removeItem("bgset");
+});
+
+window.onload = setTimeout(os, 100);
+function os() {
+ if (navigator.appVersion.indexOf("Mac") != -1) {
+  alert("unsupported os");
+  window.location.reload();
+}
+}
+
+function contextmenu() {
+	event.preventDefault();
+	document.getElementById("mySidenav").style.display = "inherit";
+	document.getElementById("overlaysidenav").style.display = "inline";
+}
+if(screen.width <= 1133) {
+	if(screen.availHeight < screen.availWidth) {
+		alert("Please use Portrait Mode");
+		window.location.reload();
+	}
+}
+var acc = document.getElementsByClassName("accordion");
+var i;
+for(i = 0; i < acc.length; i++) {
+	acc[i].addEventListener("click", function() {
+		this.classList.toggle("active");
+		var panel = this.nextElementSibling;
+		if(panel.style.maxHeight) {
+			panel.style.maxHeight = null;
+		} else {
+			panel.style.maxHeight = panel.scrollHeight + "px";
+		}
+	});
+}
+minimal.addEventListener("click", function  () {
+ document.getElementById("title").style.display = "inherit";
+ document.getElementById("btngrid").style.display = "none";
+
+ var titleinherit = document.getElementById("title").style.display = "inherit";
+ var btngridnone =document.getElementById("btngrid").style.display = "none";
+
+ localStorage.setItem("titleinherit" , titleinherit)
+ localStorage.setItem("btngridnone" , btngridnone)
+});
+window.onload =  document.getElementById("title").style.display = localStorage.getItem("titleinherit");
+window.onload =  document.getElementById("btngrid").style.display = localStorage.getItem("btngridnone");
+
+modern.addEventListener("click", function  () {
+ document.getElementById("title").style.display = "none";
+ document.getElementById("btngrid").style.display = "inherit";
+
+ localStorage.removeItem("titleinherit")
+ localStorage.removeItem("btngridnone")
+});
+
+function reset() {
+            window.localStorage.clear();
+	window.location.reload();
+}
+
+function offinp() {
+	document.getElementById("keycode").style.display = "none";
+	document.getElementById("overlay").style.display = "none";
+	document.getElementById("searchdiv").style.top = "0px";
+	document.getElementById("options").style.opacity = "100%";
+}
+
+function off() {
+	document.getElementById("mySidenav").style.display = "none";
+	document.getElementById("divmore").style.width = "0";
+	document.getElementById("overlaysidenav").style.display = "none";
+            document.getElementById("divmore").style.border = "none";
+}
+
+function openNav() {
+	document.getElementById("mySidenav").style.display = "inherit";
+	document.getElementById("overlaysidenav").style.display = "inline";
+}
+
+function moreopen() {
+	document.getElementById("divmore").style.width = "45%";
+            document.getElementById("divmore").style.border = "1px solid black";
+	document.getElementById("overlaysidenav").style.display = "inline";
+}
+
+function closeNav() {
+	document.getElementById("mySidenav").style.display = "none";
+	document.getElementById("overlaysidenav").style.display = "none";
+}
+
+
+document.getElementById("user").innerHTML = "Welcome, " + getSavedValue("name");
+document.getElementById("a1").href = getSavedValue("txt_1");
+document.getElementById("btn1").innerHTML = getSavedValue("txt_2");
+document.getElementById("a2").href = getSavedValue("txt_3");
+document.getElementById("btn2").innerHTML = getSavedValue("txt_4");
+document.getElementById("a3").href = getSavedValue("txt_5");
+document.getElementById("btn3").innerHTML = getSavedValue("txt_6");
+document.getElementById("a4").href = getSavedValue("txt_7");
+document.getElementById("btn4").innerHTML = getSavedValue("txt_8");
+document.getElementById("a5").href = getSavedValue("txt_9");
+document.getElementById("btn5").innerHTML = getSavedValue("txt_10");
+document.getElementById("a6").href = getSavedValue("txt_11");
+document.getElementById("btn6").innerHTML = getSavedValue("txt_12");
+document.getElementById("a7").href = getSavedValue("txt_13");
+document.getElementById("btn7").innerHTML = getSavedValue("txt_14");
+document.getElementById("a8").href = getSavedValue("txt_15");
+document.getElementById("btn8").innerHTML = getSavedValue("txt_16");
+function saveValue(e) {
+	var nts = e.id;
+	var ntsval = e.value;
+	localStorage.setItem(nts, ntsval);
+}
+
+function getSavedValue(v) {
+	if(!localStorage.getItem(v)) {
+		return "";
+	}
+	return localStorage.getItem(v);
+}
+
+
+function ok() {
+	window.location.reload();
+}
+
+function https() {
+	if(input.value === "ht") {
+		input.value = "https://";
+	}
+	if(input.value === "file") {
+		input.value = "file:///C:/";
+	}
+	if(input.value === "/ctrl") {
+		document.getElementById("mySidenav").style.display = "inherit";
+		document.getElementById("overlaysidenav").style.display = "inherit";
+	}
+	if(input.value === "/r") {
+		window.location.reload();
+	}
+	if(input.value === "/b") {
+		window.history.back();
+	}
+	
+}
+
+function funcurl() {
+	var inp = document.getElementById("myInput").value;
+	if(inp.startsWith("https://")) {
+		window.open(inp);
+		document.getElementById('formsearch').action = " ";
+	}
+if(inp.startsWith("http://")) {
+		alert("website you tried to enter is not secure");
+                       document.getElementById('formsearch').action = " ";
+	}
+	if(inp.startsWith("file:///C:/")) {
+		window.open(inp);
+		document.getElementById('formsearch').action = " ";
+	}
+}
+if(navigator.offLine) {
+	alert('you are offline');
+	document.getElementById('formsearch').action = " ";
+}
+window.onoffline = function() {
+	alert('you are offline');
+}
+var input = document.getElementById("myInput");
+input.addEventListener("keyup", function(event) {
+	if(event.keyCode === 13) {
+		document.getElementById("myBtn").click();
+	}
+});
+
+function myfuncweb() {
+	document.getElementById('formsearch').action = "https://bing.com";
+	document.getElementById('myInput').placeholder = "Search the web or enter a web address";
+}
+
+function myfuncimg() {
+	document.getElementById('formsearch').action = "https://www.bing.com/images/";
+	document.getElementById('myInput').placeholder = "Search for images or enter a web address";
+}
+
+function myfuncvid() {
+	document.getElementById('formsearch').action = "https://www.bing.com/videos/";
+	document.getElementById('myInput').placeholder = "Search for videos or enter a web address";
+}
+
+function myfuncmap() {
+	document.getElementById('formsearch').action = "https://www.bing.com/maps/";
+	document.getElementById('myInput').placeholder = "Search for places or enter a web address";
+}
+
+function autocomplete(inp, arr) {
+	/*the autocomplete function takes two arguments,
+	the text field element and an array of possible autocompleted values:*/
+	var currentFocus;
+	/*execute a function when someone writes in the text field:*/
+	inp.addEventListener("input", function(e) {
+		var a, b, i, val = this.value;
+		/*close any already open lists of autocompleted values*/
+		closeAllLists();
+		if(!val) {
+			return false;
+		}
+		currentFocus = -1;
+		/*create a DIV element that will contain the items (values):*/
+		a = document.createElement("DIV");
+		a.setAttribute("id", this.id + "autocomplete-list");
+		a.setAttribute("class", "autocomplete-items");
+		/*append the DIV element as a child of the autocomplete container:*/
+		this.parentNode.appendChild(a);
+		/*for each item in the array...*/
+		for(i = 0; i < arr.length; i++) {
+			/*check if the item starts with the same letters as the text field value:*/
+			if(arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+				/*create a DIV element for each matching element:*/
+				b = document.createElement("DIV");
+				/*make the matching letters bold:*/
+				b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+				b.innerHTML += arr[i].substr(val.length);
+				/*insert a input field that will hold the current array item's value:*/
+				b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+				/*execute a function when someone clicks on the item value (DIV element):*/
+				b.addEventListener("click", function(e) {
+					/*insert the value for the autocomplete text field:*/
+					inp.value = this.getElementsByTagName("input")[0].value;
+					/*close the list of autocompleted values,
+					(or any other open lists of autocompleted values:*/
+					closeAllLists();
+				});
+				a.appendChild(b);
+			}
+		}
+	});
+	/*execute a function presses a key on the keyboard:*/
+	inp.addEventListener("keydown", function(e) {
+		var x = document.getElementById(this.id + "autocomplete-list");
+		if(x) x = x.getElementsByTagName("div");
+		if(e.keyCode == 40) {
+			/*If the arrow DOWN key is pressed,
+			increase the currentFocus variable:*/
+			currentFocus++;
+			/*and and make the current item more visible:*/
+			addActive(x);
+		} else if(e.keyCode == 38) { //up
+			/*If the arrow UP key is pressed,
+			decrease the currentFocus variable:*/
+			currentFocus--;
+			/*and and make the current item more visible:*/
+			addActive(x);
+		} else if(e.keyCode == 16) {
+			e.preventDefault();
+			if(currentFocus > -1) {
+				/*and simulate a click on the "active" item:*/
+				if(x) x[currentFocus].click();
+			}
+		}
+	});
+
+	function addActive(x) {
+		/*a function to classify an item as "active":*/
+		if(!x) return false;
+		/*start by removing the "active" class on all items:*/
+		removeActive(x);
+		if(currentFocus >= x.length) currentFocus = 0;
+		if(currentFocus < 0) currentFocus = (x.length - 1);
+		/*add class "autocomplete-active":*/
+		x[currentFocus].classList.add("autocomplete-active");
+	}
+
+	function removeActive(x) {
+		/*a function to remove the "active" class from all autocomplete items:*/
+		for(var i = 0; i < x.length; i++) {
+			x[i].classList.remove("autocomplete-active");
+		}
+	}
+
+	function closeAllLists(elmnt) {
+		/*close all autocomplete lists in the document,
+		except the one passed as an argument:*/
+		var x = document.getElementsByClassName("autocomplete-items");
+		for(var i = 0; i < x.length; i++) {
+			if(elmnt != x[i] && elmnt != inp) {
+				x[i].parentNode.removeChild(x[i]);
+			}
+		}
+	}
+	/*execute a function when someone clicks in the document:*/
+	document.addEventListener("click", function(e) {
+		closeAllLists(e.target);
+	});
+}
+/*An array containing all the country names in the world:*/
+var countries = ['calculate time difference', 'how to make a', 'how to', 'when is the', 'when is', 'when is the next solar eclipse', 'when is the next lunar eclipse', 'what happenes when', 'meaning of', 'what is meant by', "hello", "hi", "what", "what is", "what is the", "what is the meaning of", "which", "which is", "which is the", "how", 'how many', 'google', 'bing', 'amazon', 'flipkart', 'a', 'animals', 'quora','https://quora.com','pexels','https://pexels.com', 'wikipedia', 'usa', 'canva', 'china', 'russia', 'india', 'who', 'who is', 'who is the', 'who was the', 'why', 'why did', 'office', 'onedrive', 'outlook', 'run', 'translate', 'youtube', 'youtube downloader', 'iconfinder', 'pintrest', 'prime video', 'amazon prime', 'sublime text', 'sublime text 3 download', 'sublime text download', 'discord', 'facebook', 'whatsapp', 'gmail', 'google meet', 'microsoft teams', 'hotstar', 'jpg to png', 'png to jpg', 'linkedin', 'zoho presentaion', 'zoom', 'zoom meeting', 'bbc news', 'msn news', 'netflix', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'msn weather', 'msn', 'euro', 'europe', 'k', 'x', 'v', 'microsoft', 'what is the difference between', 'remove bg', 'remove background', 'meet', 'png to ico', 'word to pdf', 'png to jpeg', 'png to jpg', 'jpeg to png', 'Visual Code Studio', 'Visual Code Studio download', 'skype', 'github', 'weather', 'https://', 'https://bing.com', 'https://youtube.com', 'https://google.com', 'difference between', 'youtube.com', 'bing.com', 'https://discord.com/app', 'microsoft.com', 'https://github.com', 'github.com', 'w3schools', 'stackoverflow', 'https://w3schools.com', 'https://stackoverflow.com'];
+/*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
+autocomplete(document.getElementById("myInput"), countries);
+	
+function openhelp() {
+	document.getElementById("keycode").style.display = "inherit";
+	document.getElementById("overlay").style.display = "inherit";
+}
+
+	window.onload = function() {
+
+	document.addEventListener("keydown", function(e) {
+		//document.onkeydown = function(e) {
+		// "I" key
+		if(e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+			disabledEvent(e);
+		}
+		// "J" key
+		if(e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+			disabledEvent(e);
+		}
+		// "S" key + macOS
+		if(e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+			disabledEvent(e);
+		}
+		// "U" key
+		if(e.ctrlKey && e.keyCode == 85) {
+			disabledEvent(e);
+		}
+		// "F12" key
+		if(event.keyCode == 123) {
+			disabledEvent(e);
+		}
+	}, false);
+
+	function disabledEvent(e) {
+		if(e.stopPropagation) {
+			e.stopPropagation();
+		} else if(window.event) {
+			window.event.cancelBubble = true;
+		}
+		e.preventDefault();
+		return false;
+	}
+};
+	</script>
+</html>
+
+<!-- CloudGlitch-->
+  
