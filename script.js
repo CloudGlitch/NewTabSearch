@@ -1,0 +1,1 @@
+window.onload = window.location.href = "https://cloudglitch.github.io/NewTabSearch/";
