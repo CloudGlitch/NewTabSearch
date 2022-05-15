@@ -4,6 +4,12 @@
   
 <a href="https://bit.ly/cgnewtab">click here</a> to goto the webpage
 
+## How To?
+
+follow these steps to make cloud newtab your newtab page in your browser.
+
+- <a href="chrome://extensions">click here</a>
+
 `Note : All Features May Not Be Able To Use In Unsupported Devices`
 
 ## Compatability 
