@@ -10,7 +10,7 @@ follow these steps to make cloud newtab your newtab page in your browser.
 
 - first download this <a href="https://github.com/CloudGlitch/NewTabSearch/archive/refs/heads/main.zip">file</a> and extract it.
 - At the top corner of the browser you will see 3 dots or bars , click on it
-- then click on extensions
+- then click on extensions , then click on manage extensions
 - then click on developer mode
 - now click on the load unpacked button
 - after clicking the load unpacked button goto the extracted file and open it the click on the folder inside the extracted folder and click select folder.
