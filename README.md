@@ -1,11 +1,11 @@
 # Cloud NewTab Search
 
-<a href="https://github.com/CloudGlitch"><img src="https://badgen.net/badge/Created By/CloudGlitch/blue?icon=github"></a>&nbsp;&nbsp;&nbsp;<a href="https://github.com/CloudGlitch/NewTabSearch/releases"><img src="https://badgen.net/badge/Version/v1.9/green?icon=github"></a>&nbsp;&nbsp;&nbsp;<img src="https://badgen.net/badge/Made With/HTML/orange?icon=github">&nbsp;&nbsp;&nbsp;<img src="https://badgen.net/badge/Made With/CSS/blue?icon=github">&nbsp;&nbsp;&nbsp;<img src="https://badgen.net/badge/Made With/Javascript/yellow?icon=github">
+<a href="https://github.com/CloudGlitch"><img src="https://badgen.net/badge/Created By/CloudGlitch/blue?icon=github"></a>&nbsp;&nbsp;&nbsp;<a href="https://github.com/CloudGlitch/NewTabSearch/releases"><img src="https://badgen.net/badge/Version/v1.9/green?icon=github"></a>
   
 <a href="https://bit.ly/cgnewtab">click here</a> to goto the webpage
 
-## How To?
-we are working on the newtab extension. it will be released in 2 days.
+## How To set Cloud NewTab as you default newtab page
+ <a href="https://github.com/CloudGlitch/NewTabSearch/tree/extension">click here to open the setup page</a>
 
 `Note : All Features May Not Be Able To Use In Unsupported Devices`
 
