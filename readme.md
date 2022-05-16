@@ -1,8 +1,9 @@
 
 # How To Setup NewTab Extension
 
-`DO NOT DELETE THE EXTRACTED FOLDER UNLESS YOU NEED TO DELETED THE EXTENSION. IF YOU DO THE EXTENSION WILL BE DELETED.`
-`if you get a notification to turn off extensions in devoloper mode dismiss it , if you have clicked turn off the newtab extension will be off. the warning will be as the extension is not safe but the extension is completly safe all it does it redirect you to cloud newtab search when you open a newtab`
+`DO NOT DELETE THE EXTRACTED FOLDER UNLESS YOU NEED TO DELETE THE EXTENSION. IF YOU DO THE EXTENSION WILL BE DELETED.`
+
+`if you get a notification to turn off extensions in devoloper mode dismiss it , if you have clicked turn off, the newtab extension will be off. the warning will be as the extension is not safe but the extension is completly safe all it does it redirect you to cloud newtab search when you open a newtab. you can also click on remind me in 2 weeks so that it doesnt show up everytime you open the browser.`
 
 step 1 : open this <a href="https://drive.google.com/drive/folders/1W_qbYB7VlvjN_3XMHnNmF3823onxd3Gz">file</a>.
 
