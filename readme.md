@@ -1,6 +1,8 @@
 
 # How To Setup NewTab Extension
 
+`DO NOT DELETE THE EXTRACTED FOLDER UNLESS YOU NEED TO DELETED THE EXTENSION. IF YOU DO THE EXTENSION WILL BE DELETED.`
+
 step 1 : open this <a href="https://drive.google.com/drive/folders/1W_qbYB7VlvjN_3XMHnNmF3823onxd3Gz">file</a>.
 
 step 2 : click on download all.
