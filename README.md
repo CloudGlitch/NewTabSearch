@@ -5,6 +5,9 @@
 <a href="https://bit.ly/cgnewtab">click here</a> to goto the webpage
 
 ## How To set Cloud NewTab as you default newtab page
+
+**<a href="https://microsoftedge.microsoft.com/addons/detail/cloudglitch-newtab-search/oaoknlhpccijmifkioknndcgiegdjebc">Get it from Microsoft Edge Add-ons</a>**
+
  <a href="https://github.com/CloudGlitch/NewTabSearch/tree/extension">click here to open the setup page</a>
 
 `Note : All Features May Not Be Able To Use In Unsupported Devices`
