@@ -1,6 +1,6 @@
 # Cloud NewTab Search
 
-<a href="https://github.com/CloudGlitch"><img src="https://badgen.net/badge/Created By/CloudGlitch/blue?icon=github"></a>&nbsp;&nbsp;&nbsp;<a href="https://github.com/CloudGlitch/NewTabSearch/releases"><img src="https://badgen.net/badge/Version/v1.9/green?icon=github"></a>
+<a href="https://github.com/CloudGlitch"><img src="https://badgen.net/badge/Created By/CloudGlitch/blue?icon=github"></a>&nbsp;&nbsp;&nbsp;<a href="https://github.com/CloudGlitch/NewTabSearch/releases"><img src="https://badgen.net/badge/Version/v2/green?icon=github"></a>
   
 <a href="https://bit.ly/cgnewtab">click here</a> to goto the webpage
 
