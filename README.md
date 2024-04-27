@@ -1,8 +1,8 @@
 # Cloud NewTab Search
 <a href="https://github.com/CloudGlitch"><img src="https://badgen.net/badge/Created By/CloudGlitch/blue?icon=github"></a>&nbsp;&nbsp;&nbsp;<a href="https://github.com/CloudGlitch/NewTabSearch/releases"><img src="https://badgen.net/badge/Version/v2/green?icon=github"></a>
 
-Cloud NewTab Search is a newtab extension for browsers. you can search the web or for images , videos , maps directly on a click of a button. it even has a notepad , todo , converter , stopwatch and a calculator. [ you can open these by opening the tools menu (click on the 3 dots above search bar) ]
-  
+Cloud NewTab Search is a newtab extension for browsers. you can search the web or for images , videos , maps directly on a click of a button. it even has built in widgets.
+
 <a href="https://bit.ly/cgnewtab">click here</a> to goto the webpage
 
 ## How To set Cloud NewTab as you default newtab page
