@@ -1,4 +1,3 @@
-cloud newtab v2.1 had to be removed due to bugs and instability..it will be published as soon as the bugs have been fixed 
 # Cloud NewTab Search
 <a href="https://github.com/CloudGlitch"><img src="https://badgen.net/badge/Created By/CloudGlitch/blue?icon=github"></a>&nbsp;&nbsp;&nbsp;<a href="https://github.com/CloudGlitch/NewTabSearch/releases"><img src="https://badgen.net/badge/Version/v2/green?icon=github"></a>
 
