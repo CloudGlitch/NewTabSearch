@@ -1,3 +1,4 @@
+(wallpapers can will only change daily automatically unlike earlier which changes every time you refresh the page ...we are working on this to fix it soon)
 # Cloud NewTab Search
 <a href="https://github.com/CloudGlitch"><img src="https://badgen.net/badge/Created By/CloudGlitch/blue?icon=github"></a>&nbsp;&nbsp;&nbsp;<a href="https://github.com/CloudGlitch/NewTabSearch/releases"><img src="https://badgen.net/badge/Version/v2/green?icon=github"></a>
 
