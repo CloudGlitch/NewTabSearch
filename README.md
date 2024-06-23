@@ -26,9 +26,5 @@ these are the recommended operating systems.
 -  <a href="https://github.com/CloudGlitch/NewTabSearch/wiki">click to open wiki</a>
  
 -  <a href="https://github.com/CloudGlitch/NewTabSearch/wiki#links">links</a>
- 
--  <a href="https://github.com/CloudGlitch/NewTabSearch/wiki#versions">versions</a>
- 
--  <a href="https://github.com/CloudGlitch/NewTabSearch/wiki#fonts-and-icons">fonts and icons</a>
 
 -  <a href="https://github.com/CloudGlitch/NewTabSearch/wiki/How-To%3F">How To?</a>
